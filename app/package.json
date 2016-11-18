@@ -1,0 +1,28 @@
+{
+  "name": "Afstudeerproject David de Lusenet",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daviddelusenet/afstudeerproject"
+  },
+  "author": "David de Lusenet",
+  "homepage": "afstudeerproject.lusenet.com",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "browser-sync": "^2.16.0",
+    "dropzone": "^4.3.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-watch": "^4.3.9",
+    "require-dir": "^0.3.0",
+    "webpack": "^1.13"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.2.4-rc1",
+    "jquery": "^3.1.1"
+  }
+}
