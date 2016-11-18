@@ -5,7 +5,7 @@ linters:
     force_nesting: false
   Indentation:
     allow_non_nested_indentation: true
-    width: 4
+    width: 2
   PropertySortOrder:
     order:
       - position
