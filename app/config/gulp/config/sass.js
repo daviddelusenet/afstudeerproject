@@ -3,7 +3,7 @@ var config = require('./');
 module.exports = {
 
   cssName: 'afstudeerproject.css',
-  src: ["src/**/*.{sass,scss}"],
+  src: ["app/**/*.{sass,scss}"],
   dest: config.dest + "/css",
   settings: {
     outputStyle: 'compressed',
