@@ -4,7 +4,7 @@ var webpack = require('webpack');
 
 module.exports = function (env) {
 
-  //var jsSrc = path.resolve(paths.src + '/src/userinterface');
+  var jsSrc = path.resolve(paths.jsSrc + '/afstudeerproject.js');
   var jsDest = paths.dest + '/js/';
   var publicPath = paths.dest + '/js/';
 
@@ -20,7 +20,7 @@ module.exports = function (env) {
       extensions: ['', '.js']
     },
     entry: {
-      'afstudeerproject': [paths.jsSrc + '/app/javascript/afstudeerproject.js']
+      'afstudeerproject': [jsSrc]
     },
     output: {
       path: jsDest,
