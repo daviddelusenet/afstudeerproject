@@ -1,0 +1,15 @@
+.sidebar-menu {
+  display: block;
+}
+
+  .sidebar-menu-item {
+    display: block;
+  }
+
+    .sidebar-menu-item-link {
+      display: block;
+      margin: 0 0 10px;
+      font-size: 16px;
+      text-decoration: none;
+      color: $black;
+    }

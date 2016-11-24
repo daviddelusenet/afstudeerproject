@@ -1,0 +1,15 @@
+.sidebar-submenu {
+  display: block;
+  margin: 0 0 20px;
+  padding-left: 10px;
+}
+
+  .sidebar-submenu-item {
+    display: block;
+  }
+
+    .sidebar-submenu-item-link {
+      font-size: 14px;
+      text-decoration: none;
+      color: $black;
+    }

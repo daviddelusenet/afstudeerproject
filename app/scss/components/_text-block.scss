@@ -1,13 +1,16 @@
 .text-block {
+  padding: 100px;
   color: $black;
 }
 
   .text-block-title {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .text-block-paragraph {
     margin-bottom: 20px;
+    font-family: $georgia;
     font-size: 16px;
+    line-height: 20px;
   }

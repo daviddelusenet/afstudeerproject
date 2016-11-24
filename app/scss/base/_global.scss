@@ -1,6 +1,12 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: $andale-mono;
-  background-color: rgb(251, 253, 252);
+  font-family: $verdana;
+  background-color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
