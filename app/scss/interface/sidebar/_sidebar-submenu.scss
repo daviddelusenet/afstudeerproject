@@ -9,7 +9,13 @@
   }
 
     .sidebar-submenu-item-link {
+      font-family: $georgia;
       font-size: 14px;
+      line-height: 21px;
       text-decoration: none;
       color: $black;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
