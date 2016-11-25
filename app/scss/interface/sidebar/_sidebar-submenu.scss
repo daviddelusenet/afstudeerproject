@@ -9,13 +9,32 @@
   }
 
     .sidebar-submenu-item-link {
+      position: relative;
       display: block;
       font-size: 12px;
       line-height: 1.5;
       text-decoration: none;
       color: $manatee;
+      transition: color 100ms ease-out;
 
       &:hover {
         color: $white;
+      }
+    }
+
+    .sidebar-submenu-item-link--active {
+      color: $white;
+
+      &::after {
+        position: absolute;
+        top: 3px;
+        right: -40px;
+        display: block;
+        width: 0;
+        height: 0;
+        content: '';
+        border-width: 6px 8px 6px 0;
+        border-style: solid;
+        border-color: transparent $white transparent transparent;
       }
     }
