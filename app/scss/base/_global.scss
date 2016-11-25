@@ -5,8 +5,13 @@
 }
 
 body {
-  font-family: $verdana;
-  background-color: $alto;
+  font-family: $lucida-grande;
+  background-color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.svg-definitions {
+  display: none;
+  visibility: hidden;
 }

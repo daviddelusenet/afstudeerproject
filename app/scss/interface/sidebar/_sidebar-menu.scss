@@ -6,14 +6,11 @@
     display: block;
   }
 
-    .sidebar-menu-item-link {
+    .sidebar-menu-item-title {
       display: block;
       margin: 0 0 10px;
-      font-size: 16px;
+      font-size: 13px;
+      font-weight: bold;
       text-decoration: none;
-      color: $black;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      color: $white;
     }

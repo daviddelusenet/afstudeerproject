@@ -2,12 +2,11 @@
   position: fixed;
   z-index: 100;
   top: 0;
-  left: 50%;
+  left: 0;
   width: 300px;
   height: 100%;
-  margin-left: -600px;
-  padding: 20px 25px;
-  border-right: 2px solid rgb(233, 233, 233);
+  padding: 80px 40px 0;
+  background-color: #343648;
 }
 
 @import 'sidebar-menu';

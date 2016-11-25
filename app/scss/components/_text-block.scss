@@ -1,30 +1,37 @@
 .text-block {
-  padding: 80px 100px 0;
+  padding: 80px 120px 0;
   color: $black;
 }
 
-.embed-block + .text-block {
-  padding-top: 40px;
+.embed-block,
+.slideshow-block {
+  + .text-block {
+    padding-top: 40px;
+  }
 }
 
   .text-block-title {
     margin-bottom: 30px;
-    font-size: 40px;
+    font-size: 28px;
+    font-weight: bold;
     line-height: 1.3;
+    color: #343648;
   }
 
   .text-block-subtitle {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
     line-height: 1.3;
+    color: #343648;
   }
 
   .text-block-paragraph {
     margin-bottom: 20px;
-    font-family: $georgia;
-    font-size: 16px;
-    line-height: 1.4;
+    font-family: $lucida-bright;
+    font-size: 17px;
+    line-height: 1.6;
   }
 
     .text-block-paragraph-sup {
@@ -34,23 +41,28 @@
     }
 
     .text-block-paragraph-link {
+      font-family: $lucida-grande;
+      font-size: 15px;
+      font-weight: bold;
       text-decoration: none;
-      color: $royal-blue;
+      color: #343648;
+      transition: color 100ms ease-out;
 
       &:hover {
-        text-decoration: underline;
+        color: $royal-blue;
       }
     }
 
   .text-block-list {
     display: block;
     margin: 0 0 20px 20px;
-    font-family: $georgia;
+    font-family: $lucida-bright;
   }
 
     .text-block-list-item {
       margin: 0 0 10px;
+      padding-left: 10px;
       list-style: circle;
-      font-size: 16px;
-      line-height: 1.4;
+      font-size: 17px;
+      line-height: 1.6;
     }

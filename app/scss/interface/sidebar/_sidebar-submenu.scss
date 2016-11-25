@@ -1,21 +1,21 @@
 .sidebar-submenu {
   display: block;
-  margin: 0 0 20px;
-  padding-left: 10px;
+  margin: 0 0 30px;
 }
 
   .sidebar-submenu-item {
     display: block;
+    margin-bottom: 3px;
   }
 
     .sidebar-submenu-item-link {
-      font-family: $georgia;
-      font-size: 14px;
-      line-height: 21px;
+      display: block;
+      font-size: 12px;
+      line-height: 1.5;
       text-decoration: none;
-      color: $black;
+      color: $manatee;
 
       &:hover {
-        text-decoration: underline;
+        color: $white;
       }
     }
