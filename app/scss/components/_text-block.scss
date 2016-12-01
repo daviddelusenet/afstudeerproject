@@ -12,18 +12,37 @@
 }
 
   .text-block-main-title {
+    position: relative;
     margin-bottom: 80px;
-    padding-bottom: 20px;
-    font-size: 60px;
+    font-size: 34px;
     font-weight: bold;
     line-height: 1.3;
     color: $bright-gray;
-    border-bottom: 2px solid $gray;
   }
+
+    .text-block-main-title-number {
+      position: absolute;
+      top: 7px;
+      left: -80px;
+      font-size: 28px;
+      color: $valencia;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 32px;
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin-top: -1px;
+        content: '';
+        background: $valencia;
+      }
+    }
 
   .text-block-section-title {
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     line-height: 1.3;
     color: $bright-gray;
