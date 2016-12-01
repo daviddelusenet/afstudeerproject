@@ -83,6 +83,18 @@
       }
     }
 
+    .text-block-paragraph-code {
+      position: relative;
+      top: -2px;
+      padding: 2px 5px;
+      font-family: $lucida-grande;
+      font-size: 12px;
+      color: $valencia;
+      border: 1px solid $alto;
+      background-color: $alabaster;
+      border-radius: 2px;
+    }
+
   .text-block-list {
     display: block;
     margin: 0 0 20px 20px;

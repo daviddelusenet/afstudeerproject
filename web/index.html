@@ -251,7 +251,30 @@
       <div id="development-tools">
         <div class="text-block">
           <p class="text-block-section-title">Development tools</p>
-          <p class="text-block-paragraph">Als front-ender maak je tijden</p>
+          <p class="text-block-paragraph">Als front-end developer maak je tijdens het ontwikkelingsproces veel gebruik van verschillende tools. Hieronder laat ik zien wat mijn meest gebruikte tools zijn en waar ik deze voor inzette.</p>
+          <p class="text-block-subtitle">Github</p>
+          <p class="text-block-paragraph">Github is een website die met behulp van Git het mogelijk maakt om in groepen aan dezelfde software te werken (13). Github heeft concurrentie van andere diensten (zoals <a href="//bitbucket.org/" target="_blank" class="text-block-paragraph-link">Bitbucket</a>) die ongeveer hetzelfde aanbieden maar is verreweg de grootste speler.</p>
+          <p class="text-block-paragraph">Ik gebruik Github dan ook al sinds ik ben begonnen als front-end developer en ik zie geen reden om hier de komende tijd nog van af te stappen. Github heeft een gigantische community achter zich en alle features die je als developer nodig hebt. Als je ge&iuml;nteresseerd bent in hoe Github precies werkt kan je er <a href="//readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/" target="_blank" class="text-block-paragraph-link">hier</a> meer over lezen.</p>
+          <p class="text-block-paragraph">Voor dit project gebruikten Sebastian en ik Github uiteraard erg veel. Al onze code werd via Github beheerd en opgeslagen. Op deze manier konden fouten makkelijk teruggedraaid worden en konden Sebastian en ik goed naast elkaar werken. Ook was onze code veilig mocht &eacute;&eacute;n van onze computers onverwachts stuk gaan.</p>
+          <p class="text-block-subtitle">SourceTree</p>
+          <p class="text-block-paragraph">SourceTree is een programma waarmee het mogelijk is om te communiceren met diensten die Git gebruiken (zoals Github). Het is mogelijk om met Git te werken via de command line alleen vergt dit de beheersing van veel commands.</p>
+          <p class="text-block-paragraph">Voor mensen die er geen zin in hebben om deze commands te leren zijn er programma's zoals SourceTree. Sourcetree maakt het mogelijk om via een interface Git commands uit te voeren. Dit zorgt ervoor dat je nooit in de buurt van een command line hoeft te komen.</p>
+          <p class="text-block-subtitle">Node en NPM</p>
+          <p class="text-block-paragraph">Node zorgt ervoor dat het mogelijk is om JavaScript uit te voeren via je console. Op deze manier is het mogelijk om tools zoals Gulp en Grunt te gebruiken, hierover later meer.</p>
+          <p class="text-block-paragraph">Als je Node installeert krijg je gelijk de Node Package Manager (NPM) meegeleverd. NPM is de meest gebruikte tool om packages te installeren en beheren. Op <a href="//www.npmjs.com" target="_blank" class="text-block-paragraph-link">deze website</a> kun je meer lezen over NPM en al haar packages.</p>
+          <p class="text-block-paragraph">Je kunt via NPM op een hele makkelijke manier een package installeren en opslaan in een zogenaamd <code class="text-block-paragraph-code">package.json</code> bestand. Als iemand anders dan je project binnen haalt kan hij via het volgende commando: <code class="text-block-paragraph-code">npm install</code> alle dependencies van dat project installeren.</p>
+          <p class="text-block-paragraph">Ik heb Node voor dit project gebruikt om Gulp te draaien. Ook heb ik via NPM alle packages die ik bij dit project gebruik opgeslagen en ge&iuml;nstalleerd.</p>
+          <p class="text-block-subtitle">Gulp</p>
+          <p class="text-block-paragraph">Gulp is een automated task runner. Je kunt voor Gulp tasks schrijven die je leven tijdens de ontwikkeling van een project een stuk aangenamer maken.</p>
+          <p class="text-block-paragraph">Gulp heeft concurrentie van andere task runners, waaronder <a href="//gruntjs.com/" target="_blank" class="text-block-paragraph-link">Grunt</a>. Er zijn meerdere redenen waarom ik gekozen heb voor Gulp bij dit project (en bij vele andere projecten). Een goede vergelijking van Gulp vs Grunt kan <a href="//medium.com/@preslavrachev/gulp-vs-grunt-why-one-why-the-other-f5d3b398edc4" target="_blank" class="text-block-paragraph-link">hier</a> gelezen worden.</p>
+          <p class="text-block-paragraph">Ik gebruikte Gulp voor een hoop tasks tijdens mijn project. Een belangrijke was bijvoorbeeld de SASS task, die ervoor zorgde dat mijn SASS elke keer opnieuw gecompileerd werd naar CSS als ik een aanpassing deed. Ook zorgde deze task ervoor dat de gecompileerde CSS gelijk minified werd en de nodige browser prefixes (12) werden toegevoegd.</p>
+          <p class="text-block-paragraph">Een andere veel gebruikte task was de zogenaamde <a href="//www.browsersync.io/" target="_blank" class="text-block-paragraph-link">Browsersync</a> task. Wanneer Browsersync geactiveerd wordt zorgt dit ervoor dat je website lokaal bereikbaar is vanaf het IP-adres <code class="text-block-paragraph-code">127.0.0.1</code>. Als je dan aanpassingen maakt in je JavaScript of CSS zorgt Browsersync ervoor dat deze aanpassingen gelijk gestreamd worden naar de browser. Op deze manier heb je dus je laatste code zonder steeds zelf een page refresh te moeten uitvoeren.</p>
+          <p class="text-block-subtitle">Webpack</p>
+          <p class="text-block-paragraph">Webpack (15) is een module bundler. Met Webpack kun je ontzettend veel dingen doen maar ik gebruik het voornamelijk om JavaScript te compileren.</p>
+          <p class="text-block-paragraph">Webpack is hier erg goed in en het is zelfs mogelijk om voor verschillende ontwikkelingsomgevingen verschillende instellingen te hebben. Denk hierbij aan bijvoorbeeld andere instellingen voor development dan voor live.</p>
+          <p class="text-block-paragraph">E&eacute;n van de belangrijkste redenen om met een module bundler te werken is zodat je je JavaScript mooi kunt opdelen in hapklare brokken. Webpack is een veelgebruikte keuze omdat Webpack de twee meest gebruikte varianten van JavaScript modules ondersteunt: CommonJS en AMD.</p>
+          <p class="text-block-paragraph">Andere module bundlers zoals <a href="//browserify.org/" target="_blank" class="text-block-paragraph-link">Browserify</a> en <a href="//requirejs.org/" target="_blank" class="text-block-paragraph-link">RequireJS</a> verwachten modules in &eacute;&eacute;n van de twee formaten, Webpack kan met allebei overweg.</p>
+          <p class="text-block-paragraph">Voor dit project heb ik ervoor gekozen om mijn JavaScript modules te schrijven via het CommonJS formaat.</p>
         </div>
       </div>
 
@@ -259,6 +282,7 @@
         <div class="text-block">
           <p class="text-block-section-title"></p>
           <p class="text-block-paragraph"></p>
+          <p class="text-block-p"></p>
         </div>
       </div>
 
