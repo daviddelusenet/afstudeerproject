@@ -1,0 +1,41 @@
+.intro-block {
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 120px;
+  background-color: $black;
+}
+
+  .intro-block-title {
+    position: absolute;
+    width: 100%;
+    font-family: $consolas;
+    font-size: 60px;
+    text-align: center;
+    color: $white;
+  }
+
+  .intro-block-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    fill: $white;
+  }
+
+  .intro-block-list {
+    position: absolute;
+    right: 50%;
+    bottom: 40px;
+    margin-right: -560px;
+    font-family: $lucida-bright;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: right;
+    color: $white;
+  }

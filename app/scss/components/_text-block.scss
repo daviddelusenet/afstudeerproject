@@ -65,9 +65,13 @@
   }
 
     .text-block-paragraph-sup {
-      font-size: smaller;
+      padding-left: 1px;
+      font-family: $lucida-grande;
+      font-size: 10px;
+      font-weight: bold;
       line-height: 0;
       vertical-align: super;
+      color: $valencia;
     }
 
     .text-block-paragraph-link {
@@ -75,7 +79,7 @@
       font-size: 15px;
       font-weight: bold;
       text-decoration: none;
-      color: #343648;
+      color: $bright-gray;
       transition: color 100ms ease-out;
 
       &:hover {
@@ -85,14 +89,56 @@
 
     .text-block-paragraph-code {
       position: relative;
-      top: -2px;
+      top: -1px;
       padding: 2px 5px;
-      font-family: $lucida-grande;
+      font-family: $consolas;
       font-size: 12px;
       color: $valencia;
       border: 1px solid $alto;
-      background-color: $alabaster;
       border-radius: 2px;
+      background-color: $alabaster;
+    }
+
+    .text-block-paragraph-highlight {
+      font-weight: bold;
+      color: $valencia;
+    }
+
+  .text-block-highlight {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px 160px 0 0;
+    font-family: $lucida-bright;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1.3;
+    color: $valencia;
+
+    &::before {
+      position: absolute;
+      top: 26px;
+      bottom: 6px;
+      left: -80px;
+      display: block;
+      width: 6px;
+      content: '';
+      background-color: $valencia;
+    }
+  }
+
+  .text-block-code {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: $consolas;
+    font-size: 12px;
+    line-height: 1.3;
+    border: 1px solid $alto;
+    border-radius: 2px;
+    background-color: $alabaster;
+  }
+
+    .text-block-code-comment {
+      color: $gray;
     }
 
   .text-block-list {

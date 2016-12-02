@@ -4,6 +4,6 @@
   overflow: hidden;
   width: 1200px;
   margin: 0 auto;
-  padding: 0 0 0 300px;
+  padding: calc(100vh + 40px) 0 0 300px;
   background-color: $white;
 }
