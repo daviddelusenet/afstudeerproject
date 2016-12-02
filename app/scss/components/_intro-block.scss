@@ -1,41 +1,72 @@
 .intro-block {
-  position: absolute;
-  z-index: 101;
-  top: 0;
-  width: 100%;
+  position: relative;
   min-height: 100vh;
-  padding-top: 120px;
-  background-color: $black;
+  background-color: $white;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 300px;
+    height: 100%;
+    content: '';
+    background-color: $bright-gray;
+    background-image: url("../img/david.jpg");
+    background-position: center center;
+  }
 }
 
-  .intro-block-title {
-    position: absolute;
-    width: 100%;
-    font-family: $consolas;
-    font-size: 60px;
-    text-align: center;
-    color: $white;
-  }
-
-  .intro-block-logo {
+  .intro-block-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    display: block;
-    width: 200px;
-    height: 200px;
-    margin: -100px 0 0 -100px;
-    fill: $white;
+    width: 1200px;
+    margin-left: -600px;
+    padding: 0 120px 0 420px;
+    transform: translateY(-50%);
   }
 
-  .intro-block-list {
-    position: absolute;
-    right: 50%;
-    bottom: 40px;
-    margin-right: -560px;
-    font-family: $lucida-bright;
-    font-size: 14px;
-    line-height: 1.6;
-    text-align: right;
-    color: $white;
-  }
+    .intro-block-title {
+      margin-bottom: 25px;
+      font-size: 54px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .intro-block-logo {
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 30px;
+      fill: $black;
+    }
+
+    .intro-block-divider {
+      height: 1px;
+      margin-bottom: 25px;
+      background-color: $black;
+    }
+
+    .intro-block-list {
+      display: flex;
+      font-family: $consolas;
+      font-size: 14px;
+      line-height: 1.6;
+      flex-wrap: nowrap;
+    }
+
+      .intro-block-list-item {
+        text-align: center;
+        flex: 1 1 auto;
+
+        &:first-child {
+          font-weight: bold;
+          text-align: left;
+          color: $valencia;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+      }
