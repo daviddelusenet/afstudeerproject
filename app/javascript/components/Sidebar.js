@@ -23,6 +23,8 @@ module.exports.prototype = {
 
     this.submenuLinks = this.el.querySelectorAll('.js-submenu-link');
     this.activeClass = 'sidebar-submenu-item-link--active';
+    this.isFixedClass = 'sidebar--is-fixed';
+    this.intro = document.querySelector('.js-intro-block');
 
   },
 
@@ -32,15 +34,17 @@ module.exports.prototype = {
 
   },
 
-  removeScrollEvent: function () {
-
-    window.removeEventListener('scroll', this.onScroll.bind(this));
-
-  },
-
   onScroll: function () {
 
     var scrollPos = document.body.scrollTop || document.documentElement.scrollTop;
+    var windowHeight = window.innerHeight;
+    var introHeight = this.intro.offsetHeight;
+
+    if (scrollPos > windowHeight) {
+      this.el.classList.add(this.isFixedClass);
+    } else {
+      this.el.classList.remove(this.isFixedClass);
+    }
 
     for (var i = 0; i < this.submenuLinks.length; i++) {
 
@@ -49,7 +53,7 @@ module.exports.prototype = {
 
       if (refElement) {
 
-        if (refElement.offsetTop <= scrollPos && (refElement.offsetTop + refElement.offsetHeight) > scrollPos) {
+        if ((refElement.offsetTop + introHeight) <= scrollPos && (refElement.offsetTop + refElement.offsetHeight + introHeight) > scrollPos) {
 
           this.removeActiveClasses();
           currentLink.classList.add(this.activeClass);

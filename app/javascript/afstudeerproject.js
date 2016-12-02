@@ -16,5 +16,4 @@ document.addEventListener('DOMContentLoaded', function () {
     new Sidebar(sidebar);
   }
 
-
 }, false);
