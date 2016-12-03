@@ -1,6 +1,7 @@
 .intro-block {
   position: relative;
   min-height: 100vh;
+  opacity: 0;
   background-color: $white;
 
   &::after {
