@@ -40,6 +40,9 @@ module.exports.prototype = {
       .set([this.title, this.list], {
         opacity: 0
       })
+      .set(this.list, {
+        bottom: -10
+      })
       .set(this.logo, {
         position: 'relative',
         top: '-1000px'
@@ -59,11 +62,12 @@ module.exports.prototype = {
       .to(this.title, 0.3, {
         opacity: 1,
         ease: Quad.easeInOut
-      }, '-=0.3')
+      }, '-=0.1')
       .to(this.list, 0.3, {
         opacity: 1,
+        bottom: 0,
         ease: Quad.easeInOut
-      })
+      }, '-=0.2')
 
 
   }
