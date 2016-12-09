@@ -13,7 +13,7 @@
   }
 
   &#{$pr-forms}_FormComponent--has-error {
-    .MimotoCMS_forms_input_textline,
+    #{$pr-input}_Textline,
     .form-select,
     .form-checkbox::after,
     .form-radiobutton::after,
