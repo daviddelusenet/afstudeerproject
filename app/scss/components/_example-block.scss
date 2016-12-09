@@ -1,6 +1,4 @@
 .example-block {
-  @include clearfix;
-  position: relative;
   padding: 20px 120px 0;
 }
 
@@ -45,7 +43,7 @@
 
     .example-block-checkbox {
       display: block;
-      margin-right: 5px;
+      margin-right: 10px;
     }
 
   .example-block-toggle-content {
@@ -54,4 +52,26 @@
 
   .example-block-toggle-content--active {
     display: block;
+  }
+
+  .example-block-button {
+    display: inline-block;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    opacity: .8;
+    color: $valencia;
+    border: 2px solid $valencia;
+    border-radius: 0;
+    outline: none;
+    background: none;
+    -webkit-appearance: none;
+
+    &:hover {
+      opacity: 1;
+    }
   }
