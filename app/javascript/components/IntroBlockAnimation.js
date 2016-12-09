@@ -67,8 +67,7 @@ module.exports.prototype = {
         opacity: 1,
         bottom: 0,
         ease: Quad.easeInOut
-      }, '-=0.2')
-
+      }, '-=0.2');
 
   }
 
