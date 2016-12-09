@@ -1,0 +1,136 @@
+#{$pr-forms}_FormComponent {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  font-family: $font-family-futura;
+  line-height: 1.5;
+
+  &#{$pr-forms}_FormComponent--is-validated {
+    .#{$pr-forms}_FormComponent-title {
+      color: $tower-gray;
+    }
+  }
+
+  &#{$pr-forms}_FormComponent--has-error {
+    .MimotoCMS_forms_input_textline,
+    .form-select,
+    .form-checkbox::after,
+    .form-radiobutton::after,
+    .form-image-upload {
+      border-color: $fuzzy-wuzzy-brown;
+    }
+  }
+}
+
+#{$pr-forms}_FormComponent-header {
+  display: flex;
+  padding-right: percentage(1 / 3);
+  align-items: center;
+}
+
+#{$pr-forms}_FormComponent-title {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 0 20px 0 0;
+  font-family: $font-family-futura;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba($black, .9);
+}
+
+#{$pr-forms}_FormComponent-title-information {
+  font-family: $font-family-helvetica;
+  color: rgba($black, .5);
+}
+
+#{$pr-forms}_FormComponent-title-icon {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  display: none;
+  width: 15px;
+  height: 30px;
+}
+
+#{$pr-forms}_FormComponent-title-iconicon-loading {
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-size: 15px 15px;
+}
+
+#{$pr-forms}_FormComponent-title-icon--checkmark {
+  display: block;
+  fill: $tower-gray;
+}
+
+#{$pr-forms}_FormComponent-title-icon--warning {
+  display: block;
+  fill: $fuzzy-wuzzy-brown;
+}
+
+#{$pr-forms}_FormComponent-button {
+  display: flex;
+  margin: 0 0 10px;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+#{$pr-forms}_FormComponent-content {
+  display: flex;
+  flex-wrap: wrap;
+
+  &#{$pr-forms}_FormComponent-content--no-description {
+    padding: 0 percentage(1 / 3) 0 0;
+  }
+}
+
+#{$pr-forms}_FormComponent-element {
+  width: percentage(2 / 3);
+  min-width: 400px;
+  flex: 1 1 auto;
+}
+
+#{$pr-forms}_FormComponent-description {
+  position: relative;
+  width: percentage(1 / 3);
+  min-width: 200px;
+  margin: 0 0 10px;
+  padding: 10px 0 0 15px;
+  font-size: 13px;
+  color: rgba($black, 5);
+  flex: 1 1 auto;
+}
+
+#{$pr-forms}_FormComponent-description::before {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  display: block;
+  width: 100px;
+  height: 1px;
+  content: '';
+  background: rgba($black, .15);
+}
+
+#{$pr-forms}_FormComponent-element-container {
+  display: flex;
+  margin: 0 0 10px;
+}
+
+#{$pr-forms}_FormComponent-element-label {
+  padding: 0 0 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba($black, .9);
+  flex: 0 1 auto;
+}
+
+#{$pr-forms}_FormComponent-element-error {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: $fuzzy-wuzzy-brown;
+}
+

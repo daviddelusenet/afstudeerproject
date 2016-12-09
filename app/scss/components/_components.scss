@@ -1,6 +1,13 @@
 @import 'embed-block';
+@import 'example-block';
 @import 'footnote';
 @import 'image-block';
 @import 'intro-block';
 @import 'slideshow-block';
 @import 'text-block';
+
+@import 'mimoto/button';
+@import 'mimoto/checkbox';
+@import 'mimoto/formcomponent';
+@import 'mimoto/radiobutton';
+@import 'mimoto/textline';

@@ -1,0 +1,57 @@
+.example-block {
+  @include clearfix;
+  position: relative;
+  padding: 20px 120px 0;
+}
+
+  .example-block-label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: $lucida-grande;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $bright-gray;
+    transition: color 100ms ease-out;
+  }
+
+  .example-block-inputs {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+
+    .example-block-label {
+      margin-bottom: 0;
+    }
+  }
+
+    .example-block-input {
+      display: block;
+      width: 50%;
+      height: 40px;
+      margin-right: 5px;
+      padding: 0 10px;
+      font-family: $lucida-bright;
+      font-size: 15px;
+      border: 1px solid $alto;
+      border-radius: 2px;
+      outline: none;
+      background-color: $alabaster;
+
+      &:last-child {
+        margin: 0 0 0 5px;
+      }
+    }
+
+    .example-block-checkbox {
+      display: block;
+      margin-right: 5px;
+    }
+
+  .example-block-toggle-content {
+    display: none;
+  }
+
+  .example-block-toggle-content--active {
+    display: block;
+  }
