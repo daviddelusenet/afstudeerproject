@@ -13,10 +13,12 @@ module.exports = function (env) {
     context: paths.jsSrc,
     plugins: [
       new webpack.ProvidePlugin({
+        EH: 'ErrorHandling',
+        FV: 'FormValidation'
       })
     ],
     resolve: {
-      modulesDirectories: ['node_modules'],
+      modulesDirectories: ['node_modules', 'app/javascript/mimoto/utils'],
       extensions: ['', '.js']
     },
     entry: {
