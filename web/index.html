@@ -31,6 +31,14 @@
         <symbol id="ico-logo" viewBox="0 0 74 74">
           <path d="M0,0v21.2L21.2,0H0z M31.8,0L0,31.8v21.1L52.9,0H31.8z M74,74V52.8L52.8,74H74z M42.3,74L74,42.3V21.1L21.1,74H42.3z M63.4,0L0,63.4V74h10.6L74,10.6V0H63.4z"/>
         </symbol>
+
+        <symbol id="ico-warning" viewBox="0 0 18 36">
+          <path d="M17.72,23.47l-7.59-12a1.25,1.25,0,0,0-2.25,0l-7.59,12c-.63,1-.17,1.82,1,1.82H16.69C17.89,25.29,18.35,24.47,17.72,23.47ZM9,23a1.12,1.12,0,1,1,1.12-1.12A1.12,1.12,0,0,1,9,23Zm1.12-3.37H7.88v-4.5h2.25Z"/>
+        </symbol>
+
+        <symbol id="ico-checkmark" viewBox="0 0 18 36">
+          <path d="M17.72,12.48l-1.29-1.4A.81.81,0,0,0,15.28,11l-.06.06h0l-8.87,9.5L2.76,16.72a.81.81,0,0,0-1.14-.06l-.06.06L.25,18.12a1,1,0,0,0,0,1.29h0L5.1,24.62a1.69,1.69,0,0,0,2.38.13l.13-.13L17.72,13.85A1,1,0,0,0,17.72,12.48Z"/>
+        </symbol>
       </defs>
     </svg>
   </div>
@@ -70,7 +78,7 @@
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#insteek">Insteek</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#development-tools">Development tools</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#samenvatting">Samenvatting</a></li>
-            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#uitdaging">Uitdagingen</a></li>
+            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#uitdagingen">Uitdagingen</a></li>
           </ul>
         </li>
 
@@ -112,7 +120,7 @@
 
       <div id="voorwoord">
         <div class="text-block">
-          <h1 class="text-block-main-title"><span class="text-block-main-title-number">1</span>Context</h1>
+          <h1 class="text-block-title"><span class="text-block-title-number">1</span>Context</h1>
           <p class="text-block-section-title">Voorwoord</p>
           <p class="text-block-paragraph">De afgelopen maanden zijn een erg uitdagende en leuke periode geweest. Ik ben druk bezig geweest met mijn afstudeerproject en combineerde dit met mijn baan bij Momkai. Ook heb ik in mijn vrije tijd nog de nodige uurtjes op een basketbalveld doorgebracht.</p>
           <p class="text-block-paragraph">Ik wil dan ook mijn vriendin Katheleyne bedanken voor haar begrip als ik weer eens moe thuiskwam na een lange dag.</p>
@@ -267,7 +275,7 @@ transition: all 100ms ease;</pre>
 
       <div id="insteek">
         <div class="text-block">
-          <h1 class="text-block-main-title"><span class="text-block-main-title-number">2</span>Ontwerpproces</h1>
+          <h1 class="text-block-title"><span class="text-block-title-number">2</span>Ontwerpproces</h1>
           <p class="text-block-section-title">Insteek</p>
           <p class="text-block-paragraph">Op voorhand wist ik dat dit een uitdagend project zou worden. Er was erg veel vrijheid waar ik gebruik van kon maken, wat dingen er soms niet makkelijker op maakte.</p>
           <p class="text-block-paragraph">Het was aan het begin namelijk nog niet helemaal duidelijk wat er allemaal gebouwd diende te worden. We wisten dat we formulier elementen nodig zouden hebben. Ook hadden we natuurlijk een interface nodig om deze elementen in te kunnen gebruiken. Wat we nog niet wisten waren de specifieke componenten die we hier voor nodig zouden hebben.</p>
@@ -320,15 +328,132 @@ transition: all 100ms ease;</pre>
           <p class="text-block-paragraph">Webpack is hier erg goed in en het is zelfs mogelijk om voor verschillende ontwikkelingsomgevingen verschillende instellingen te hebben. Denk hierbij aan bijvoorbeeld andere instellingen voor development dan voor live.</p>
           <p class="text-block-paragraph">E&eacute;n van de belangrijkste redenen om met een module bundler te werken is zodat je je JavaScript mooi kunt opdelen in hapklare brokken. Webpack is een veelgebruikte keuze omdat Webpack de twee meest gebruikte varianten van JavaScript modules ondersteunt: CommonJS en AMD.</p>
           <p class="text-block-paragraph">Andere module bundlers zoals <a href="//browserify.org/" target="_blank" class="text-block-paragraph-link">Browserify</a> en <a href="//requirejs.org/" target="_blank" class="text-block-paragraph-link">RequireJS</a> verwachten modules in &eacute;&eacute;n van de twee formaten, Webpack kan met allebei overweg.</p>
-          <p class="text-block-paragraph">Voor dit project heb ik ervoor gekozen om mijn JavaScript modules te schrijven via het CommonJS formaat.</p>
+          <p class="text-block-paragraph">Voor dit project heb ik ervoor gekozen om mijn JavaScript modules te schrijven via het CommonJS formaat. Waarom ik dit heb gedaan licht ik later nog toe.</p>
+          <p class="text-block-subtitle">Overige tools</p>
+          <p class="text-block-paragraph">Buiten al deze tools heb ik natuurlijk ook nog wat programma's gebruikt tijdens mijn proces. Om mijn code te schrijven heb ik het programma <a href="//www.jetbrains.com/phpstorm/" target="_blank" class="text-block-paragraph-link">PhpStorm</a> gebruikt. PhpStorm biedt ontzettend veel functionaliteit en is dan ook een erg fijn programma om mee te ontwikkelen.</p>
+          <p class="text-block-paragraph">Ook werkte ik met een lokale database. Om aanpassingen in deze database te kunnen doen gebruikte ik het programma <a href="//www.sequelpro.com/" target="_blank" class="text-block-paragraph-link">Sequel Pro</a>. Met Sequel Pro is het erg simpel om te werken met MySQL databases.</p>
+          <p class="text-block-paragraph">Om de designs die gemaakt werden te bekijken gebruikte ik uiteraard het programma <a href="//www.adobe.com/photoshop" target="_blank" class="text-block-paragraph-link">Adobe Photoshop</a>. Ik ben geen grote fan van Photoshop maar kan er goed genoeg mee overweg om er geen last van te hebben.</p>
         </div>
+      </div>
+
+      <div id="samenvatting">
+        <div class="text-block">
+          <p class="text-block-section-title">Samenvatting</p>
+          <p class="text-block-paragraph"></p>
+        </div>
+      </div>
+
+      <div id="uitdagingen">
+        <div class="text-block">
+          <p class="text-block-section-title">Uitdagingen</p>
+          <p class="text-block-section-title">Component naamgeving</p>
+          <p class="text-block-paragraph">Bij een modulaire applicatie is correcte naamgeving erg belangrijk. Aangezien elk component uniek is kan een component naam niet meer dan &eacute;&eacute;n keer gebruikt worden. Deze component naam wordt dan ook gebruikt als CSS selector. Bij complexe applicaties zoals Mimoto kan dit problemen opleveren.</p>
+          <p class="text-block-paragraph">In toekomstige versies van Mimoto is het namelijk de bedoeling dat Mimoto over een website heen geprojecteerd kan worden. Dit willen we doen zodat inline editing van content mogelijk is. Als wij dan een component naam zoals <code class="text-block-paragraph-code">button</code> gebruiken kan dit conflicten opleveren met de styling van de desbetreffende website. Gebruikt de desbetreffende website dan namelijk ook de component naam <code class="text-block-paragraph-code">button</code> dan wordt onze styling overschreven.</p>
+          <p class="text-block-paragraph">Oorspronkelijk was ik van mening dat met goede component namen je dit probleem vrijwel niet tegen zou komen. Om dingen nog veiliger te maken was ik aan het nadenken over een prefix zoals bijvoorbeeld <code class="text-block-paragraph-code">mi</code>. Om het button component als voorbeeld te nemen, de component-naam zou dan <code class="text-block-paragraph-code">mi-button</code> worden.</p>
+          <p class="text-block-paragraph">Sebastian had hier echter een ander idee over. Component namen zoals <code class="text-block-paragraph-code">mi-button</code> zouden volgens hem alsnog relatief makkelijk conflicten kunnen opleveren. Aangezien zijn achtergrond meer ligt in de klassieke programmeertalen opperde hij de suggestie om locaties in de component namen te gaan gebruiken.</p>
+          <p class="text-block-paragraph">Ik was het hier oorspronkelijk niet mee eens. In mijn ogen heeft de naam van een component niks te maken met waar het zich bevindt. Om ons meningsverschil op te lossen hebben we toen een meeting ingepland met onze front-end collega Marc.</p>
+          <p class="text-block-paragraph">In deze meeting hebben Sebastian en ik allebei ons zegje gedaan. Sebastian heeft hier zijn standpunt uitgebreid toegelicht en heeft uiteindelijk Marc en mij met de volgende argumenten weten te overtuigen:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item">Locaties gebruiken in component namen zorgt ervoor dat het onmogelijk is om conflicten te krijgen met andere component namen.</li>
+            <li class="text-block-list-item">E&eacute;n blik op de component naam en je weet precies in welke folder dit component te vinden is.</li>
+            <li class="text-block-list-item">Consistentie met component namen in andere programmeertalen (Sebastian hanteerde dit principe al in de PHP en JavaScript die hij schreef).</li>
+          </ul>
+          <p class="text-block-paragraph">Deze beslissing betekende wel een hoop refactoring werkzaamheden. Alle HTML en CSS die ik tot dit punt had geschreven diende aangepast te worden. Hieronder volgt een voorbeeld van hoe we oorspronkelijk component CSS hadden opgebouwd:</p>
+          <pre class="text-block-code">
+.button {} <span class="text-block-code-comment">// Button component selector</span>
+  .button-text {} <span class="text-block-code-comment">// Children of button component</span>
+  .button-icon {}</pre>
+          <p class="text-block-paragraph">Na de refactoring zag de CSS er zo uit:</p>
+          <pre class="text-block-code">
+.MimotoCMS_forms_input_button {}
+  mimoto cms forms input button text {}
+  .MimotoCMS_forms_input_button-icon {}</pre>
+          <p class="text-block-paragraph">Zoals te zien zijn de class namen een stuk langer dan voorheen. Wel zijn ze een stuk specifieker en ook is het via de class naam te zien waar het component zich precies bevindt. Al met al ben ik dan ook erg tevreden over deze oplossing.</p>
+        </div>
+      </div>
+
+      <div id="omschrijving">
+        <div class="text-block">
+          <h1 class="text-block-title"><span class="text-block-title-number">3</span>Test fase</h1>
+          <p class="text-block-section-title">Omschrijving</p>
+          <p class="text-block-paragraph"></p>
+        </div>
+      </div>
+
+      <div id="resultaten">
+        <div class="text-block">
+          <p class="text-block-section-title">Resultaten</p>
+          <p class="text-block-paragraph"></p>
+        </div>
+      </div>
+
+      <div id="conclusies">
+        <div class="text-block">
+          <p class="text-block-section-title">Conclusies</p>
+          <p class="text-block-paragraph"></p>
+        </div>
+      </div>
+
+      <div id="uitleg-componenten">
+        <div class="text-block">
+          <h1 class="text-block-title"><span class="text-block-title-number">4</span>Product presentatie</h1>
+          <p class="text-block-paragraph">Omdat het voor mensen zonder technische achtergrond soms moeilijk te begrijpen is wat ik precies gedaan heb heb ik een paar voorbeelden gemaakt van mijn werk. Hieronder ziet je een formulier waarmee je jouw eigen validatie kunt toepassen op het invoerveld daaronder. Typ maar eens wat cijfers in de invoervelden, druk op 'voeg validatie toe' en typ in het invoerveld!</p>
+        </div>
+
+        <div class="example-block js-example-textline">
+          <label class="example-block-label">Lengte van de invoer</label>
+          <div class="example-block-inputs">
+            <input class="example-block-input js-input" id="min-length" placeholder="Minimaal aantal characters"
+                   type="text"/>
+            <input class="example-block-input js-input" id="max-length" placeholder="Maximaal aantal characters"
+                   type="text"/>
+          </div>
+          <div class="example-block-inputs">
+            <input class="example-block-checkbox js-input js-toggle" data-target="js-numbers-toggle-target" type="checkbox" id="no-numbers"><label for="no-numbers" class="example-block-label">Nummers toestaan</label>
+          </div>
+          <div class="example-block-toggle-content js-numbers-toggle-target">
+            <label class="example-block-label">Aantal nummmers</label>
+            <div class="example-block-inputs">
+              <input class="example-block-input js-input" id="min-numbers" placeholder="Minimaal aantal nummers"
+                     type="text"/>
+              <input class="example-block-input js-input" id="max-numbers" placeholder="Maximaal aantal nummers"
+                     type="text"/>
+            </div>
+          </div>
+
+          <div class="example-block-inputs">
+            <input class="example-block-checkbox js-input js-toggle" data-target="js-special-characters-toggle-target" type="checkbox" id="no-special-characters"><label for="no-special-characters" class="example-block-label">Speciale characters toestaan</label>
+          </div>
+          <div class="example-block-toggle-content js-special-characters-toggle-target">
+            <label class="example-block-label">Aantal speciale characters</label>
+            <div class="example-block-inputs">
+              <input class="example-block-input js-input" id="min-special-characters" placeholder="Minimaal aantal speciale characters" type="text"/>
+              <input class="example-block-input js-input" id="max-special-characters" placeholder="Maximaal aantal speciale characters" type="text"/>
+            </div>
+          </div>
+
+
+          <button class="example-block-button js-submit">Voeg validatie toe</button>
+        </div>
+
+        <form class="js-form">
+          <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
+            <label for="" class="MimotoCMS_forms_FormComponent-title">Custom validatie voorbeeld <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+            <div class="MimotoCMS_forms_FormComponent-content">
+
+              <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
+                <input type="text" class="MimotoCMS_forms_input_textline js-textline js-example-textline-target" placeholder="Typ hier">
+              </div>
+              <p class="MimotoCMS_forms_FormComponent-description">Jouw eigen custom validatie</p>
+            </div>
+          </div>
+        </form>
       </div>
 
       <div id="">
         <div class="text-block">
           <p class="text-block-section-title"></p>
           <p class="text-block-paragraph"></p>
-          <p class="text-block-p"></p>
         </div>
       </div>
 
