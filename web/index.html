@@ -400,7 +400,7 @@ transition: all 100ms ease;</pre>
           <p class="text-block-paragraph">Omdat het voor mensen zonder technische achtergrond soms moeilijk te begrijpen is wat ik precies gedaan heb heb ik een paar voorbeelden gemaakt van mijn werk. Hieronder ziet je een formulier waarmee je jouw eigen validatie kunt toepassen op het invoerveld daaronder. Typ maar eens wat cijfers in de invoervelden, druk op 'voeg validatie toe' en typ in het invoerveld!</p>
         </div>
 
-        <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target1">
+        <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target1" data-form="js-form1">
           <label class="example-block-label">Lengte van de invoer</label>
           <div class="example-block-inputs">
             <input class="example-block-input js-input" id="min-length" placeholder="Minimaal aantal characters" type="text"/>
@@ -433,7 +433,7 @@ transition: all 100ms ease;</pre>
         </div>
 
         <div class="preview-block">
-          <form class="js-form">
+          <form class="js-form js-form1">
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
               <label for="" class="MimotoCMS_forms_FormComponent-title">Custom validatie voorbeeld <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
@@ -447,7 +447,7 @@ transition: all 100ms ease;</pre>
           </form>
         </div>
 
-        <div class="example-block js-example" data-example-type="checkbox" data-example-target="js-example-target2">
+        <div class="example-block js-example" data-example-type="checkbox" data-example-target="js-example-target2" data-form="js-form2">
           <label class="example-block-label">Aantal selecties</label>
           <div class="example-block-inputs">
             <input class="example-block-input js-input" id="min-checked" placeholder="Minimaal aantal selecties" type="text"/>
@@ -456,52 +456,53 @@ transition: all 100ms ease;</pre>
           <button class="example-block-button js-submit">Voeg validatie toe</button>
         </div>
         <div class="preview-block">
-          <form class="js-form">
+          <form class="js-form js-form2">
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-checkbox">
-            <div class="MimotoCMS_forms_FormComponent-header">
-              <label for="" class="MimotoCMS_forms_FormComponent-title">Je favoriete eten <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
-            </div>
+              <div class="MimotoCMS_forms_FormComponent-header">
+                <label for="" class="MimotoCMS_forms_FormComponent-title">Je favoriete eten <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              </div>
 
-            <div class="MimotoCMS_forms_FormComponent-content form-component-content--no-description">
-              <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
-                <div class="MimotoCMS_forms_FormComponent-element-container">
-                  <div class="MimotoCMS_forms_input_Checkbox-container">
-                    <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox js-example-target2" />
-                    <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+              <div class="MimotoCMS_forms_FormComponent-content form-component-content--no-description">
+                <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
+                  <div class="MimotoCMS_forms_FormComponent-element-container">
+                    <div class="MimotoCMS_forms_input_Checkbox-container">
+                      <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox js-example-target2" />
+                      <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                    </div>
+                    <label for="" class="MimotoCMS_forms_FormComponent-element-label">Patat</label>
                   </div>
-                  <label for="" class="MimotoCMS_forms_FormComponent-element-label">Patat</label>
-                </div>
-                <div class="MimotoCMS_forms_FormComponent-element-container">
-                  <div class="MimotoCMS_forms_input_Checkbox-container">
-                    <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox" />
-                    <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                  <div class="MimotoCMS_forms_FormComponent-element-container">
+                    <div class="MimotoCMS_forms_input_Checkbox-container">
+                      <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox" />
+                      <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                    </div>
+                    <label for="" class="MimotoCMS_forms_FormComponent-element-label">Spareribs</label>
                   </div>
-                  <label for="" class="MimotoCMS_forms_FormComponent-element-label">Spareribs</label>
-                </div>
-                <div class="MimotoCMS_forms_FormComponent-element-container">
-                  <div class="MimotoCMS_forms_input_Checkbox-container">
-                    <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox" />
-                    <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                  <div class="MimotoCMS_forms_FormComponent-element-container">
+                    <div class="MimotoCMS_forms_input_Checkbox-container">
+                      <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox" />
+                      <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                    </div>
+                    <label for="" class="MimotoCMS_forms_FormComponent-element-label">Pizza</label>
                   </div>
-                  <label for="" class="MimotoCMS_forms_FormComponent-element-label">Pizza</label>
-                </div>
-                <div class="MimotoCMS_forms_FormComponent-element-container">
-                  <div class="MimotoCMS_forms_input_Checkbox-container">
-                    <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox" />
-                    <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                  <div class="MimotoCMS_forms_FormComponent-element-container">
+                    <div class="MimotoCMS_forms_input_Checkbox-container">
+                      <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox" />
+                      <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                    </div>
+                    <label for="" class="MimotoCMS_forms_FormComponent-element-label">Kip</label>
                   </div>
-                  <label for="" class="MimotoCMS_forms_FormComponent-element-label">Kip</label>
-                </div>
-                <div class="MimotoCMS_forms_FormComponent-element-container">
-                  <div class="MimotoCMS_forms_input_Checkbox-container">
-                    <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox" />
-                    <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                  <div class="MimotoCMS_forms_FormComponent-element-container">
+                    <div class="MimotoCMS_forms_input_Checkbox-container">
+                      <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox" />
+                      <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
+                    </div>
+                    <label for="" class="MimotoCMS_forms_FormComponent-element-label">Steak</label>
                   </div>
-                  <label for="" class="MimotoCMS_forms_FormComponent-element-label">Steak</label>
                 </div>
               </div>
+
             </div>
-          </div>
           </form>
         </div>
       </div>

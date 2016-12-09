@@ -21,11 +21,14 @@ module.exports.prototype = {
   setVariables: function () {
 
     this.type = this.el.getAttribute('data-example-type');
+    this.formClass = '.' + this.el.getAttribute('data-form');
     this.targetClass = '.' + this.el.getAttribute('data-example-target');
     this.contentActiveClass = 'example-block-toggle-content--active';
 
+    console.log(this.formClass);
     this.inputs = this.el.querySelectorAll('.js-input');
     this.submit = this.el.querySelector('.js-submit');
+    this.form = document.querySelector(this.formClass);
     this.target = document.querySelector(this.targetClass);
 
     this.toggles = this.el.querySelectorAll('.js-toggle');
@@ -99,12 +102,23 @@ module.exports.prototype = {
       delete this.options['max-numbers'];
     }
 
+    if (this.options['no-special-characters'] == '') {
+      delete this.options['min-special-characters'];
+      delete this.options['max-special-characters'];
+    }
+
     for (var key in this.options) {
       if (this.options.hasOwnProperty(key)) {
         this.target.setAttribute('data-fv-' + key, this.options[key]);
         console.log(this.target);
       }
     }
+
+    // Create the event
+    var event = new CustomEvent("validate", { "detail": "Example of an event" });
+
+    // Dispatch/Trigger/Fire the event
+    this.form.dispatchEvent(event);
 
   },
 
