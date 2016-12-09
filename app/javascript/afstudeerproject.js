@@ -4,7 +4,7 @@ var IntroBlockAnimation = require('./components/IntroBlockAnimation');
 
 // Mimoto views
 var FormView = require('./mimoto/views/form-components/Form');
-var ExampleTextline = require('./mimoto/examples/ExampleTextline');
+var ExampleView = require('./mimoto/views/Example');
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -12,19 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
   var sidebar = document.querySelector('.js-sidebar');
   var introBlock = document.querySelector('.js-intro-block');
 
-  if (slideshows.length) {
-    for (var i = 0; i < slideshows.length; i++) {
+  if (slideshows.length)
+    for (var i = 0; i < slideshows.length; i++)
       new Slideshow(slideshows[i]);
-    }
-  }
 
-  if (sidebar) new Sidebar(sidebar);
 
-  if (introBlock) new IntroBlockAnimation(introBlock);
+  if (sidebar)
+    new Sidebar(sidebar);
+
+
+  if (introBlock)
+    new IntroBlockAnimation(introBlock);
+
 
   // Mimoto examples
   var forms = document.querySelectorAll('.js-form');
-  var exampleTextline = document.querySelector('.js-example-textline');
+  var examples = document.querySelectorAll('.js-example');
 
   EH.init({
     "element": "p",
@@ -36,10 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
     "iconValidatedClass": "MimotoCMS_forms_FormComponent-title-icon--checkmark"
   });
 
-  for (i = 0; i < forms.length; i++) {
+  for (i = 0; i < forms.length; i++)
     new FormView(forms[i]);
-  }
 
-  if (exampleTextline) new ExampleTextline(exampleTextline);
+
+  if (examples.length)
+    for (i = 0; i < examples.length; i++)
+      new ExampleView(examples[i]);
+
 
 }, false);

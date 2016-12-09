@@ -1,5 +1,5 @@
 .example-block {
-  padding: 20px 120px 0;
+  padding: 20px 200px 0 120px;
 }
 
   .example-block-label {
@@ -31,6 +31,7 @@
       padding: 0 10px;
       font-family: $lucida-bright;
       font-size: 15px;
+      line-height: 38px;
       border: 1px solid $alto;
       border-radius: 2px;
       outline: none;

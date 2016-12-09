@@ -11,7 +11,7 @@ module.exports.prototype = {
 
   init: function () {
 
-    console.log('Init Example textline');
+    console.log('Init Example');
 
     this.setVariables();
     this.addEventListeners();
@@ -20,11 +20,13 @@ module.exports.prototype = {
 
   setVariables: function () {
 
+    this.type = this.el.getAttribute('data-example-type');
+    this.targetClass = '.' + this.el.getAttribute('data-example-target');
     this.contentActiveClass = 'example-block-toggle-content--active';
 
     this.inputs = this.el.querySelectorAll('.js-input');
     this.submit = this.el.querySelector('.js-submit');
-    this.target = document.querySelector('.js-example-textline-target');
+    this.target = document.querySelector(this.targetClass);
 
     this.toggles = this.el.querySelectorAll('.js-toggle');
 
