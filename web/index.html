@@ -390,12 +390,12 @@ var headerView = require('./views/Header'); <span class="text-block-code-comment
 
 document.addEventListener('DOMContentLoaded', function () { <span class="text-block-code-comment">// JavaScript binnen dit blok wordt pas uitgevoerd wanneer de pagina geladen is</span>
 
-    var navigation = document.querySelector('.js-navigation'); <span class="text-block-code-comment">// Variabelen waarin HTML elementen worden opgeslagen</span>
-    var header = document.querySelector('.js-header');
+  var navigation = document.querySelector('.js-navigation'); <span class="text-block-code-comment">// Variabelen waarin HTML elementen worden opgeslagen</span>
+  var header = document.querySelector('.js-header');
 
-    if (navigation && header) { <span class="text-block-code-comment">// Check of de HTML elementen die nodig zijn voor de HeaderView module bestaan</span>
-        new HeaderView(header); <span class="text-block-code-comment">// Initieer HeaderView module</span>
-    }
+  if (navigation && header) { <span class="text-block-code-comment">// Check of de HTML elementen die nodig zijn voor de HeaderView module bestaan</span>
+    new HeaderView(header); <span class="text-block-code-comment">// Initieer HeaderView module</span>
+  }
 
 }, false);</pre>
         </div>
