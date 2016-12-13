@@ -87,21 +87,16 @@
           <ul class="sidebar-submenu">
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#omschrijving">Omschrijving</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#resultaten">Resultaten</a></li>
-            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#conclusies">Conclusies</a></li>
-          </ul>
-        </li>
-
-        <li class="sidebar-menu-item">
-          <p class="sidebar-menu-item-title">Revisie</p>
-          <ul class="sidebar-submenu">
-            <!--<li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href=""></a></li>-->
           </ul>
         </li>
 
         <li class="sidebar-menu-item">
           <p class="sidebar-menu-item-title">Product presentatie</p>
           <ul class="sidebar-submenu">
-            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#uitleg-componenten">Uitleg componenten</a></li>
+            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#uitleg-libraries">Uitleg libraries</a></li>
+            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#demo-componenten">Demo componenten</a></li>
+            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#prototype">Prototype</a></li>
+            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#conclusies">Conclusies</a></li>
           </ul>
         </li>
 
@@ -346,7 +341,7 @@ transition: all 100ms ease;</pre>
       <div id="uitdagingen">
         <div class="text-block">
           <p class="text-block-section-title">Uitdagingen</p>
-          <p class="text-block-section-title">Component naamgeving</p>
+          <p class="text-block-subtitle">Component naamgeving</p>
           <p class="text-block-paragraph">Bij een modulaire applicatie is correcte naamgeving erg belangrijk. Aangezien elk component uniek is kan een component naam niet meer dan &eacute;&eacute;n keer gebruikt worden. Deze component naam wordt dan ook gebruikt als CSS selector. Bij complexe applicaties zoals Mimoto kan dit problemen opleveren.</p>
           <p class="text-block-paragraph">In toekomstige versies van Mimoto is het namelijk de bedoeling dat Mimoto over een website heen geprojecteerd kan worden. Dit willen we doen zodat inline editing van content mogelijk is. Als wij dan een component naam zoals <code class="text-block-paragraph-code">button</code> gebruiken kan dit conflicten opleveren met de styling van de desbetreffende website. Gebruikt de desbetreffende website dan namelijk ook de component naam <code class="text-block-paragraph-code">button</code> dan wordt onze styling overschreven.</p>
           <p class="text-block-paragraph">Oorspronkelijk was ik van mening dat met goede component namen je dit probleem vrijwel niet tegen zou komen. Om dingen nog veiliger te maken was ik aan het nadenken over een prefix zoals bijvoorbeeld <code class="text-block-paragraph-code">mi</code>. Om het button component als voorbeeld te nemen, de component-naam zou dan <code class="text-block-paragraph-code">mi-button</code> worden.</p>
@@ -369,6 +364,40 @@ transition: all 100ms ease;</pre>
   mimoto cms forms input button text {}
   .MimotoCMS_forms_input_button-icon {}</pre>
           <p class="text-block-paragraph">Zoals te zien zijn de class namen een stuk langer dan voorheen. Wel zijn ze een stuk specifieker en ook is het via de class naam te zien waar het component zich precies bevindt. Al met al ben ik dan ook erg tevreden over deze oplossing.</p>
+          <p class="text-block-subtitle">JavaScript module setup</p>
+          <p class="text-block-paragraph">Bij vrijwel alle Momkai projecten wordt er gebruik gemaakt van de open-source <a href="//conditionerjs.com/" target="_blank" class="text-block-paragraph-link">Conditioner.js</a> library. Met deze library is het mogelijk om JavaScript modules in te laden wanneer er aan bepaalde condities voldaan wordt.</p>
+          <p class="text-block-paragraph">In de praktijk ziet dit er als volgt uit:</p>
+          <pre class="text-block-code">&lt;a href=&quot;http://maps.google.com/?ll=51.741,3.822&quot; data-module=&quot;ui/Map&quot; data-conditions=&quot;media:{(min-width:40em)} and element:{was visible}&quot;&gt; ... &lt;/a&gt;</pre>
+          <p class="text-block-paragraph">Als je geen condities instelt (zoals wij over het algemeen doen bij Momkai) wordt de JavaScript gewoon geladen wanneer het component waar de JavaScript bij hoort gebruikt wordt. Dit is handig zodat je geen if-statements hoeft te schrijven in je initiatie JavaScript bestand.</p>
+          <p class="text-block-paragraph">Het was dus ook de bedoeling om Conditioner te gaan gebruiken bij dit project. Echter, toen ik bezig was met de opzet van mijn development setup kreeg ik Conditioner niet werkend. Na wat onderzoek gedaan te hebben kwam ik tot de conclusie dat wij een custom build van Conditioner gebruikten zodat het mogelijk was om JavaScript modules te schrijven in het <a href="//en.wikipedia.org/wiki/CommonJS" target="_blank" class="text-block-paragraph-link">CommonJS</a> formaat. Oorspronkelijk ondersteunt Conditioner alleen <a href="//en.wikipedia.org/wiki/Asynchronous_module_definition" target="_blank" class="text-block-paragraph-link">AMD</a> JavaScript modules.</p>
+          <p class="text-block-paragraph">Normaliter schreef ik mijn JavaScript modules altijd via het CommonJS formaat. Aangezien ik Conditioner graag wou gebruiken besloot ik om voor dit project mijn JavaScript modules via het AMD formaat te schrijven.</p>
+          <p class="text-block-paragraph">Echter kreeg ik Conditioner alsnog niet werkend in combinatie met Webpack. Conditioner heeft om te kunnen werken een loader zoals bijvoorbeeld RequireJS nodig. Echter kan Webpack alles zelf al wat RequireJS ook kan dus is het nogal raar om verschillende dingen te gebruiken die hetzelfde doen.</p>
+          <p class="text-block-paragraph">Om mijn probleem op te lossen besloot ik om via Github contact te zoeken met de ontwikkelaar van Conditioner. Daar stelde ik hem de volgende <a href="//github.com/rikschennink/conditioner/issues/98" target="_blank" class="text-block-paragraph-link">vraag</a>.</p>
+          <p class="text-block-paragraph">Na een paar berichten heen en weer kreeg ik eindelijk een werkend voorbeeld van hoe het mogelijk was om Conditioner te gebruiken in combinatie met Webpack. Dit voorbeeld was echter zo ingewikkeld en achterhaald dat ik besloten heb om Conditioner niet te gebruiken binnen Mimoto. Voor deze beslissing had ik de volgende argumenten:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item">Conditioner heeft een extra loader nodig om te functioneren terwijl Webpack al alles kan wat die loaders ook kunnen. Het gebruik van een extra loader is dan ook overkill.</li>
+            <li class="text-block-list-item">De performance van Conditioner is minder goed dan de 'oldskool' manier van if-statements.</li>
+            <li class="text-block-list-item">We willen zo weinig mogelijk dependencies binnen Mimoto.</li>
+          </ul>
+          <p class="text-block-paragraph">Omdat ik dus geen Conditioner heb gebruikt binnen dit project moest ik mijn JavaScript modules op de ouderwetse manier gebruiken. Ik zal nu uitleggen hoe dat precies te werk is gegaan.</p>
+          <p class="text-block-paragraph">Over het algemeen waren de JavaScript modules die ik schreef constructors. Als je hier meer over te weten wilt komen lees dan eens het volgende <a href="//css-tricks.com/understanding-javascript-constructors/" target="_blank" class="text-block-paragraph-link">artikel</a>.</p>
+          <p class="text-block-paragraph">Als ik dan een module wou gebruiken voegde ik deze toe aan mijn <code class="text-block-paragraph-code">mimoto.cms.js</code> bestand. In dit bestand wordt alle JavaScript van Mimoto ge&iuml;nitialiseerd. Webpack zorgt er uiteindelijk voor dat alle modules ook daadwerkelijk worden samengevoegd en geminified.</p>
+          <p class="text-block-paragraph">Het toevoegen van een JavaScript module aan mijn initiatie bestand is extreem simpel om te doen. Het kan namelijk al met de volgende code:</p>
+          <pre class="text-block-code">var headerView = require('./views/Header');</pre>
+          <p class="text-block-paragraph">Nadat een module is toegevoegd moet hij ge&iuml;nitialiseerd worden wil je hem kunnen gebruiken. Hieronder volgt een versimpeld voorbeeld van hoe het precies werkt om JavaScript modules te gebruiken.</p>
+          <pre class="text-block-code">
+var headerView = require('./views/Header'); <span class="text-block-code-comment">// Require de module en sla hem op in een variabele</span>
+
+document.addEventListener('DOMContentLoaded', function () { <span class="text-block-code-comment">// JavaScript binnen dit blok wordt pas uitgevoerd wanneer de pagina geladen is</span>
+
+    var navigation = document.querySelector('.js-navigation'); <span class="text-block-code-comment">// Variabelen waarin HTML elementen worden opgeslagen</span>
+    var header = document.querySelector('.js-header');
+
+    if (navigation && header) { <span class="text-block-code-comment">// Check of de HTML elementen die nodig zijn voor de HeaderView module bestaan</span>
+        new HeaderView(header); <span class="text-block-code-comment">// Initieer HeaderView module</span>
+    }
+
+}, false);</pre>
         </div>
       </div>
 
@@ -387,16 +416,17 @@ transition: all 100ms ease;</pre>
         </div>
       </div>
 
-      <div id="conclusies">
+      <div id="uitleg-libraries">
         <div class="text-block">
-          <p class="text-block-section-title">Conclusies</p>
+          <h1 class="text-block-title"><span class="text-block-title-number">4</span>Product presentatie</h1>
+          <p class="text-block-section-title">Uitleg libraries</p>
           <p class="text-block-paragraph"></p>
         </div>
       </div>
 
-      <div id="uitleg-componenten">
+      <div id="demo-componenten">
         <div class="text-block">
-          <h1 class="text-block-title"><span class="text-block-title-number">4</span>Product presentatie</h1>
+          <p class="text-block-section-title">Demo componenten</p>
           <p class="text-block-paragraph">Omdat het voor mensen zonder technische achtergrond soms moeilijk te begrijpen is wat ik precies gedaan heb heb ik een paar voorbeelden gemaakt van mijn werk. Hieronder ziet je een formulier waarmee je jouw eigen validatie kunt toepassen op het invoerveld daaronder. Typ maar eens wat cijfers in de invoervelden, druk op 'voeg validatie toe' en typ in het invoerveld!</p>
         </div>
 
@@ -507,9 +537,39 @@ transition: all 100ms ease;</pre>
         </div>
       </div>
 
+      <div id="prototype">
+        <div class="text-block">
+          <p class="text-block-section-title">Prototype</p>
+          <p class="text-block-paragraph"></p>
+        </div>
+      </div>
+
+      <div id="conclusies">
+        <div class="text-block">
+          <p class="text-block-section-title">Conclusies</p>
+          <p class="text-block-paragraph"></p>
+        </div>
+      </div>
+
+      <div id="bronvermelding">
+        <div class="text-block">
+          <h1 class="text-block-title"><span class="text-block-title-number">5</span>Bronnen &amp; bijlagen</h1>
+          <p class="text-block-section-title">Bronvermelding</p>
+          <p class="text-block-paragraph"></p>
+        </div>
+      </div>
+
+      <div id="bijlagen">
+        <div class="text-block">
+          <p class="text-block-section-title">Bijlagen</p>
+          <p class="text-block-paragraph"></p>
+        </div>
+      </div>
+
+
       <div id="">
         <div class="text-block">
-          <p class="text-block-section-title"></p>
+          <p class="text-block-title"></p>
           <p class="text-block-paragraph"></p>
         </div>
       </div>

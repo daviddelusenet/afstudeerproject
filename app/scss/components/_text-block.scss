@@ -131,6 +131,7 @@
   }
 
   .text-block-code {
+    overflow: auto;
     margin-bottom: 20px;
     padding: 20px 19px;
     font-family: $consolas;
