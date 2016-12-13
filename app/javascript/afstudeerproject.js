@@ -16,14 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < slideshows.length; i++)
       new Slideshow(slideshows[i]);
 
+  if (sidebar) new Sidebar(sidebar);
 
-  if (sidebar)
-    new Sidebar(sidebar);
-
-
-  if (introBlock)
-    new IntroBlockAnimation(introBlock);
-
+  if (introBlock) new IntroBlockAnimation(introBlock);
 
   // Mimoto examples
   var forms = document.querySelectorAll('.js-form');
@@ -39,13 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
     "iconValidatedClass": "MimotoCMS_forms_FormComponent-title-icon--checkmark"
   });
 
-  for (i = 0; i < forms.length; i++)
-    new FormView(forms[i]);
-
+  if (forms.length)
+    for (i = 0; i < forms.length; i++)
+      new FormView(forms[i]);
 
   if (examples.length)
     for (i = 0; i < examples.length; i++)
       new ExampleView(examples[i]);
-
 
 }, false);

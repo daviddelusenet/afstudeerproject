@@ -53,7 +53,7 @@ module.exports.prototype = {
 
       if (refElement) {
 
-        if ((refElement.offsetTop + introHeight) <= scrollPos && (refElement.offsetTop + refElement.offsetHeight + introHeight) > scrollPos) {
+        if ((refElement.offsetTop + introHeight - 1) <= scrollPos && (refElement.offsetTop + refElement.offsetHeight + introHeight) > scrollPos) {
 
           this.removeActiveClasses();
           currentLink.classList.add(this.activeClass);
