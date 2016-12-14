@@ -78,19 +78,6 @@
       color: $valencia;
     }
 
-    .text-block-paragraph-link {
-      font-family: $lucida-grande;
-      font-size: 15px;
-      font-weight: bold;
-      text-decoration: none;
-      color: $bright-gray;
-      transition: color 100ms ease-out;
-
-      &:hover {
-        color: $royal-blue;
-      }
-    }
-
     .text-block-paragraph-code {
       position: relative;
       top: -1px;
@@ -103,12 +90,25 @@
       background-color: $alabaster;
     }
 
-    .text-block-paragraph-highlight {
+  .text-block-link {
+    font-family: $lucida-grande;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $bright-gray;
+    transition: color 100ms ease-out;
+
+    &:hover {
+      color: $royal-blue;
+    }
+  }
+
+  .text-block-highlight {
       font-weight: bold;
       color: $valencia;
     }
 
-  .text-block-highlight {
+  .text-block-design-challenge {
     position: relative;
     margin-bottom: 20px;
     padding: 20px 160px 0 0;
