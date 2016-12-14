@@ -94,7 +94,8 @@
           <p class="sidebar-menu-item-title">Product presentatie</p>
           <ul class="sidebar-submenu">
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#toelichting">Toelichting</a></li>
-            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#uitleg-libraries">Uitleg libraries</a></li>
+            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#werking-formvalidation">Werking FormValidation</a></li>
+            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#werking-errorhandling">Werking ErrorHandling</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#demo-componenten">Demo componenten</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#prototype">Prototype</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#conclusies">Conclusies</a></li>
@@ -425,10 +426,9 @@ document.addEventListener('DOMContentLoaded', function () { <span class="text-bl
         </div>
       </div>
 
-      <div id="uitleg-libraries">
+      <div id="werking-formvalidation">
         <div class="text-block">
-          <p class="text-block-section-title">Uitleg libraries</p>
-          <p class="text-block-subtitle">Werking FormValidation</p>
+          <p class="text-block-section-title">Werking FormValidation</p>
           <p class="text-block-paragraph">Ik heb de FormValidation library gebouwd om de validatie van formulier elementen te regelen. Via Webpack is het mogelijk om een JavaScript module toe te kennen aan een variabele en deze beschikbaar te maken in alle modules. Op deze manier hoef je een veelgebruikte module maar &eacute;&eacute;n keer toe te voegen en kan je hem daarna overal gebruiken.</p>
           <p class="text-block-paragraph">Om je module op deze manier toe te kunnen voegen dient hij wel via de object literal notatie geschreven te worden. Wil je meer over JavaScript data types en literals te weten komen lees dan eens het volgende <a class="text-block-link" target="_blank" href="//developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">artikel</a>. Omdat het nogal een uitgebreid artikel is zal ik zelf ook een kort voorbeeld geven van hoe een object literal precies werkt.</p>
           <pre class="text-block-code">
@@ -451,11 +451,329 @@ var human = {
           <ul class="text-block-list">
             <li class="text-block-list-item"><span class="text-block-highlight">Min-length:</span> de minimale lengte van de input waarde.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">Max-length:</span> de minimale lengte van de input waarde.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">No-numbers:</span> blokkeert het gebruik van nummers in de input waarde.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Min-numbers:</span> minimaal aantal nummers wat de input waarde moet bevatten.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Max-numbers:</span> maximaal aantal nummers wat de input waarde mag bevatten.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">No-special-characters:</span> blokkeert het gebruik van speciale karakters in de input waarde.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Min-special-characters:</span> minimaal aantal speciale karakters wat de input waarde moet bevatten.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Max-special-characters:</span> maximaal aantal speciale karakters wat de input waarde mag bevatten.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Custom-regex:</span> een custom <a class="text-block-link" target="_blank" href="//developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">reguliere expressie</a> waartegen de input waarde gevalideerd wordt.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Error-message:</span> moet gebruikt worden in combinatie met het custom-regex data-attribuut. Via dit data-attribuut kan een custom error message ingesteld worden welke getoond wordt wanneer de validatie met de custom-regex faalt.</li>
           </ul>
+          <p class="text-block-paragraph">Ook zijn er nog twee data-attributen die gebruikt kunnen worden in combinatie met checkboxes:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item"><span class="text-block-highlight">Min-checked:</span> het minimale aantal checkboxes wat geselecteerd dient te worden.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Max-checked:</span> het maximale aantal checkboxes wat geselecteerd mag worden.</li>
+          </ul>
+          <p class="text-block-paragraph">Ik heb de data-attributen geprefixed met <code class="text-block-paragraph-code">fv</code> zodat het duidelijk is waar de data-attributen voor gebruikt worden. In de praktijk ziet een data-attribuut er dus zo uit: <code class="text-block-paragraph-code">data-fv-min-length="10"</code>.</p>
+          <p class="text-block-subtitle">Uitleg functies</p>
+          <p class="text-block-paragraph">Nadat je al je data-attributen naar keuze hebt toegevoegd aan je input element kun je dit element valideren door middel van de volgende functie: <code class="text-block-paragraph-code">FV.validateInput();</code>. Als parameter dien je een element mee te geven wat de parent is van het input element waar je de data-attributen aan hebt toegevoegd. Je HTML dient er dus ongeveer als volgt uit te zien:</p>
+          <pre class="text-block-code">
+&lt;div class=&quot;textline-parent js-textline-parent&quot;&gt; <span class="text-block-code-comment">// De parent van het input element </span>
+  &lt;input class=&quot;textline js-textline&quot; type=&quot;text&quot; placeholder=&quot;Uw naam&quot; data-fv-min-length=&quot;5&quot; data-fv-max-length=&quot;15&quot; data-fv-no-numbers data-fv-no-special-characters /&gt;
+&lt;/div&gt;</pre>
+          <p class="text-block-paragraph">Als je dan dit input element wilt valideren kan dat met de volgende JavaScript:</p>
+          <pre class="text-block-code">
+var textlineParent = document.querySelector('.js-textline-parent');
+
+FV.validateInput(textlineParent);</pre>
+          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">validateInput</code> functie doet niks anders dan het valideren van de waarde uit het input element en geeft het resultaat hiervan terug. Als de waarde door de validatie heen komt wordt er teruggegeven dat het valideren gelukt is. Komt de waarde niet door de validatie heen wordt er ook nog een error message teruggegeven.</p>
+          <p class="text-block-paragraph">Dit is hoe de <code class="text-block-paragraph-code">validateInput</code> functie er exact uitziet:</p>
+          <pre class="text-block-code">
+validateInput: function (element) {
+
+  this.setVariables(element);
+  this.setInputOptions();
+  this.setResult(true);
+  this.handleValidation();
+
+  return this.result;
+
+}</pre>
+          <p class="text-block-paragraph">Zoals je ziet verwacht <code class="text-block-paragraph-code">validateInput</code> een element als parameter en geeft hij het resultaat terug wanneer hij klaar is met het uitvoeren van de vier andere functies die hij aanroept.</p>
+          <p class="text-block-paragraph">De eerste functie die <code class="text-block-paragraph-code">validateInput</code> aanroept is <code class="text-block-paragraph-code">setVariables</code>. Voordat ik verder inga op de werking van de <code class="text-block-paragraph-code">setVariables</code> functie zal ik eerst wat toelichting geven. Een normale JavaScript variabele wordt gedefinieerd op de volgende manier:</p>
+          <pre class="text-block-code">
+var variable = &quot;Hello world!&quot;;
+console.log(variable); <span class="text-block-code-comment">// Toont 'Hello world!' in de console</span></pre>
+          <p class="text-block-paragraph">Als je op deze manier een variabele definieert in een functie is hij buiten deze functie niet toegankelijk. Het volgende voorbeeld werkt dus niet:</p>
+          <pre class="text-block-code">
+<span class="text-block-code-comment">// Definieer twee functies</span>
+function setVariable ()  {
+  var variable = &quot;Hello world!&quot;;
+};
+
+function logVariable () {
+  console.log(variable);
+};
+
+<span class="text-block-code-comment">// Voer de functies uit</span>
+setVariable();
+logVariable(); <span class="text-block-code-comment">// Toont de volgende error in de console: 'Uncaught ReferenceError: variable is not defined'</span></pre>
+          <p class="text-block-paragraph">Je kunt variabelen wel bereikbaar maken in verschillende functies binnen een object literal. Het bovenstaande voorbeeld kan dus met relatief kleine aanpassingen wel werkend gemaakt worden:</p>
+          <pre class="text-block-code">
+<span class="text-block-code-comment">// Definieer een object literal welke de twee functies bevat</span>
+var variableObject = {
+
+  setVariable: function ()  {
+    this.variable = &quot;Hello world!&quot;;
+  },
+
+  logVariable: function () {
+    console.log(this.variable);
+  };
+
+};
+
+<span class="text-block-code-comment">// Voer de functies uit</span>
+variableObject.setVariable();
+variableObject.logVariable(); <span class="text-block-code-comment">// Toont 'Hello world!' in de console</span></pre>
+          <p class="text-block-paragraph">Buiten de aanpassingen naar de object literal notatie is de grootste aanpassing het <code class="text-block-paragraph-code">this</code> keyword. Alle variabelen die in een object literal via het <code class="text-block-paragraph-code">this</code> keyword worden gedefinieerd zijn binnen elke andere functie binnen hetzelfde object te benaderen.</p>
+          <p class="text-block-paragraph">Nu je enigszins begrijpt hoe variabelen werken binnen JavaScript kan ik uitleggen hoe de <code class="text-block-paragraph-code">setVariables</code> functie werkt. Dit is hoe hij eruit ziet:</p>
+          <pre class="text-block-code">
+setVariables: function (element) {
+
+  this.el = element;
+
+  this.textline = this.el.querySelector('.js-textline');
+  this.checkboxes = this.el.querySelectorAll('.js-checkbox');
+  this.radioButtons = this.el.querySelectorAll('.js-radio-button');
+
+  if (this.textline) {
+    this.input = this.textline;
+    this.value = this.input.value;
+  } else if (this.checkboxes.length) {
+    this.input = this.checkboxes[0];
+    this.countChecked();
+  } else if (this.radioButtons.length) {
+    this.input = this.radioButtons[0];
+  }
+
+}</pre>
+          <p class="text-block-paragraph">Het eerste wat hier gebeurd is dat het element wat <code class="text-block-paragraph-code">setVariables</code> meekrijgt als parameter wordt gedefinieerd als <code class="text-block-paragraph-code">this.el</code>. Daarna wordt er binnen <code class="text-block-paragraph-code">this.el</code> gezocht naar verschillende classes. De HTML elementen die deze classes bevatten worden opgeslagen in variabelen. Dat wordt gedaan met de volgende code:</p>
+          <pre class="text-block-code">
+this.textline = this.el.querySelector('.js-textline');
+this.checkboxes = this.el.querySelectorAll('.js-checkbox');
+this.radioButtons = this.el.querySelectorAll('.js-radio-button');</pre>
+          <p class="text-block-paragraph">Nadat deze variabelen zijn gedefinieerd wordt er door middel van een if-statement gekeken of de daadwerkelijke variabelen ook echt gevuld zijn. Er worden verschillende dingen gedaan wanneer er verschillende variabelen gevuld zijn. Voor dit voorbeeld gaan we nu er nu even vanuit dat <code class="text-block-paragraph-code">this.textline</code> gevuld is. Dat betekent dat de volgende code wordt uitgevoerd:</p>
+          <pre class="text-block-code">
+this.input = this.textline;
+this.value = this.input.value;</pre>
+          <p class="text-block-paragraph">Na het uitvoeren van de <code class="text-block-paragraph-code">setVariables</code> functie wordt de <code class="text-block-paragraph-code">setInputOptions</code> functie uitgevoerd. Deze functie ziet er als volgt uit:</p>
+          <pre class="text-block-code">
+setInputOptions: function () {
+
+  this.minLength = this.input.getAttribute('data-fv-min-length');
+  this.maxLength = this.input.getAttribute('data-fv-max-length');
+
+  this.noNumbers = this.input.hasAttribute('data-fv-no-numbers');
+  this.minNumbers = this.input.getAttribute('data-fv-min-numbers');
+  this.maxNumbers = this.input.getAttribute('data-fv-max-numbers');
+
+  this.noSpecialCharacters = this.input.hasAttribute('data-fv-no-special-characters');
+  this.minSpecialCharacters = this.input.getAttribute('data-fv-min-special-characters');
+  this.maxSpecialCharacters = this.input.getAttribute('data-fv-max-special-characters');
+
+  this.minChecked = this.input.getAttribute('data-fv-min-checked');
+  this.maxChecked = this.input.getAttribute('data-fv-max-checked');
+
+  this.ifChecked = this.input.type == 'radio';
+
+  this.customRegex = this.input.getAttribute('data-fv-regex');
+  this.errorMessage = this.input.getAttribute('data-fv-error-message');
+
+  this.setValidationOptions();
+
+}</pre>
+          <p class="text-block-paragraph">De bovenstaande functie leest de waardes uit van alle data-attributen van <code class="text-block-paragraph-code">this.input</code>. Bevat <code class="text-block-paragraph-code">this.input</code> een data-attribuut niet dan wordt de waarde ingesteld als een lege string, oftewel <code class="text-block-paragraph-code">''</code>. Nadat alle waardes zijn uitgelezen en opgeslagen wordt de <code class="text-block-paragraph-code">setValidationOptions</code> functie uitgevoerd. Die ziet er zo uit:</p>
+          <pre class="text-block-code">
+setValidationOptions: function () {
+
+  this.validateMinLength = this.minLength ? true : false;
+  this.validateMaxLength = this.maxLength ? true : false;
+  this.validateNoNumbers = this.noNumbers ? true : false;
+  this.validateMinNumbers = this.minNumbers ? true : false;
+  this.validateMaxNumbers = this.maxNumbers ? true : false;
+  this.validateNoSpecialCharacters = this.noSpecialCharacters ? true : false;
+  this.validateMinSpecialCharacters = this.minSpecialCharacters ? true : false;
+  this.validateMaxSpecialCharacters = this.maxSpecialCharacters ? true : false;
+  this.validateMinChecked = this.minChecked ? true : false;
+  this.validateMaxChecked = this.maxChecked ? true : false;
+  this.validateIfChecked = this.ifChecked ? true : false;
+  this.validateCustomRegex = this.customRegex ? true : false;
+
+}</pre>
+          <p class="text-block-paragraph">Deze functie kijkt of de variabelen die in de <code class="text-block-paragraph-code">setInputOptions</code> functie zijn ingesteld ook echt waardes bevatten. Bevatten ze een waarde dan wordt de bijbehorende variabele op <code class="text-block-paragraph-code">true</code> ingesteld. Zo niet, dan wordt de bijhorende variabele op <code class="text-block-paragraph-code">false</code> ingesteld (een lege string is in JavaScript geen waarde). Kortom, deze functie stelt in waar er allemaal op gevalideerd dient te worden.</p>
+          <p class="text-block-paragraph">Hierna wordt een belangrijke functie binnen <code class="text-block-paragraph-code">FV</code> uitgevoerd, namelijk de <code class="text-block-paragraph-code">setResult</code> functie. De <code class="text-block-paragraph-code">setResult</code> functie ziet er als volgt uit:</p>
+          <pre class="text-block-code">
+setResult: function (passed, message) {
+
+  this.result = {};
+
+  this.result.passed = passed;
+
+  if (message) {
+    this.result.message = message;
+  }
+
+}</pre>
+          <p class="text-block-paragraph">Via deze functie is het mogelijk om het resultaat in te stellen wat uit eindelijk door de <code class="text-block-paragraph-code">validateInput</code> functie wordt teruggegeven. Het is mogelijk om twee parameters mee te geven aan <code class="text-block-paragraph-code">setResult</code>. De eerste parameter is een boolean (kan alleen true of false zijn) en gaat over of de validatie is gelukt. De tweede parameter is een optioneel bericht. Deze parameter wordt alleen gebruikt wanneer de validatie niet gelukt is.</p>
+          <p class="text-block-paragraph">In de <code class="text-block-paragraph-code">validateInput</code> functie wordt het resultaat ingesteld op <code class="text-block-paragraph-code">true</code> aangezien de validatie initieel altijd gelukt is. Via de <code class="text-block-paragraph-code">handleValidation</code> functie wordt dan de daadwerkelijke validatie gedaan en wordt zo nodig het resultaat ge&uuml;pdatet. Dit is hoe de <code class="text-block-paragraph-code">handleValidation</code> functie eruitziet:</p>
+          <pre class="text-block-code">
+handleValidation: function () {
+
+  if (this.validateMinLength) this.checkMinLength();
+
+  if (this.validateMaxLength) this.checkMaxLength();
+
+  if (this.validateNoNumbers) this.checkNoNumbers();
+
+  if (this.validateMinNumbers) this.checkMinNumbers();
+
+  if (this.validateMaxNumbers) this.checkMaxNumbers();
+
+  if (this.validateNoSpecialCharacters) this.checkNoSpecialCharacters();
+
+  if (this.validateMinSpecialCharacters) this.checkMinSpecialCharacters();
+
+  if (this.validateMaxSpecialCharacters) this.checkMaxSpecialCharacters();
+
+  if (this.validateMinChecked) this.checkMinChecked();
+
+  if (this.validateMaxChecked) this.checkMaxChecked();
+
+  if (this.validateIfChecked) this.checkIfChecked();
+
+  if (this.validateCustomRegex) this.checkCustomRegex();
+
+  this.result.passed ? EH.addValidatedState(this.el) : EH.addErrorState(this.el, this.result.message);
+
+}</pre>
+          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">handleValidation</code> functie kijkt naar de variabelen die door <code class="text-block-paragraph-code">setValidationOptions</code> zijn ingesteld. Is een variabele <code class="text-block-paragraph-code">true</code> dan wordt de bijhorende validatie functie uitgevoerd. Nadat alle validatie is gedaan wordt er gekeken wat de waarde van <code class="text-block-paragraph-code">this.result.passed</code> is. Is deze waarde <code class="text-block-paragraph-code">true</code> dan betekent het dat de validatie is geslaagd. Is deze waarde <code class="text-block-paragraph-code">false</code> betekent het dat de validatie mislukt is.</p>
+          <p class="text-block-paragraph">Om de uitleg over <code class="text-block-paragraph-code">FV</code> af te ronden zal ik ook nog alle validatie functies laten zien. Ik ga niet uitleggen hoe deze precies werken aangezien dit niet super interessant is. Dit zijn alle validatie functies:</p>
+          <pre class="text-block-code">
+checkMinLength: function () {
+
+  if (this.value.length &lt; this.minLength) {
+    this.setResult(false, &quot;Input should be minimal &quot; + this.minLength + &quot; characters long.&quot;);
+  }
+
+},
+
+checkMaxLength: function () {
+
+  if (this.value.length &gt; this.maxLength) {
+    this.setResult(false, &quot;Input can't be longer than &quot; + this.maxLength + &quot; characters.&quot;);
+  }
+
+},
+
+checkNoNumbers: function () {
+
+  var regex = new RegExp(&quot;\\d&quot;);
+
+  if (regex.test(this.value)) {
+    this.setResult(false, &quot;No numbers allowed.&quot;);
+  }
+
+},
+
+checkMinNumbers: function () {
+
+  var regex = new RegExp(&quot;([^\\d]*\\d){&quot; + this.minNumbers + &quot;,}&quot;);
+
+  if (!regex.test(this.value)) {
+    this.setResult(false, &quot;Input should contain a minimum of &quot; + this.minNumbers + &quot; number(s).&quot;);
+  }
+},
+
+checkMaxNumbers: function () {
+
+  var regex = new RegExp(&quot;([^\\d]*\\d){&quot; + (Number(this.maxNumbers) + 1) + &quot;,}&quot;);
+
+  if (regex.test(this.value)) {
+    this.setResult(false, &quot;Input can't contain more than &quot; + this.maxNumbers + &quot; numbers.&quot;);
+  }
+
+},
+
+checkNoSpecialCharacters: function () {
+
+  var regex = new RegExp(&quot;^[\\w]*$&quot;);
+
+  if (!regex.test(this.value)) {
+    this.setResult(false, &quot;Input can't contain special characters (except for underscores).&quot;);
+  }
+
+},
+
+checkMinSpecialCharacters: function () {
+
+  var regex = new RegExp(&quot;([\\w]*\\W){&quot; + this.minSpecialCharacters + &quot;,}&quot;);
+
+  if (!regex.test(this.value)) {
+    this.setResult(false, &quot;Input should contain a minimum of &quot; + this.minSpecialCharacters + &quot; special character(s).&quot;);
+  }
+
+},
+
+checkMaxSpecialCharacters: function () {
+
+  var regex = new RegExp(&quot;([\\w]*\\W){&quot; + (Number(this.maxSpecialCharacters) + 1) + &quot;,}&quot;);
+
+  if (regex.test(this.value)) {
+    this.setResult(false, &quot;Input can't contain more than &quot; + this.maxSpecialCharacters + &quot; special character(s).&quot;);
+  }
+
+},
+
+checkMinChecked: function () {
+
+  if (this.checked &lt; this.minChecked) {
+    this.setResult(false, &quot;You need to check at least &quot; + this.minChecked + &quot; checkbox(es).&quot;);
+  }
+
+},
+
+checkMaxChecked: function () {
+
+  if (this.checked &gt; this.maxChecked) {
+    this.setResult(false, &quot;You can't check more than &quot; + this.maxChecked + &quot; checkbox(es).&quot;);
+  }
+
+},
+
+checkIfChecked: function () {
+
+  var checked = false;
+
+  for (var i = 0; i &lt; this.radioButtons.length; i++) {
+    if (this.radioButtons[i].checked) {
+      checked = true;
+    }
+  }
+
+  if (!checked) {
+    this.setResult(false, &quot;Please select an option.&quot;);
+  }
+
+},
+
+checkCustomRegex: function () {
+
+  var regex = new RegExp(this.customRegex);
+
+  if (!regex.test(this.value)) {
+    this.setResult(false, this.errorMessage);
+  }
+
+}</pre>
+        </div>
+      </div>
+
+      <div id="werking-errorhandling">
+        <div class="text-block">
+          <p class="text-block-section-title">Werking ErrorHandling</p>
           <p class="text-block-paragraph"></p>
-
-
-
         </div>
       </div>
 
