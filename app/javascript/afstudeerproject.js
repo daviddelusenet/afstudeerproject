@@ -25,13 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
   var examples = document.querySelectorAll('.js-example');
 
   EH.init({
-    "element": "p",
-    "classes": ["MimotoCMS_forms_FormComponent-element-error"],
-    "errorClass": "MimotoCMS_forms_FormComponent--has-error",
-    "validatedClass": "MimotoCMS_forms_FormComponent--is-validated",
+    "errorElement": "p",
+    "errorElementClasses": ["MimotoCMS_forms_FormComponent-element-error"],
     "iconSelectorClass": "js-error-icon",
-    "iconErrorClass": "MimotoCMS_forms_FormComponent-title-icon--warning",
-    "iconValidatedClass": "MimotoCMS_forms_FormComponent-title-icon--checkmark"
+    "validatedClass": "MimotoCMS_forms_FormComponent--is-validated",
+    "validatedIcon": "#ico-checkmark",
+    "validatedIconClass": "MimotoCMS_forms_FormComponent-title-icon--checkmark",
+    "errorParentClass": "js-error-parent",
+    "errorClass": "MimotoCMS_forms_FormComponent--has-error",
+    "errorIcon": "#ico-warning",
+    "errorIconClass": "MimotoCMS_forms_FormComponent-title-icon--warning"
   });
 
   if (forms.length)

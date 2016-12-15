@@ -5,43 +5,36 @@ module.exports = {
   init: function (options) {
 
     // Default options
-    this.element = "p";
-    this.classes = "error-message";
-    this.validatedClass = "is-validated";
-    this.errorClass = "has-error";
+    this.errorElement = "p";
+    this.errorElementClasses = "error-message";
     this.iconSelectorClass = "icon";
-    this.iconValidatedClass = "icon-validated";
-    this.iconErrorClass = "icon-error";
-    this.errorIcon = "#ico-warning";
-    this.validatedIcon = "#ico-checkmark";
+    this.validatedClass = "is-validated";
+    this.validatedIcon = "#ico-validated";
+    this.validatedIconClass = "icon-validated";
+    this.errorParentClass = "error-parent";
+    this.errorClass = "has-error";
+    this.errorIcon = "#ico-error";
+    this.errorIconClass = "icon-error";
 
-    if (options.element) {
-      this.element = options.element;
-    }
+    if (options.errorElement) this.errorElement = options.errorElement;
 
-    if (options.classes) {
-      this.classes = options.classes;
-    }
+    if (options.errorElementClasses) this.errorElementClasses = options.errorElementClasses;
 
-    if (options.iconSelectorClass) {
-      this.iconSelectorClass = options.iconSelectorClass;
-    }
+    if (options.iconSelectorClass) this.iconSelectorClass = options.iconSelectorClass;
 
-    if (options.errorClass) {
-      this.errorClass = options.errorClass;
-    }
+    if (options.validatedClass) this.validatedClass = options.validatedClass;
 
-    if (options.iconErrorClass) {
-      this.iconErrorClass = options.iconErrorClass;
-    }
+    if (options.validatedIcon) this.validatedIcon = options.validatedIcon;
 
-    if (options.validatedClass) {
-      this.validatedClass = options.validatedClass;
-    }
+    if (options.validatedIconClass) this.validatedIconClass = options.validatedIconClass;
 
-    if (options.iconValidatedClass) {
-      this.iconValidatedClass = options.iconValidatedClass;
-    }
+    if (options.errorParentClass) this.errorParentClass = options.errorParentClass;
+
+    if (options.errorClass) this.errorClass = options.errorClass;
+
+    if (options.errorIcon) this.errorIcon = options.errorIcon;
+
+    if (options.errorIconClass) this.errorIconClass = options.errorIconClass;
 
   },
 
@@ -49,7 +42,7 @@ module.exports = {
 
     this.el = element;
 
-    this.errorParent = this.el.querySelector('.js-error-parent');
+    this.errorParent = this.el.querySelector('.' + this.errorParentClass);
     this.iconElement = this.el.querySelector('.' + this.iconSelectorClass);
     this.useElement = this.iconElement.getElementsByTagName('use')[0];
 
@@ -90,7 +83,7 @@ module.exports = {
     if (this.hasError) {
       this.removeElementClass(this.errorClass);
       this.removeErrorElement();
-      this.removeIcon(this.iconErrorClass);
+      this.removeIcon(this.errorIconClass);
     }
 
   },
@@ -99,7 +92,7 @@ module.exports = {
 
     if (this.isValidated) {
       this.removeElementClass(this.validatedClass);
-      this.removeIcon(this.iconValidatedClass);
+      this.removeIcon(this.validatedIconClass);
     }
 
   },
@@ -120,7 +113,7 @@ module.exports = {
 
     if (!this.isValidated) {
       this.addElementClass(this.validatedClass);
-      this.addIcon(this.iconValidatedClass, this.validatedIcon);
+      this.addIcon(this.validatedIconClass, this.validatedIcon);
     }
 
   },
@@ -134,7 +127,7 @@ module.exports = {
     if (!this.hasError) {
       this.addErrorElement(message);
       this.addElementClass(this.errorClass);
-      this.addIcon(this.iconErrorClass, this.errorIcon);
+      this.addIcon(this.errorIconClass, this.errorIcon);
     } else {
       this.updateErrorElement(message);
     }
@@ -143,11 +136,11 @@ module.exports = {
 
   addErrorElement: function (message) {
 
-    var error = document.createElement(this.element);
+    var error = document.createElement(this.errorElement);
 
-    for (var i = 0; i < this.classes.length; i++) {
+    for (var i = 0; i < this.errorElementClasses.length; i++) {
 
-      error.classList.add(this.classes[i]);
+      error.classList.add(this.errorElementClasses[i]);
 
     }
 
@@ -158,7 +151,7 @@ module.exports = {
 
   removeErrorElement: function () {
 
-    var error = this.errorParent.querySelector('.' + this.classes[0]);
+    var error = this.errorParent.querySelector('.' + this.errorElementClasses[0]);
 
     if (error) {
       this.errorParent.removeChild(error);
@@ -168,7 +161,7 @@ module.exports = {
 
   updateErrorElement: function (message) {
 
-    var error = this.errorParent.querySelector('.' + this.classes[0]);
+    var error = this.errorParent.querySelector('.' + this.errorElementClasses[0]);
     error.innerHTML = message;
 
   }
