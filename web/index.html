@@ -59,7 +59,6 @@
 
   <nav class="sidebar js-sidebar">
       <ul class="sidebar-menu">
-
         <li class="sidebar-menu-item">
           <p class="sidebar-menu-item-title">Context</p>
           <ul class="sidebar-submenu">
@@ -109,7 +108,6 @@
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#bijlagen">Bijlagen</a></li>
           </ul>
         </li>
-
       </ul>
     </nav>
 
@@ -152,19 +150,30 @@
       <div id="terminologie">
         <div class="text-block">
           <p class="text-block-section-title">Terminologie</p>
+          <p class="text-block-paragraph">Voor degene die dit leest en geen technische achtergrond heeft, hierbij een uitleg van veel gebruikte technische termen binnen mijn verslag.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">HTML:</span> HTML (Hyper Text Markup Language) is een opmaaktaal waarmee het mogelijk is om documenten te schrijven. HTML is de standaard opmaaktaal voor webpagina's en bestaat al sinds 1997.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Twig:</span> Twig is een templating engine voor PHP. Twig code wordt gecompileerd naar PHP maar is een stuk beter leesbaar. Ook maakt Twig bepaalde PHP functionaliteit een stuk makkelijker om te gebruiken.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">CSS:</span> CSS is een taal om webpagina's mee op te maken. In CSS verwijs je naar HTML-elementen om deze vervolgens te stylen.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Browser Prefixes</span>: Sommige CSS heeft browser prefixes nodig om te kunnen functioneren in verschillende browsers. Hieronder volgt een code voorbeeld:</p>
+          <pre class="text-block-code">
+-webkit-transition: all 100ms ease; <span class="text-block-code-comment">// Chrome, Safari, newer versions of Opera.</span>
+-moz-transition: all 100ms ease; <span class="text-block-code-comment">// Firefox</span>
+-ms-transition: all 100ms ease; <span class="text-block-code-comment">// Internet Explorer</span>
+-o-transition: all 100ms ease; <span class="text-block-code-comment">// Opera</span>
+transition: all 100ms ease;</pre><p class="text-block-paragraph"><span class="text-block-highlight">JavaScript:</span> Een veelgebruikte scripttaal waarmee het mogelijk is om de DOM (het HTML document) te manipuleren.</p>
           <p class="text-block-paragraph"><span class="text-block-highlight">Component</span>: Een op zichzelf staand stukje code. Een component moet op zichzelf staand kunnen functioneren en geen afhankelijkheid hebben van andere componenten. In mijn project bestaat een component over het algemeen uit twee of drie dingen:</p>
           <ul class="text-block-list">
             <li class="text-block-list-item">Een Twig bestand waarin alle HTML/Twig logica zich bevindt.</li>
             <li class="text-block-list-item">Een SASS bestand waarin de styling zich bevindt.</li>
             <li class="text-block-list-item">Optioneel: een JavaScript bestand waarin de functionaliteit van het component zich bevindt.</li>
           </ul>
-          <p class="text-block-paragraph"><span class="text-block-highlight">Browser prefixes</span>: Sommige CSS heeft browser prefixes nodig om te kunnen functioneren in verschillende browsers. Hieronder volgt een code voorbeeld:</p>
-          <pre class="text-block-code">
--webkit-transition: all 100ms ease; <span class="text-block-code-comment">// Chrome, Safari, newer versions of Opera.</span>
--moz-transition: all 100ms ease; <span class="text-block-code-comment">// Firefox</span>
--ms-transition: all 100ms ease; <span class="text-block-code-comment">// Internet Explorer</span>
--o-transition: all 100ms ease; <span class="text-block-code-comment">// Opera</span>
-transition: all 100ms ease;</pre>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Refactoring:</span> Het aanpassen van bepaalde code naar een nieuwe (verbeterde) versie. Dit wordt vaak gedaan om de leesbaarheid en de performance van code te verbeteren.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Content Management Sytem:</span> Een Content Management System (ook wel CMS genoemd) bevindt zich over het algemeen aan de achterkant van een website. Via een CMS is het mogelijk om content in te voeren in pagina's en in sommige gevallen kan je er zelfs pagina's mee aanmaken.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Automated Task Runner:</span> Met een task runner is het mogelijk om je ontwikkelingsproces te stroomlijnen. Denk hierbij aan het automatisch compileren van code wanneer je iets aanpast en het up to date houden van verschillende browsers.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Module Bundler:</span> In mijn project gebruik ik een module bundler om mijn JavaScript bestanden samen te voegen. Het is handig om functionaliteit om te delen in kleinere, beter onderhoudbare bestanden.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Minification:</span> Minifyen is het verwijderen van alle onnodige karakters van stukken code zonder de functionaliteit te veranderen. Dit wordt gedaan om de bestandsgrote te verkleinen en de uitvoeringssnelheid te vergroten.</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Slicen:</span> Het nabouwen van een Photoshop ontwerp met behulp van HTML en CSS. Een gesliced ontwerp bevat nog geen functionaliteit.</p>
+          <!--<p class="text-block-paragraph"><span class="text-block-highlight"></span> </p>-->
         </div>
       </div>
 
@@ -336,7 +345,27 @@ transition: all 100ms ease;</pre>
       <div id="samenvatting">
         <div class="text-block">
           <p class="text-block-section-title">Samenvatting</p>
-          <p class="text-block-paragraph"></p>
+          <p class="text-block-subtitle">Periode 1: vooronderzoek en eerste opzet componenten</p>
+          <p class="text-block-paragraph">De eerste weken van mijn project heb ik mij voornamelijk beziggehouden met vooronderzoek en de eerste opzet van sommige componenten.</p>
+          <p class="text-block-paragraph">In de eerste week heb ik op school een workshop bijgewoond over de designbrief en later ook nog &eacute;&eacute;n over de roadmap. Ook heb ik deze week mijn afstudeerbegeleider Koen Wijffelaars toegewezen gekregen. Ik had Koen nog niet ontmoet en was erg benieuwd hoe hij in het echt zou zijn.</p>
+          <p class="text-block-paragraph">Ondertussen was ik bij Momkai begonnen met de opzet van mijn project. Denk hierbij aan de folderindeling, het opzetten van Webpack en Gulp en het alvast voorbereiden van verschillende bestanden.</p>
+          <p class="text-block-paragraph">Toen deze opzet werkbaar was ben ik begonnen met het opzetten van de eerste componenten. Denk hierbij aan het opzetten van de basis HTML structuur en bijbehorende CSS zonder enige functionaliteit. Ook heb ik in deze week Koen voor het eerst ontmoet. Buiten dit alles was ik ook begonnen met mijn designbrief en roadmap, welke aan het einde van week 3 ingeleverd dienden te worden.</p>
+          <p class="text-block-paragraph">Aan het eind van deze periode heb ik toen mijn designbrief en roadmap ingeleverd. De inlevering van deze documenten betekende dat het daadwerkelijke project nu echt ging beginnen.</p>
+          <p class="text-block-subtitle">Periode 2: ontwikkeling</p>
+          <p class="text-block-paragraph">Het eerste component waar ik mee ben begonnen is het input component. Dit component is vrij simpel qua interactie, er kan namelijk alleen maar in getypt worden. Echter betekent dit niet dat het een simpel component is om te ontwikkelen.</p>
+          <p class="text-block-paragraph">Sebastian was ondertussen bezig met de back-end en wou graag wat mooi opgemaakte componenten hebben om mee te werken. Om deze reden heb ik daarom eerst nog wat andere componenten gebouwd. Nadat ik de eerste versie van de checkbox, radiobutton en select klaar had ben ik verder gegaan met de functionaliteit van het input component.</p>
+          <p class="text-block-paragraph">De week daarop heb ik mij voornamelijk beziggehouden met het slicen van het image upload component. Ook ben ik bezig geweest met het verder finetunen van de componenten die ik al eerder had gesliced. Aan het einde van deze week heb ik mijn designbrief ingeleverd.</p>
+          <p class="text-block-paragraph">De weken die daarop volgden heb ik mij vooral beziggehouden met de formulier elementen. Denk hierbij aan relatief simpele element zoals een input, checkbox en radiobutton.</p>
+          <p class="text-block-paragraph">Het was erg belangrijk dat deze componenten goed opgezet zouden worden zodat ze makkelijk hergebruikt kunnen worden voor toekomstige projecten.</p>
+          <p class="text-block-paragraph">Ik merkte al snel tijdens mijn ontwikkeling dat ik behoefte had aan herbruikbare JavaScript functies voor formulier validatie en error afhandeling. Ik heb om dit probleem op te lossen mijn eigen libraries geschreven, FormValidation en ErrorHandling. Hierover later meer.</p>
+          <p class="text-block-paragraph">Tijdens deze periode van het project heb ik veel overlegd met Sebastian over wat we precies wilden ontwikkelen. Dit project is namelijk vooraf niet vastgelegd in steen dus dienden er veel beslissingen tijdens ontwikkeling gemaakt te worden. Deze beslissingen werden over het algemeen gemaakt in meetings. Ik heb meetings gehad over naamgeving, functionaliteit, code structuur en nog veel meer.</p>
+          <p class="text-block-paragraph">In de meetings met Sebastian kwamen we vaak tot lijstjes to-do's waar we de komende tijd aan wilden werken. Om deze lijstjes overzichtelijk te houden besloten we om Trello te gaan gebruiken. Op deze manier was het makkelijk om te documenteren wie wat had afgerond en wie waar nog mee bezig was.</p>
+          <p class="text-block-paragraph">Ik heb met Sebastian tijdens dit project veel discussies gevoerd. Wij hebben allebei een sterke mening over bepaalde punten en soms was het lastig om hierin concessies te doen.</p>
+          <p class="text-block-paragraph">Om maar even een voorbeeld te noemen, Sebastian en ik hadden allebei een andere mening over de beste manier om CSS naamgeving te regelen. Dit heeft ons eerst een uur lang een discussie opgeleverd en later hebben we zelfs een meeting moeten inplannen met een andere front-end developer erbij om hieruit te komen.</p>
+          <p class="text-block-paragraph">Buiten de nadelen die zulke stelligheid met zich meebrengt heeft het ook veel positieve invloeden gehad op ons project. We hielden ons namelijk allebei erg veel bezig met de 'juiste manier' om dingen te doen en dit heeft ertoe geleidt dat ons eindproduct van een hoge kwaliteit is.</p>
+          <p class="text-block-paragraph">Terwijl ik bezig was met de ontwikkeling van Mimoto heb ik mij ook nog beziggehouden met de ontwikkeling van de nieuwe Momkai website. Om de eerste versie van Mimoto te gaan testen is het namelijk de bedoeling om deze te gaan gebruiken bij de nieuwe Momkai website.</p>
+          <p class="text-block-paragraph">Het uit eindelijke prototype wat ik dan ook heb opgeleverd is dan ook een kopie van de Momkai website.</p>
+          <p class="text-block-subtitle">Periode 3: testing</p>
         </div>
       </div>
 
@@ -491,7 +520,7 @@ validateInput: function (element) {
 
 }</pre>
           <p class="text-block-paragraph">Zoals je ziet verwacht <code class="text-block-paragraph-code">validateInput</code> een element als parameter en geeft hij het resultaat terug wanneer hij klaar is met het uitvoeren van de vier andere functies die hij aanroept.</p>
-          <p class="text-block-paragraph">De eerste functie die <code class="text-block-paragraph-code">validateInput</code> aanroept is <code class="text-block-paragraph-code">setVariables</code>. Voordat ik verder inga op de werking van de <code class="text-block-paragraph-code">setVariables</code> functie zal ik eerst wat toelichting geven. Een normale JavaScript variabele wordt gedefinieerd op de volgende manier:</p>
+          <p class="text-block-paragraph">De eerste functie die <code class="text-block-paragraph-code">validateInput</code> aanroept is <code class="text-block-paragraph-code">setVariables</code>. Voordat ik verder inga op de werking van de <code class="text-block-paragraph-code">setVariables</code> functie zal ik eerst wat toelichting op JavaScript variabelen geven. Een normale JavaScript variabele wordt gedefinieerd op de volgende manier:</p>
           <pre class="text-block-code">
 var variable = &quot;Hello world!&quot;;
 console.log(variable); <span class="text-block-code-comment">// Toont 'Hello world!' in de console</span></pre>
@@ -918,7 +947,6 @@ checkCustomRegex: function () {
           <p class="text-block-paragraph"></p>
         </div>
       </div>
-
 
       <div id="">
         <div class="text-block">
