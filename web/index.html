@@ -805,7 +805,77 @@ checkCustomRegex: function () {
       <div id="werking-errorhandling">
         <div class="text-block">
           <p class="text-block-section-title">Werking ErrorHandling</p>
-          <p class="text-block-paragraph"></p>
+          <p class="text-block-paragraph">De ErrorHandling library is gebouwd om de state van een formulier element te kunnen veranderen. De oplettende lezer heeft al een glimp opgevangen van hoe deze library gebruikt kan worden. Dit is namelijk de laatste regel van de <code class="text-block-paragraph-code">FV.handleValidation</code> functie:</p>
+          <pre class="text-block-code">
+this.result.passed ? EH.addValidatedState(this.el) : EH.addErrorState(this.el, this.result.message);</pre>
+          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">EH</code> variabele verwijst naar mijn ErrorHandling library. Hier zie je dus dat er verschillende states worden toegevoegd. Welke state wordt toegevoegd hangt af van de waarden van de <code class="text-block-paragraph-code">this.result.passed</code> variabele.</p>
+          <p class="text-block-subtitle">Instellen opties</p>
+          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">EH</code> library werkt iets anders dan de <code class="text-block-paragraph-code">FV</code> library. Voordat je <code class="text-block-paragraph-code">EH</code> namelijk kunt gebruiken met je eigen custom HTML dien je eerst de <code class="text-block-paragraph-code">init</code> functie aan te roepen. Die functie ziet er als volgt uit:</p>
+          <pre class="text-block-code">
+init: function (options) {
+
+  this.errorElement = "p";
+  this.errorElementClasses = "error-message";
+  this.iconSelectorClass = "icon";
+  this.validatedClass = "is-validated";
+  this.validatedIcon = "#ico-validated";
+  this.validatedIconClass = "icon-validated";
+  this.errorParentClass = "error-parent";
+  this.errorClass = "has-error";
+  this.errorIcon = "#ico-error";
+  this.errorIconClass = "icon-error";
+
+  if (options.errorElement) this.errorElement = options.errorElement;
+
+  if (options.errorElementClasses) this.errorElementClasses = options.errorElementClasses;
+
+  if (options.iconSelectorClass) this.iconSelectorClass = options.iconSelectorClass;
+
+  if (options.validatedClass) this.validatedClass = options.validatedClass;
+
+  if (options.validatedIcon) this.validatedIcon = options.validatedIcon;
+
+  if (options.validatedIconClass) this.validatedIconClass = options.validatedIconClass;
+
+  if (options.errorParentClass) this.errorParentClass = options.errorParentClass;
+
+  if (options.errorClass) this.errorClass = options.errorClass;
+
+  if (options.errorIcon) this.errorIcon = options.errorIcon;
+
+  if (options.errorIconClass) this.errorIconClass = options.errorIconClass;
+
+}</pre>
+          <p class="text-block-paragraph">De bovenstaande functie stelt eerst een hoop default opties in. Daarna kijkt hij of de desbetreffende optie is meegegeven aan de <code class="text-block-paragraph-code">options</code> parameter. Zo ja, dan overschrijft hij de eerder ingestelde default waarde. Dit zijn de opties die je kunt instellen:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item"><span class="text-block-highlight">This.errorElement:</span> het HTML element waarin de error wordt getoond.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.errorElementClasses:</span> de classes die aan this.errorElement worden toegevoegd.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.iconSelectorClass:</span> een HTML class om het SVG element mee te selecteren.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.validatedClass:</span> een HTML class die wordt toegevoegd wanneer de validated status wordt toegevoegd.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.validatedIcon:</span> een ID referentie naar het SVG icoon wat wordt toegevoegd wanneer de validated status wordt toegevoegd.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.validatedIconClass:</span> een HTML class die wordt toegevoegd aan this.iconSelectorClass wanneer de validated status wordt toegevoegd.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.errorParentClass:</span> een HTML class waaraan this.errorElement wordt toegevoegd.<li class="text-block-list-item"><span class="text-block-highlight"></span></li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.errorClass:</span> een HTML class die wordt toegevoegd wanneer de error status wordt toegevoegd.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.errorIcon:</span> een ID referentie naar het SVG icoon wat wordt toegevoegd wanneer de error status wordt toegevoegd.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.errorIconClass:</span> een HTML class die wordt toegevoegd aan this.iconSelectorClass wanneer de error status wordt toegevoegd.</li>
+          </ul>
+          <p class="text-block-paragraph">Mimoto heeft uiteraard haar eigen custom HTML. Mijn <code class="text-block-paragraph-code">init</code> functie voor Mimoto ziet er dan ook zo uit:</p>
+          <pre class="text-block-code">
+EH.init({
+  "errorElement": "p",
+  "errorElementClasses": ["MimotoCMS_forms_FormComponent-element-error"],
+  "iconSelectorClass": "js-error-icon",
+  "validatedClass": "MimotoCMS_forms_FormComponent--is-validated",
+  "validatedIcon": "#ico-checkmark",
+  "validatedIconClass": "MimotoCMS_forms_FormComponent-title-icon--checkmark",
+  "errorParentClass": "js-error-parent",
+  "errorClass": "MimotoCMS_forms_FormComponent--has-error",
+  "errorIcon": "#ico-warning",
+  "errorIconClass": "MimotoCMS_forms_FormComponent-title-icon--warning"
+});</pre>
+          <!--<p class="text-block-paragraph"></p>-->
+          <!--<p class="text-block-paragraph"></p>-->
+          <!--<p class="text-block-paragraph"></p>-->
         </div>
       </div>
 
