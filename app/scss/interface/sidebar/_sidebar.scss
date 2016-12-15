@@ -3,10 +3,11 @@
   z-index: 100;
   top: 100%;
   left: 0;
+  overflow: auto;
   width: 300px;
   height: 100%;
-  padding: 80px 40px 0;
-  background-color: #343648;
+  padding: 40px 40px 0;
+  background-color: $bright-gray;
 }
 
 .sidebar--is-fixed {
