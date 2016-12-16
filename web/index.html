@@ -322,13 +322,13 @@ transition: all 100ms ease;</pre><p class="text-block-paragraph"><span class="te
           <p class="text-block-subtitle">Node en NPM</p>
           <p class="text-block-paragraph">Node zorgt ervoor dat het mogelijk is om JavaScript uit te voeren via je console. Op deze manier is het mogelijk om tools zoals Gulp en Grunt te gebruiken, hierover later meer.</p>
           <p class="text-block-paragraph">Als je Node installeert krijg je gelijk de Node Package Manager (NPM) meegeleverd. NPM is de meest gebruikte tool om packages te installeren en beheren. Op <a href="http://www.npmjs.com" target="_blank" class="text-block-link">deze website</a> kun je meer lezen over NPM en al haar packages.</p>
-          <p class="text-block-paragraph">Je kunt via NPM op een hele makkelijke manier een package installeren en opslaan in een zogenaamd <code class="text-block-paragraph-code">package.json</code> bestand. Als iemand anders dan je project binnen haalt kan hij via het volgende commando: <code class="text-block-paragraph-code">npm install</code> alle dependencies van dat project installeren.</p>
+          <p class="text-block-paragraph">Je kunt via NPM op een hele makkelijke manier een package installeren en opslaan in een zogenaamd <code class="text-block-inline-code">package.json</code> bestand. Als iemand anders dan je project binnen haalt kan hij via het volgende commando: <code class="text-block-inline-code">npm install</code> alle dependencies van dat project installeren.</p>
           <p class="text-block-paragraph">Ik heb Node voor dit project gebruikt om Gulp te draaien. Ook heb ik via NPM alle packages die ik bij dit project gebruik opgeslagen en ge&iuml;nstalleerd.</p>
           <p class="text-block-subtitle">Gulp</p>
           <p class="text-block-paragraph">Gulp is een automated task runner. Je kunt voor Gulp tasks schrijven die je leven tijdens de ontwikkeling van een project een stuk aangenamer maken.</p>
           <p class="text-block-paragraph">Gulp heeft concurrentie van andere task runners, waaronder <a href="http://gruntjs.com/" target="_blank" class="text-block-link">Grunt</a>. Er zijn meerdere redenen waarom ik gekozen heb voor Gulp bij dit project (en bij vele andere projecten). Een goede vergelijking van Gulp vs Grunt kan <a href="http://medium.com/@preslavrachev/gulp-vs-grunt-why-one-why-the-other-f5d3b398edc4" target="_blank" class="text-block-link">hier</a> gelezen worden.</p>
           <p class="text-block-paragraph">Ik gebruikte Gulp voor een hoop tasks tijdens mijn project. Een belangrijke was bijvoorbeeld de SASS task, die ervoor zorgde dat mijn SASS elke keer opnieuw gecompileerd werd naar CSS als ik een aanpassing deed. Ook zorgde deze task ervoor dat de gecompileerde CSS gelijk geminified werd en de nodige browser prefixes werden toegevoegd.</p>
-          <p class="text-block-paragraph">Een andere veel gebruikte task was de zogenaamde <a href="http://www.browsersync.io/" target="_blank" class="text-block-link">Browsersync</a> task. Wanneer Browsersync geactiveerd wordt zorgt dit ervoor dat je website lokaal bereikbaar is vanaf het IP-adres <code class="text-block-paragraph-code">127.0.0.1</code>. Als je dan aanpassingen maakt in je JavaScript of CSS zorgt Browsersync ervoor dat deze aanpassingen gelijk gestreamd worden naar de browser. Op deze manier heb je dus je laatste code zonder steeds zelf een page refresh te moeten uitvoeren.</p>
+          <p class="text-block-paragraph">Een andere veel gebruikte task was de zogenaamde <a href="http://www.browsersync.io/" target="_blank" class="text-block-link">Browsersync</a> task. Wanneer Browsersync geactiveerd wordt zorgt dit ervoor dat je website lokaal bereikbaar is vanaf het IP-adres <code class="text-block-inline-code">127.0.0.1</code>. Als je dan aanpassingen maakt in je JavaScript of CSS zorgt Browsersync ervoor dat deze aanpassingen gelijk gestreamd worden naar de browser. Op deze manier heb je dus je laatste code zonder steeds zelf een page refresh te moeten uitvoeren.</p>
           <p class="text-block-subtitle">Webpack</p>
           <p class="text-block-paragraph">Webpack is een module bundler. Met Webpack kun je ontzettend veel dingen doen maar ik gebruik het voornamelijk om JavaScript te compileren.</p>
           <p class="text-block-paragraph">Webpack is hier erg goed in en het is zelfs mogelijk om voor verschillende ontwikkelingsomgevingen verschillende instellingen te hebben. Denk hierbij aan bijvoorbeeld andere instellingen voor development dan voor live.</p>
@@ -375,9 +375,9 @@ transition: all 100ms ease;</pre><p class="text-block-paragraph"><span class="te
           <p class="text-block-section-title">Uitdagingen</p>
           <p class="text-block-subtitle">Component naamgeving</p>
           <p class="text-block-paragraph">Bij een modulaire applicatie is correcte naamgeving erg belangrijk. Aangezien elk component uniek is kan een component naam niet meer dan &eacute;&eacute;n keer gebruikt worden. Deze component naam wordt dan ook gebruikt als CSS selector. Bij complexe applicaties zoals Mimoto kan dit problemen opleveren.</p>
-          <p class="text-block-paragraph">In toekomstige versies van Mimoto is het namelijk de bedoeling dat Mimoto over een website heen geprojecteerd kan worden. Dit willen we doen zodat inline editing van content mogelijk is. Als wij dan een component naam zoals <code class="text-block-paragraph-code">button</code> gebruiken kan dit conflicten opleveren met de styling van de desbetreffende website. Gebruikt de desbetreffende website dan namelijk ook de component naam <code class="text-block-paragraph-code">button</code> dan wordt onze styling overschreven.</p>
-          <p class="text-block-paragraph">Oorspronkelijk was ik van mening dat met goede component namen je dit probleem vrijwel niet tegen zou komen. Om dingen nog veiliger te maken was ik aan het nadenken over een prefix zoals bijvoorbeeld <code class="text-block-paragraph-code">mi</code>. Om het button component als voorbeeld te nemen, de component-naam zou dan <code class="text-block-paragraph-code">mi-button</code> worden.</p>
-          <p class="text-block-paragraph">Sebastian had hier echter een ander idee over. Component namen zoals <code class="text-block-paragraph-code">mi-button</code> zouden volgens hem alsnog relatief makkelijk conflicten kunnen opleveren. Aangezien zijn achtergrond meer ligt in de klassieke programmeertalen opperde hij de suggestie om locaties in de component namen te gaan gebruiken.</p>
+          <p class="text-block-paragraph">In toekomstige versies van Mimoto is het namelijk de bedoeling dat Mimoto over een website heen geprojecteerd kan worden. Dit willen we doen zodat inline editing van content mogelijk is. Als wij dan een component naam zoals <code class="text-block-inline-code">button</code> gebruiken kan dit conflicten opleveren met de styling van de desbetreffende website. Gebruikt de desbetreffende website dan namelijk ook de component naam <code class="text-block-inline-code">button</code> dan wordt onze styling overschreven.</p>
+          <p class="text-block-paragraph">Oorspronkelijk was ik van mening dat met goede component namen je dit probleem vrijwel niet tegen zou komen. Om dingen nog veiliger te maken was ik aan het nadenken over een prefix zoals bijvoorbeeld <code class="text-block-inline-code">mi</code>. Om het button component als voorbeeld te nemen, de component-naam zou dan <code class="text-block-inline-code">mi-button</code> worden.</p>
+          <p class="text-block-paragraph">Sebastian had hier echter een ander idee over. Component namen zoals <code class="text-block-inline-code">mi-button</code> zouden volgens hem alsnog relatief makkelijk conflicten kunnen opleveren. Aangezien zijn achtergrond meer ligt in de klassieke programmeertalen opperde hij de suggestie om locaties in de component namen te gaan gebruiken.</p>
           <p class="text-block-paragraph">Ik was het hier oorspronkelijk niet mee eens. In mijn ogen heeft de naam van een component niks te maken met waar het zich bevindt. Om ons meningsverschil op te lossen hebben we toen een meeting ingepland met onze front-end collega Marc.</p>
           <p class="text-block-paragraph">In deze meeting hebben Sebastian en ik allebei ons zegje gedaan. Sebastian heeft hier zijn standpunt uitgebreid toegelicht en heeft uiteindelijk Marc en mij met de volgende argumenten weten te overtuigen:</p>
           <ul class="text-block-list">
@@ -411,9 +411,31 @@ transition: all 100ms ease;</pre><p class="text-block-paragraph"><span class="te
             <li class="text-block-list-item">De performance van Conditioner is minder goed dan de 'oldskool' manier van if-statements.</li>
             <li class="text-block-list-item">We willen zo weinig mogelijk dependencies binnen Mimoto.</li>
           </ul>
-          <p class="text-block-paragraph">Omdat ik dus geen Conditioner heb gebruikt binnen dit project moest ik mijn JavaScript modules op de ouderwetse manier gebruiken. Ik zal nu uitleggen hoe dat precies te werk is gegaan.</p>
-          <p class="text-block-paragraph">Over het algemeen waren de JavaScript modules die ik schreef constructors. Als je hier meer over te weten wilt komen lees dan eens het volgende <a href="http://css-tricks.com/understanding-javascript-constructors/" target="_blank" class="text-block-link">artikel</a>.</p>
-          <p class="text-block-paragraph">Als ik dan een module wou gebruiken voegde ik deze toe aan mijn <code class="text-block-paragraph-code">mimoto.cms.js</code> bestand. In dit bestand wordt alle JavaScript van Mimoto ge&iuml;nitialiseerd. Webpack zorgt er uiteindelijk voor dat alle modules ook daadwerkelijk worden samengevoegd en geminified.</p>
+          <p class="text-block-paragraph">Omdat ik dus geen Conditioner kon gebruiken binnen dit project moest ik mijn JavaScript modules op de ouderwetse manier inladen. Ik zal nu uitleggen hoe dat precies te werk is gegaan.</p>
+          <p class="text-block-paragraph">JavaScript modules worden over het algemeen geschreven als JavaScript objecten met een constructor functie. Dit is een JavaScript object:</p>
+          <pre class="text-block-code">
+var myObject = {
+  <span class="text-block-code-comment">// Hier kan je dingen doen</span>
+};</pre>
+          <p class="text-block-paragraph">Op deze manier is het niet mogelijk om nieuwe instanties van dit object aan te maken. Dit komt omdat dit een object literal is. Wat dat precies is leg ik later nog uit. Om hier een object constructor van te maken dienen er wat aanpassingen gedaan te worden.</p>
+          <pre class="text-block-code">
+var Human = function (name) {
+  this.name = name;
+};
+
+Human.prototype = {
+  introduce: function () {
+    console.log("Mijn naam is " + this.name);
+  }
+};
+
+var human = new Human("David");
+human.introduce(); <span class="text-block-code-comment">// Toont 'Mijn naam is David' in de console.</span></pre>
+          <p class="text-block-paragraph">Hierboven definieer ik een variabele genaamd <code class="text-block-inline-code">Human</code>. Aan deze variabele zit een functie gekoppeld. Deze functie wordt gebruikt als een object en er wordt via het prototype een functie genaamd <code class="text-block-inline-code">introduce</code> toegevoegd.</p>
+          <p class="text-block-paragraph">Met de JavaScript operator <code class="text-block-inline-code">new</code> maak ik dan een nieuwe instantie aan van het <code class="text-block-inline-code">Human</code> object. Deze instantie sla ik op in de variabele <code class="text-block-inline-code">human</code>. Via deze variabele kan ik daarna de functies aanroepen die horen bij het <code class="text-block-inline-code">Human</code> object.</p>
+
+          <!--<p class="text-block-paragraph">Over het algemeen waren de JavaScript modules die ik schreef constructors. Als je hier meer over te weten wilt komen lees dan eens het volgende <a href="http://css-tricks.com/understanding-javascript-constructors/" target="_blank" class="text-block-link">artikel</a>.</p>-->
+          <p class="text-block-paragraph">Als ik dan een module wou gebruiken voegde ik deze toe aan mijn <code class="text-block-inline-code">mimoto.cms.js</code> bestand. In dit bestand wordt alle JavaScript van Mimoto ge&iuml;nitialiseerd. Webpack zorgt er uiteindelijk voor dat alle modules ook daadwerkelijk worden samengevoegd en geminified.</p>
           <p class="text-block-paragraph">Het toevoegen van een JavaScript module aan mijn initiatie bestand is extreem simpel om te doen. Het kan namelijk al met de volgende code:</p>
           <pre class="text-block-code">var headerView = require('./views/Header');</pre>
           <p class="text-block-paragraph">Nadat een module is toegevoegd moet hij ge&iuml;nitialiseerd worden wil je hem kunnen gebruiken. Hieronder volgt een versimpeld voorbeeld van hoe het precies werkt om JavaScript modules te gebruiken.</p>
@@ -475,8 +497,8 @@ var human = {
   }
 
 };</pre>
-          <p class="text-block-paragraph">Hierboven wordt een JavaScript object gedefinieerd en toegekend aan de variabele <code class="text-block-paragraph-code">human</code>. Dit object bevat twee functies, <code class="text-block-paragraph-code">speak</code> en <code class="text-block-paragraph-code">run</code>. Deze functies kunnen op de volgende manier worden aangeroepen: <code class="text-block-paragraph-code">human.speak();</code> of <code class="text-block-paragraph-code">human.run();</code>.</p>
-          <p class="text-block-paragraph">Ik heb de FormValidation library via Webpack gekoppeld aan de variabele <code class="text-block-paragraph-code">FV</code>. Op deze manier kan je via <code class="text-block-paragraph-code">FV.functieNaam();</code> in alle JavaScript modules functies uit de FormValidation library aanroepen. Ik zal vanaf nu dan ook naar de FormValidation library refereren via FV.</p>
+          <p class="text-block-paragraph">Hierboven wordt een JavaScript object gedefinieerd en toegekend aan de variabele <code class="text-block-inline-code">human</code>. Dit object bevat twee functies, <code class="text-block-inline-code">speak</code> en <code class="text-block-inline-code">run</code>. Deze functies kunnen op de volgende manier worden aangeroepen: <code class="text-block-inline-code">human.speak();</code> of <code class="text-block-inline-code">human.run();</code>.</p>
+          <p class="text-block-paragraph">Ik heb de FormValidation library via Webpack gekoppeld aan de variabele <code class="text-block-inline-code">FV</code>. Op deze manier kan je via <code class="text-block-inline-code">FV.functieNaam();</code> in alle JavaScript modules functies uit de FormValidation library aanroepen. Ik zal vanaf nu dan ook naar de FormValidation library refereren via FV.</p>
           <p class="text-block-subtitle">Data-attributen</p>
           <p class="text-block-paragraph">Als je gebruik wilt maken van FV dien je als eerste data-attributen toe te voegen aan je formulier element. De volgende data-attributen worden ondersteunt voor formulier elementen waarin getypt kan worden:</p>
           <p class="text-block-paragraph"></p>
@@ -497,9 +519,9 @@ var human = {
             <li class="text-block-list-item"><span class="text-block-highlight">Min-checked:</span> het minimale aantal checkboxes wat geselecteerd dient te worden.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">Max-checked:</span> het maximale aantal checkboxes wat geselecteerd mag worden.</li>
           </ul>
-          <p class="text-block-paragraph">Ik heb de data-attributen geprefixed met <code class="text-block-paragraph-code">fv</code> zodat het duidelijk is waar de data-attributen voor gebruikt worden. In de praktijk ziet een data-attribuut er dus zo uit: <code class="text-block-paragraph-code">data-fv-min-length="10"</code>.</p>
+          <p class="text-block-paragraph">Ik heb de data-attributen geprefixed met <code class="text-block-inline-code">fv</code> zodat het duidelijk is waar de data-attributen voor gebruikt worden. In de praktijk ziet een data-attribuut er dus zo uit: <code class="text-block-inline-code">data-fv-min-length="10"</code>.</p>
           <p class="text-block-subtitle">Uitleg functies</p>
-          <p class="text-block-paragraph">Nadat je al je data-attributen naar keuze hebt toegevoegd aan je input element kun je dit element valideren door middel van de volgende functie: <code class="text-block-paragraph-code">FV.validateInput();</code>. Als parameter dien je een element mee te geven wat de parent is van het input element waar je de data-attributen aan hebt toegevoegd. Je HTML dient er dus ongeveer als volgt uit te zien:</p>
+          <p class="text-block-paragraph">Nadat je al je data-attributen naar keuze hebt toegevoegd aan je input element kun je dit element valideren door middel van de volgende functie: <code class="text-block-inline-code">FV.validateInput();</code>. Als parameter dien je een element mee te geven wat de parent is van het input element waar je de data-attributen aan hebt toegevoegd. Je HTML dient er dus ongeveer als volgt uit te zien:</p>
           <pre class="text-block-code">
 &lt;div class=&quot;textline-parent js-textline-parent&quot;&gt; <span class="text-block-code-comment">// De parent van het input element </span>
   &lt;input class=&quot;textline js-textline&quot; type=&quot;text&quot; placeholder=&quot;Uw naam&quot; data-fv-min-length=&quot;5&quot; data-fv-max-length=&quot;15&quot; data-fv-no-numbers data-fv-no-special-characters /&gt;
@@ -509,8 +531,8 @@ var human = {
 var textlineParent = document.querySelector('.js-textline-parent');
 
 FV.validateInput(textlineParent);</pre>
-          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">validateInput</code> functie doet niks anders dan het valideren van de waarde uit het input element en geeft het resultaat hiervan terug. Als de waarde door de validatie heen komt wordt er teruggegeven dat het valideren gelukt is. Komt de waarde niet door de validatie heen wordt er ook nog een error message teruggegeven.</p>
-          <p class="text-block-paragraph">Dit is hoe de <code class="text-block-paragraph-code">validateInput</code> functie er exact uitziet:</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">validateInput</code> functie doet niks anders dan het valideren van de waarde uit het input element en geeft het resultaat hiervan terug. Als de waarde door de validatie heen komt wordt er teruggegeven dat het valideren gelukt is. Komt de waarde niet door de validatie heen wordt er ook nog een error message teruggegeven.</p>
+          <p class="text-block-paragraph">Dit is hoe de <code class="text-block-inline-code">validateInput</code> functie er exact uitziet:</p>
           <pre class="text-block-code">
 validateInput: function (element) {
 
@@ -522,8 +544,8 @@ validateInput: function (element) {
   return this.result;
 
 }</pre>
-          <p class="text-block-paragraph">Zoals je ziet verwacht <code class="text-block-paragraph-code">validateInput</code> een element als parameter en geeft hij het resultaat terug wanneer hij klaar is met het uitvoeren van de vier andere functies die hij aanroept.</p>
-          <p class="text-block-paragraph">De eerste functie die <code class="text-block-paragraph-code">validateInput</code> aanroept is <code class="text-block-paragraph-code">setVariables</code>. Voordat ik verder inga op de werking van de <code class="text-block-paragraph-code">setVariables</code> functie zal ik eerst wat toelichting op JavaScript variabelen geven. Een normale JavaScript variabele wordt gedefinieerd op de volgende manier:</p>
+          <p class="text-block-paragraph">Zoals je ziet verwacht <code class="text-block-inline-code">validateInput</code> een element als parameter en geeft hij het resultaat terug wanneer hij klaar is met het uitvoeren van de vier andere functies die hij aanroept.</p>
+          <p class="text-block-paragraph">De eerste functie die <code class="text-block-inline-code">validateInput</code> aanroept is <code class="text-block-inline-code">setVariables</code>. Voordat ik verder inga op de werking van de <code class="text-block-inline-code">setVariables</code> functie zal ik eerst wat toelichting op JavaScript variabelen geven. Een normale JavaScript variabele wordt gedefinieerd op de volgende manier:</p>
           <pre class="text-block-code">
 var variable = &quot;Hello world!&quot;;
 console.log(variable); <span class="text-block-code-comment">// Toont 'Hello world!' in de console</span></pre>
@@ -559,8 +581,8 @@ var variableObject = {
 <span class="text-block-code-comment">// Voer de functies uit</span>
 variableObject.setVariable();
 variableObject.logVariable(); <span class="text-block-code-comment">// Toont 'Hello world!' in de console</span></pre>
-          <p class="text-block-paragraph">Buiten de aanpassingen naar de object literal notatie is de grootste aanpassing het <code class="text-block-paragraph-code">this</code> keyword. Alle variabelen die in een object literal via het <code class="text-block-paragraph-code">this</code> keyword worden gedefinieerd zijn binnen elke andere functie binnen hetzelfde object te benaderen.</p>
-          <p class="text-block-paragraph">Nu je enigszins begrijpt hoe variabelen werken binnen JavaScript kan ik uitleggen hoe de <code class="text-block-paragraph-code">setVariables</code> functie werkt. Dit is hoe hij eruit ziet:</p>
+          <p class="text-block-paragraph">Buiten de aanpassingen naar de object literal notatie is de grootste aanpassing het <code class="text-block-inline-code">this</code> keyword. Alle variabelen die in een object literal via het <code class="text-block-inline-code">this</code> keyword worden gedefinieerd zijn binnen elke andere functie binnen hetzelfde object te benaderen.</p>
+          <p class="text-block-paragraph">Nu je enigszins begrijpt hoe variabelen werken binnen JavaScript kan ik uitleggen hoe de <code class="text-block-inline-code">setVariables</code> functie werkt. Dit is hoe hij eruit ziet:</p>
           <pre class="text-block-code">
 setVariables: function (element) {
 
@@ -581,16 +603,16 @@ setVariables: function (element) {
   }
 
 }</pre>
-          <p class="text-block-paragraph">Het eerste wat hier gebeurd is dat het element wat <code class="text-block-paragraph-code">setVariables</code> meekrijgt als parameter wordt gedefinieerd als <code class="text-block-paragraph-code">this.el</code>. Daarna wordt er binnen <code class="text-block-paragraph-code">this.el</code> gezocht naar verschillende classes. De HTML elementen die deze classes bevatten worden opgeslagen in variabelen. Dat wordt gedaan met de volgende code:</p>
+          <p class="text-block-paragraph">Het eerste wat hier gebeurd is dat het element wat <code class="text-block-inline-code">setVariables</code> meekrijgt als parameter wordt gedefinieerd als <code class="text-block-inline-code">this.el</code>. Daarna wordt er binnen <code class="text-block-inline-code">this.el</code> gezocht naar verschillende classes. De HTML elementen die deze classes bevatten worden opgeslagen in variabelen. Dat wordt gedaan met de volgende code:</p>
           <pre class="text-block-code">
 this.textline = this.el.querySelector('.js-textline');
 this.checkboxes = this.el.querySelectorAll('.js-checkbox');
 this.radioButtons = this.el.querySelectorAll('.js-radio-button');</pre>
-          <p class="text-block-paragraph">Nadat deze variabelen zijn gedefinieerd wordt er door middel van een if-statement gekeken of de daadwerkelijke variabelen ook echt gevuld zijn. Er worden verschillende dingen gedaan wanneer er verschillende variabelen gevuld zijn. Voor dit voorbeeld gaan we nu er nu even vanuit dat <code class="text-block-paragraph-code">this.textline</code> gevuld is. Dat betekent dat de volgende code wordt uitgevoerd:</p>
+          <p class="text-block-paragraph">Nadat deze variabelen zijn gedefinieerd wordt er door middel van een if-statement gekeken of de daadwerkelijke variabelen ook echt gevuld zijn. Er worden verschillende dingen gedaan wanneer er verschillende variabelen gevuld zijn. Voor dit voorbeeld gaan we nu er nu even vanuit dat <code class="text-block-inline-code">this.textline</code> gevuld is. Dat betekent dat de volgende code wordt uitgevoerd:</p>
           <pre class="text-block-code">
 this.input = this.textline;
 this.value = this.input.value;</pre>
-          <p class="text-block-paragraph">Na het uitvoeren van de <code class="text-block-paragraph-code">setVariables</code> functie wordt de <code class="text-block-paragraph-code">setInputOptions</code> functie uitgevoerd. Deze functie ziet er als volgt uit:</p>
+          <p class="text-block-paragraph">Na het uitvoeren van de <code class="text-block-inline-code">setVariables</code> functie wordt de <code class="text-block-inline-code">setInputOptions</code> functie uitgevoerd. Deze functie ziet er als volgt uit:</p>
           <pre class="text-block-code">
 setInputOptions: function () {
 
@@ -616,7 +638,7 @@ setInputOptions: function () {
   this.setValidationOptions();
 
 }</pre>
-          <p class="text-block-paragraph">De bovenstaande functie leest de waardes uit van alle data-attributen van <code class="text-block-paragraph-code">this.input</code>. Bevat <code class="text-block-paragraph-code">this.input</code> een data-attribuut niet dan wordt de waarde ingesteld als een lege string, oftewel <code class="text-block-paragraph-code">''</code>. Nadat alle waardes zijn uitgelezen en opgeslagen wordt de <code class="text-block-paragraph-code">setValidationOptions</code> functie uitgevoerd. Die ziet er zo uit:</p>
+          <p class="text-block-paragraph">De bovenstaande functie leest de waardes uit van alle data-attributen van <code class="text-block-inline-code">this.input</code>. Bevat <code class="text-block-inline-code">this.input</code> een data-attribuut niet dan wordt de waarde ingesteld als een lege string, oftewel <code class="text-block-inline-code">''</code>. Nadat alle waardes zijn uitgelezen en opgeslagen wordt de <code class="text-block-inline-code">setValidationOptions</code> functie uitgevoerd. Die ziet er zo uit:</p>
           <pre class="text-block-code">
 setValidationOptions: function () {
 
@@ -634,8 +656,8 @@ setValidationOptions: function () {
   this.validateCustomRegex = this.customRegex ? true : false;
 
 }</pre>
-          <p class="text-block-paragraph">Deze functie kijkt of de variabelen die in de <code class="text-block-paragraph-code">setInputOptions</code> functie zijn ingesteld ook echt waardes bevatten. Bevatten ze een waarde dan wordt de bijbehorende variabele op <code class="text-block-paragraph-code">true</code> ingesteld. Zo niet, dan wordt de bijhorende variabele op <code class="text-block-paragraph-code">false</code> ingesteld (een lege string is in JavaScript geen waarde). Kortom, deze functie stelt in waar er allemaal op gevalideerd dient te worden.</p>
-          <p class="text-block-paragraph">Hierna wordt een belangrijke functie binnen <code class="text-block-paragraph-code">FV</code> uitgevoerd, namelijk de <code class="text-block-paragraph-code">setResult</code> functie. De <code class="text-block-paragraph-code">setResult</code> functie ziet er als volgt uit:</p>
+          <p class="text-block-paragraph">Deze functie kijkt of de variabelen die in de <code class="text-block-inline-code">setInputOptions</code> functie zijn ingesteld ook echt waardes bevatten. Bevatten ze een waarde dan wordt de bijbehorende variabele op <code class="text-block-inline-code">true</code> ingesteld. Zo niet, dan wordt de bijhorende variabele op <code class="text-block-inline-code">false</code> ingesteld (een lege string is in JavaScript geen waarde). Kortom, deze functie stelt in waar er allemaal op gevalideerd dient te worden.</p>
+          <p class="text-block-paragraph">Hierna wordt een belangrijke functie binnen <code class="text-block-inline-code">FV</code> uitgevoerd, namelijk de <code class="text-block-inline-code">setResult</code> functie. De <code class="text-block-inline-code">setResult</code> functie ziet er als volgt uit:</p>
           <pre class="text-block-code">
 setResult: function (passed, message) {
 
@@ -648,8 +670,8 @@ setResult: function (passed, message) {
   }
 
 }</pre>
-          <p class="text-block-paragraph">Via deze functie is het mogelijk om het resultaat in te stellen wat uit eindelijk door de <code class="text-block-paragraph-code">validateInput</code> functie wordt teruggegeven. Het is mogelijk om twee parameters mee te geven aan <code class="text-block-paragraph-code">setResult</code>. De eerste parameter is een boolean (kan alleen true of false zijn) en gaat over of de validatie is gelukt. De tweede parameter is een optioneel bericht. Deze parameter wordt alleen gebruikt wanneer de validatie niet gelukt is.</p>
-          <p class="text-block-paragraph">In de <code class="text-block-paragraph-code">validateInput</code> functie wordt het resultaat ingesteld op <code class="text-block-paragraph-code">true</code> aangezien de validatie initieel altijd gelukt is. Via de <code class="text-block-paragraph-code">handleValidation</code> functie wordt dan de daadwerkelijke validatie gedaan en wordt zo nodig het resultaat ge&uuml;pdatet. Dit is hoe de <code class="text-block-paragraph-code">handleValidation</code> functie eruitziet:</p>
+          <p class="text-block-paragraph">Via deze functie is het mogelijk om het resultaat in te stellen wat uit eindelijk door de <code class="text-block-inline-code">validateInput</code> functie wordt teruggegeven. Het is mogelijk om twee parameters mee te geven aan <code class="text-block-inline-code">setResult</code>. De eerste parameter is een boolean (kan alleen true of false zijn) en gaat over of de validatie is gelukt. De tweede parameter is een optioneel bericht. Deze parameter wordt alleen gebruikt wanneer de validatie niet gelukt is.</p>
+          <p class="text-block-paragraph">In de <code class="text-block-inline-code">validateInput</code> functie wordt het resultaat ingesteld op <code class="text-block-inline-code">true</code> aangezien de validatie initieel altijd gelukt is. Via de <code class="text-block-inline-code">handleValidation</code> functie wordt dan de daadwerkelijke validatie gedaan en wordt zo nodig het resultaat ge&uuml;pdatet. Dit is hoe de <code class="text-block-inline-code">handleValidation</code> functie eruitziet:</p>
           <pre class="text-block-code">
 handleValidation: function () {
 
@@ -680,8 +702,8 @@ handleValidation: function () {
   this.result.passed ? EH.addValidatedState(this.el) : EH.addErrorState(this.el, this.result.message);
 
 }</pre>
-          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">handleValidation</code> functie kijkt naar de variabelen die door <code class="text-block-paragraph-code">setValidationOptions</code> zijn ingesteld. Is een variabele <code class="text-block-paragraph-code">true</code> dan wordt de bijhorende validatie functie uitgevoerd. Nadat alle validatie is gedaan wordt er gekeken wat de waarde van <code class="text-block-paragraph-code">this.result.passed</code> is. Is deze waarde <code class="text-block-paragraph-code">true</code> dan betekent het dat de validatie is geslaagd. Is deze waarde <code class="text-block-paragraph-code">false</code> betekent het dat de validatie mislukt is.</p>
-          <p class="text-block-paragraph">Om de uitleg over <code class="text-block-paragraph-code">FV</code> af te ronden zal ik ook nog alle validatie functies laten zien. Ik ga niet uitleggen hoe deze precies werken aangezien dit niet super interessant is. Dit zijn alle validatie functies:</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">handleValidation</code> functie kijkt naar de variabelen die door <code class="text-block-inline-code">setValidationOptions</code> zijn ingesteld. Is een variabele <code class="text-block-inline-code">true</code> dan wordt de bijhorende validatie functie uitgevoerd. Nadat alle validatie is gedaan wordt er gekeken wat de waarde van <code class="text-block-inline-code">this.result.passed</code> is. Is deze waarde <code class="text-block-inline-code">true</code> dan betekent het dat de validatie is geslaagd. Is deze waarde <code class="text-block-inline-code">false</code> betekent het dat de validatie mislukt is.</p>
+          <p class="text-block-paragraph">Om de uitleg over <code class="text-block-inline-code">FV</code> af te ronden zal ik ook nog alle validatie functies laten zien. Ik ga niet uitleggen hoe deze precies werken aangezien dit niet super interessant is. Dit zijn alle validatie functies:</p>
           <pre class="text-block-code">
 checkMinLength: function () {
 
@@ -799,19 +821,19 @@ checkCustomRegex: function () {
   }
 
 }</pre>
-          <p class="text-block-paragraph">Wel wil ik nog wat toelichting geven over het gebruik van reguliere expressies. Ik gebruik reguliere expressies om te controleren of de input waarde aan een conditie voldoet. Vandaar komt het volgende stukje code nogal vaak voor: <code class="text-block-paragraph-code">new RegExp("Reguliere expressie hier");</code>. Al deze reguliere expressies zijn door mij zelf geschreven. Over het algemeen zijn ze niet super ingewikkeld maar voor iemand die totaal geen ervaring had met reguliere expressies was het toch vrij uitdagend om deze expressies te schrijven.</p>
+          <p class="text-block-paragraph">Wel wil ik nog wat toelichting geven over het gebruik van reguliere expressies. Ik gebruik reguliere expressies om te controleren of de input waarde aan een conditie voldoet. Vandaar komt het volgende stukje code nogal vaak voor: <code class="text-block-inline-code">new RegExp("Reguliere expressie hier");</code>. Al deze reguliere expressies zijn door mij zelf geschreven. Over het algemeen zijn ze niet super ingewikkeld maar voor iemand die totaal geen ervaring had met reguliere expressies was het toch vrij uitdagend om deze expressies te schrijven.</p>
         </div>
       </div>
 
       <div id="werking-errorhandling">
         <div class="text-block">
           <p class="text-block-section-title">Werking ErrorHandling</p>
-          <p class="text-block-paragraph">De ErrorHandling library is gebouwd om de state van een formulier element te kunnen veranderen. De oplettende lezer heeft al een glimp opgevangen van hoe deze library gebruikt kan worden. Dit is namelijk de laatste regel van de <code class="text-block-paragraph-code">FV.handleValidation</code> functie:</p>
+          <p class="text-block-paragraph">De ErrorHandling library is gebouwd om de state van een formulier element te kunnen veranderen. De oplettende lezer heeft al een glimp opgevangen van hoe deze library gebruikt kan worden. Dit is namelijk de laatste regel van de <code class="text-block-inline-code">FV.handleValidation</code> functie:</p>
           <pre class="text-block-code">
 this.result.passed ? EH.addValidatedState(this.el) : EH.addErrorState(this.el, this.result.message);</pre>
-          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">EH</code> variabele verwijst naar mijn ErrorHandling library. Hier zie je dus dat er verschillende states worden toegevoegd. Welke state wordt toegevoegd hangt af van de waarden van de <code class="text-block-paragraph-code">this.result.passed</code> variabele.</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">EH</code> variabele verwijst naar mijn ErrorHandling library. Hier zie je dus dat er verschillende states worden toegevoegd. Welke state wordt toegevoegd hangt af van de waarden van de <code class="text-block-inline-code">this.result.passed</code> variabele.</p>
           <p class="text-block-subtitle">Instellen opties</p>
-          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">EH</code> library werkt iets anders dan de <code class="text-block-paragraph-code">FV</code> library. Voordat je <code class="text-block-paragraph-code">EH</code> namelijk kunt gebruiken met je eigen custom HTML dien je eerst de <code class="text-block-paragraph-code">init</code> functie aan te roepen. Die functie ziet er als volgt uit:</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">EH</code> library werkt iets anders dan de <code class="text-block-inline-code">FV</code> library. Voordat je <code class="text-block-inline-code">EH</code> namelijk kunt gebruiken met je eigen custom HTML dien je eerst de <code class="text-block-inline-code">init</code> functie aan te roepen. Die functie ziet er als volgt uit:</p>
           <pre class="text-block-code">
 init: function (options) {
 
@@ -847,7 +869,7 @@ init: function (options) {
   if (options.errorIconClass) this.errorIconClass = options.errorIconClass;
 
 }</pre>
-          <p class="text-block-paragraph">De bovenstaande functie stelt eerst een hoop default opties in. Daarna kijkt hij of de desbetreffende optie is meegegeven aan de <code class="text-block-paragraph-code">options</code> parameter. Zo ja, dan overschrijft hij de eerder ingestelde default waarde. Dit zijn de opties die je kunt instellen:</p>
+          <p class="text-block-paragraph">De bovenstaande functie stelt eerst een hoop default opties in. Daarna kijkt hij of de desbetreffende optie is meegegeven aan de <code class="text-block-inline-code">options</code> parameter. Zo ja, dan overschrijft hij de eerder ingestelde default waarde. Dit zijn de opties die je kunt instellen:</p>
           <ul class="text-block-list">
             <li class="text-block-list-item"><span class="text-block-highlight">This.errorElement:</span> het HTML element waarin de error wordt getoond.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">This.errorElementClasses:</span> de classes die aan this.errorElement worden toegevoegd.</li>
@@ -860,7 +882,7 @@ init: function (options) {
             <li class="text-block-list-item"><span class="text-block-highlight">This.errorIcon:</span> een ID referentie naar het SVG icoon wat wordt toegevoegd wanneer de error status wordt toegevoegd.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">This.errorIconClass:</span> een HTML class die wordt toegevoegd aan this.iconSelectorClass wanneer de error status wordt toegevoegd.</li>
           </ul>
-          <p class="text-block-paragraph">Mimoto heeft uiteraard haar eigen custom HTML. Mijn <code class="text-block-paragraph-code">init</code> functie voor Mimoto ziet er dan ook zo uit:</p>
+          <p class="text-block-paragraph">Mimoto heeft uiteraard haar eigen custom HTML. Mijn <code class="text-block-inline-code">init</code> functie voor Mimoto ziet er dan ook zo uit:</p>
           <pre class="text-block-code">
 EH.init({
   "errorElement": "p",
@@ -875,8 +897,8 @@ EH.init({
   "errorIconClass": "MimotoCMS_forms_FormComponent-title-icon--warning"
 });</pre>
           <p class="text-block-subtitle">Belangrijkste functies</p>
-          <p class="text-block-paragraph">Nadat je je opties hebt ingesteld kun je <code class="text-block-paragraph-code">EH></code> gaan gebruiken. Er zijn eigenlijk maar twee functies die je als gebruiker zult aanroepen. Dat zijn <code class="text-block-paragraph-code">addErrorState</code> en <code class="text-block-paragraph-code">addValidatedState</code>. Deze functies updaten het element wat wordt meegegeven als parameter. Hierbij gebruiken ze de opties die je eerder hebt ingesteld.</p>
-          <p class="text-block-paragraph">De <code class="text-block-paragraph-code">addValidatedState</code> functie ziet er als volgt uit:</p>
+          <p class="text-block-paragraph">Nadat je je opties hebt ingesteld kun je <code class="text-block-inline-code">EH></code> gaan gebruiken. Er zijn eigenlijk maar twee functies die je als gebruiker zult aanroepen. Dat zijn <code class="text-block-inline-code">addErrorState</code> en <code class="text-block-inline-code">addValidatedState</code>. Deze functies updaten het element wat wordt meegegeven als parameter. Hierbij gebruiken ze de opties die je eerder hebt ingesteld.</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">addValidatedState</code> functie ziet er als volgt uit:</p>
           <pre class="text-block-code">
 addValidatedState: function (element) {
 
@@ -1008,7 +1030,7 @@ addValidatedState: function (element) {
       <div id="prototype">
         <div class="text-block">
           <p class="text-block-section-title">Prototype</p>
-          <p class="text-block-paragraph">Ik ben tijdens mijn afstudeerprojecto ook bezig geweest met de nieuwe website van Momkai. Deze is momenteel nog in ontwikkeling. We hebben Mimoto aan deze website gekoppeld om te demonstreren hoe Mimoto precies werkt. Ook kan er op deze manier effectief getest worden. Als prototype gaan we een kopie maken van de staging omgeving van deze website en deze openstellen voor de lezers van mijn verslag. Op deze manier kan Mimoto echt gebruikt worden en worden de aanpassingen die je doet gelijk getoond op de website.</p>
+          <p class="text-block-paragraph">Ik ben tijdens mijn afstudeerproject ook bezig geweest met de nieuwe website van Momkai. Deze is momenteel nog in ontwikkeling. We hebben Mimoto aan deze website gekoppeld om te demonstreren hoe Mimoto precies werkt. Ook kan er op deze manier effectief getest worden. Als prototype gaan we een kopie maken van de staging omgeving van deze website en deze openstellen voor de lezers van mijn verslag. Op deze manier kan Mimoto echt gebruikt worden en worden de aanpassingen die je doet gelijk getoond op de website.</p>
         </div>
       </div>
 
