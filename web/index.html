@@ -160,7 +160,17 @@
 -moz-transition: all 100ms ease; <span class="text-block-code-comment">// Firefox</span>
 -ms-transition: all 100ms ease; <span class="text-block-code-comment">// Internet Explorer</span>
 -o-transition: all 100ms ease; <span class="text-block-code-comment">// Opera</span>
-transition: all 100ms ease;</pre><p class="text-block-paragraph"><span class="text-block-highlight">JavaScript:</span> Een veelgebruikte scripttaal waarmee het mogelijk is om de DOM (het HTML document) te manipuleren.<sup class="text-block-paragraph-sup">5</sup></p>
+transition: all 100ms ease;</pre>
+          <p class="text-block-paragraph"><span class="text-block-highlight">JavaScript:</span> Een veelgebruikte scripttaal waarmee het mogelijk is om de DOM (het HTML document) te manipuleren.<sup class="text-block-paragraph-sup">5</sup></p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Parameter: </span> een vooraf ingesteld waarde die je meegeeft aan een JavaScript functie. Deze functie kan dan gebruik maken van deze waarde. Hier volgt een voorbeeld:</p>
+          <pre class="text-block-code">
+var myName = "David";
+
+function sayName (name) {
+  console.log("Mijn naam is " + name);
+};
+
+sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is David' in de console</span></pre>
           <p class="text-block-paragraph"><span class="text-block-highlight">Component</span>: Een op zichzelf staand stukje code. Een component moet op zichzelf staand kunnen functioneren en geen afhankelijkheid hebben van andere componenten. In mijn project bestaat een component over het algemeen uit twee of drie dingen:</p>
           <ul class="text-block-list">
             <li class="text-block-list-item">Een Twig bestand waarin alle HTML/Twig logica zich bevindt.</li>
@@ -173,7 +183,7 @@ transition: all 100ms ease;</pre><p class="text-block-paragraph"><span class="te
           <p class="text-block-paragraph"><span class="text-block-highlight">Module Bundler:</span> In mijn project gebruik ik een module bundler om mijn JavaScript bestanden samen te voegen. Het is handig om functionaliteit om te delen in kleinere, beter onderhoudbare bestanden.</p>
           <p class="text-block-paragraph"><span class="text-block-highlight">Minification:</span> Minifyen is het verwijderen van alle onnodige karakters van stukken code zonder de functionaliteit te veranderen. Dit wordt gedaan om de bestandsgrote te verkleinen en de uitvoeringssnelheid te vergroten.</p>
           <p class="text-block-paragraph"><span class="text-block-highlight">Slicen:</span> Het nabouwen van een Photoshop ontwerp met behulp van HTML en CSS. Een gesliced ontwerp bevat nog geen functionaliteit.</p>
-          <!--<p class="text-block-paragraph"><span class="text-block-highlight"></span> </p>-->
+          <p class="text-block-paragraph"><span class="text-block-highlight"></span> </p>
         </div>
       </div>
 
@@ -321,7 +331,7 @@ transition: all 100ms ease;</pre><p class="text-block-paragraph"><span class="te
           <p class="text-block-paragraph">Voor mensen die er geen zin in hebben om deze commands te leren zijn er programma's zoals SourceTree. Sourcetree maakt het mogelijk om via een interface Git commands uit te voeren. Dit zorgt ervoor dat je nooit in de buurt van een command line hoeft te komen.</p>
           <p class="text-block-subtitle">Node en NPM</p>
           <p class="text-block-paragraph">Node zorgt ervoor dat het mogelijk is om JavaScript uit te voeren via je console. Op deze manier is het mogelijk om tools zoals Gulp en Grunt te gebruiken, hierover later meer.</p>
-          <p class="text-block-paragraph">Als je Node installeert krijg je gelijk de Node Package Manager (NPM) meegeleverd. NPM is de meest gebruikte tool om packages te installeren en beheren. Op <a href="http://www.npmjs.com" target="_blank" class="text-block-link">deze website</a> kun je meer lezen over NPM en al haar packages.</p>
+          <p class="text-block-paragraph">Als je Node installeert krijg je gelijk de Node Package Manager (NPM) meegeleverd. NPM is de meest gebruikte tool om packages te installeren en beheren. Op deze <a href="http://www.npmjs.com" target="_blank" class="text-block-link">website</a> kun je meer lezen over NPM en al haar packages.</p>
           <p class="text-block-paragraph">Je kunt via NPM op een hele makkelijke manier een package installeren en opslaan in een zogenaamd <code class="text-block-inline-code">package.json</code> bestand. Als iemand anders dan je project binnen haalt kan hij via het volgende commando: <code class="text-block-inline-code">npm install</code> alle dependencies van dat project installeren.</p>
           <p class="text-block-paragraph">Ik heb Node voor dit project gebruikt om Gulp te draaien. Ook heb ik via NPM alle packages die ik bij dit project gebruik opgeslagen en ge&iuml;nstalleerd.</p>
           <p class="text-block-subtitle">Gulp</p>
@@ -471,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function () { <span class="text-bl
         <div class="text-block">
           <h1 class="text-block-title"><span class="text-block-title-number">3</span>Test fase</h1>
           <p class="text-block-section-title">Omschrijving</p>
-          <p class="text-block-paragraph">De tests die gepland staan wil ik via expert reviews volbrengen. Bij Momkai is er op user-experience gebied veel expertise aanwezig. De bedoeling is om de eerste versie van Mimoto te koppelen aan de nieuwe website van Momkai (waar ik zelf een grootdeel van ontwikkeld heb). Door mensen Mimoto dan echt te gaan laten gebruiken komen we snel tot goede feedback.</p>
+          <p class="text-block-paragraph">De tests die gepland staan wil ik via expert reviews volbrengen. Bij Momkai is er op user-experience gebied veel expertise aanwezig. De bedoeling is om de eerste versie van Mimoto te koppelen aan de nieuwe website van Momkai (waar ik zelf een groot deel van ontwikkeld heb). Door mensen Mimoto dan echt te gaan laten gebruiken komen we snel tot goede feedback.</p>
         </div>
       </div>
 
@@ -930,6 +940,7 @@ addValidatedState: function (element) {
         <div class="text-block">
           <p class="text-block-section-title">Demo componenten</p>
           <p class="text-block-paragraph">Omdat het voor mensen zonder technische achtergrond soms moeilijk te begrijpen is wat ik precies gedaan heb heb ik een paar voorbeelden gemaakt van mijn werk. Hieronder ziet je een formulier waarmee je jouw eigen validatie kunt toepassen op het invoerveld daaronder. Typ maar eens wat cijfers in de invoervelden, druk op 'voeg validatie toe' en typ in het invoerveld!</p>
+          <p class="text-block-paragraph">Het is de bedoeling dat dit gedeelte nog een stuk uitgebreider wordt. Ik wil tot in detail uitleggen hoe de belangrijkste formulier elementen zijn opgebouwd en hoe ze werken. Ook wil ik hier nog meerdere demo's bijvoegen.</p>
         </div>
 
         <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target1" data-form="js-form1">
@@ -1079,7 +1090,7 @@ addValidatedState: function (element) {
       <div id="bijlagen">
         <div class="text-block">
           <p class="text-block-section-title">Bijlagen</p>
-          <p class="text-block-paragraph"></p>
+          <p class="text-block-paragraph">Hier komen uit eindelijk al mijn bijlagen. Denk hierbij onder andere aan de expert reviews, een paar Photoshop designs en de designbrief.</p>
         </div>
       </div>
 
