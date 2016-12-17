@@ -433,12 +433,21 @@ var human = new Human("David");
 human.introduce(); <span class="text-block-code-comment">// Toont 'Mijn naam is David' in de console.</span></pre>
           <p class="text-block-paragraph">Hierboven definieer ik een variabele genaamd <code class="text-block-inline-code">Human</code>. Aan deze variabele zit een functie gekoppeld. Deze functie wordt gebruikt als een object en er wordt via het prototype een functie genaamd <code class="text-block-inline-code">introduce</code> toegevoegd.</p>
           <p class="text-block-paragraph">Met de JavaScript operator <code class="text-block-inline-code">new</code> maak ik dan een nieuwe instantie aan van het <code class="text-block-inline-code">Human</code> object. Deze instantie sla ik op in de variabele <code class="text-block-inline-code">human</code>. Via deze variabele kan ik daarna de functies aanroepen die horen bij het <code class="text-block-inline-code">Human</code> object.</p>
+          <p class="text-block-paragraph">Vrijwel alle componenten die ik heb ontwikkeld bevatten een JavaScript module. Omdat ik mijn modules beheer met Webpack is de syntax iets anders. Webpack werkt namelijk met de <code class="text-block-inline-code">module.exports</code> syntax. Mijn JavaScript modules zagen er daardoor zo uit:</p>
+          <pre class="text-block-code">
+module.exports = function () {
+  this.init();
+};
 
-          <!--<p class="text-block-paragraph">Over het algemeen waren de JavaScript modules die ik schreef constructors. Als je hier meer over te weten wilt komen lees dan eens het volgende <a href="http://css-tricks.com/understanding-javascript-constructors/" target="_blank" class="text-block-link">artikel</a>.</p>-->
+module.exports.prototype = {
+  init: function () {
+    <span class="text-block-code-comment">// Begin hier met het uitvoeren van andere code</span>
+  }
+};</pre>
           <p class="text-block-paragraph">Als ik dan een module wou gebruiken voegde ik deze toe aan mijn <code class="text-block-inline-code">mimoto.cms.js</code> bestand. In dit bestand wordt alle JavaScript van Mimoto ge&iuml;nitialiseerd. Webpack zorgt er uiteindelijk voor dat alle modules ook daadwerkelijk worden samengevoegd en geminified.</p>
           <p class="text-block-paragraph">Het toevoegen van een JavaScript module aan mijn initiatie bestand is extreem simpel om te doen. Het kan namelijk al met de volgende code:</p>
           <pre class="text-block-code">var headerView = require('./views/Header');</pre>
-          <p class="text-block-paragraph">Nadat een module is toegevoegd moet hij ge&iuml;nitialiseerd worden wil je hem kunnen gebruiken. Hieronder volgt een versimpeld voorbeeld van hoe het precies werkt om JavaScript modules te gebruiken.</p>
+          <p class="text-block-paragraph">Nadat een module is toegevoegd moet hij ge&iuml;nitialiseerd worden wil je hem kunnen gebruiken. Dat kan met de eerder getoonde <code class="text-block-inline-code">new</code> operator. Hieronder volgt een voorbeeld vanuit <code class="text-block-inline-code">mimoto.cms.js</code> waarin modules worden ingeladen en aangeroepen.</p>
           <pre class="text-block-code">
 var headerView = require('./views/Header'); <span class="text-block-code-comment">// Require de module en sla hem op in een variabele</span>
 
@@ -452,6 +461,9 @@ document.addEventListener('DOMContentLoaded', function () { <span class="text-bl
   }
 
 }, false);</pre>
+          <p class="text-block-paragraph">
+            Vaak geef ik bij mijn modules het element waar hij bij hoort mee als parameter. Je ziet in het voorbeeld hierboven dat ik de variabele <code class="text-block-inline-code">header</code> meegeef aan de <code class="text-block-inline-code">HeaderView</code> instantie. Op deze manier weet de <code class="text-block-inline-code">HeaderView</code> instantie meteen welk element hij dient te besturen.
+          </p>
         </div>
       </div>
 
