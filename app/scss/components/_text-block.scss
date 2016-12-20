@@ -96,7 +96,12 @@
         font-weight: bold;
         line-height: 0;
         vertical-align: super;
+        text-decoration: none;
         color: $valencia;
+
+        &:hover {
+          color: $royal-blue;
+        }
       }
 
     .text-block-inline-code {
