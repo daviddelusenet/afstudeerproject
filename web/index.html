@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function () { <span class="text-bl
         <div class="text-block">
           <h1 class="text-block-title"><span class="text-block-title-number">4</span>Product presentatie</h1>
           <p class="text-block-section-title"><span class="text-block-section-title-number">4.1</span>Toelichting</p>
-          <p class="text-block-paragraph">Tijdens dit project heb ik verschillende dingen ontwikkeld. In deze sectie ga ik dieper in op de functionaliteit van de belangrijkste libraries en componenten die ik heb gebouwd. Als eerste zal ik uitleg geven over de werking van mijn FormValidation en ErrorHandling JavaScript libraries. Daarna geef ik een demo van verschillende formulier elementen die ik heb gebouwd. Tijdens deze demo's demonstreer ik ook de kracht van de JavaScript libraries die ik heb gebouwd.</p>
+          <p class="text-block-paragraph">Tijdens dit project heb ik verschillende dingen ontwikkeld. In deze sectie ga ik dieper in op de functionaliteit van de belangrijkste libraries en componenten die ik heb gebouwd. Als eerste zal ik uitleg geven over de werking van mijn <code class="text-block-inline-code">FormValidation</code> en <code class="text-block-inline-code">ErrorHandling</code> JavaScript libraries. Daarna geef ik een demo van verschillende formulier elementen die ik heb gebouwd. Tijdens deze demo's demonstreer ik ook de kracht van de JavaScript libraries die ik heb gebouwd.</p>
           <p class="text-block-paragraph">Omdat alles wat ik heb ontwikkeld voor dit project bestaat uit code nodig ik je graag uit om de <a class="text-block-link" target="_blank" href="http://github.com/SebastianKersten/Mimoto.Aimless">broncode</a> van dit project te bekijken. Daar valt pas goed op hoe groot dit project is en hoeveel werk er al inzit. En dan te bedenken dat Mimoto nog lang niet af is.</p>
           <p class="text-block-paragraph">Als je broncode interessant vindt om te bekijken neem dan ook eens een kijkje naar de broncode van de website die je nu bekijkt. Die code kan <a class="text-block-link" target="_blank" href="http://github.com/daviddelusenet/afstudeerproject">hier</a> gevonden worden.</p>
         </div>
@@ -520,9 +520,9 @@ var human = {
 
 };</pre>
           <p class="text-block-paragraph">Hierboven wordt een JavaScript object gedefinieerd en toegekend aan de variabele <code class="text-block-inline-code">human</code>. Dit object bevat twee functies, <code class="text-block-inline-code">speak</code> en <code class="text-block-inline-code">run</code>. Deze functies kunnen op de volgende manier worden aangeroepen: <code class="text-block-inline-code">human.speak();</code> of <code class="text-block-inline-code">human.run();</code>.</p>
-          <p class="text-block-paragraph">Ik heb de FormValidation library via Webpack gekoppeld aan de variabele <code class="text-block-inline-code">FV</code>. Op deze manier kan je via <code class="text-block-inline-code">FV.functieNaam();</code> in alle JavaScript modules functies uit de FormValidation library aanroepen. Ik zal vanaf nu dan ook naar de FormValidation library refereren via FV.</p>
+          <p class="text-block-paragraph">Ik heb de FormValidation library via Webpack gekoppeld aan de variabele <code class="text-block-inline-code">FV</code>. Op deze manier kan je via <code class="text-block-inline-code">FV.functieNaam();</code> in alle JavaScript modules functies uit de FormValidation library aanroepen. Ik zal vanaf nu dan ook naar de FormValidation library refereren via <code class="text-block-inline-code">FV</code>.</p>
           <p class="text-block-subtitle">Data-attributen</p>
-          <p class="text-block-paragraph">Als je gebruik wilt maken van FV dien je als eerste data-attributen toe te voegen aan je formulier element. De volgende data-attributen worden ondersteunt voor formulier elementen waarin getypt kan worden:</p>
+          <p class="text-block-paragraph">Als je gebruik wilt maken van <code class="text-block-inline-code">FV</code> dien je als eerste data-attributen toe te voegen aan je formulier element. De volgende data-attributen worden ondersteunt voor formulier elementen waarin getypt kan worden:</p>
           <p class="text-block-paragraph"></p>
           <ul class="text-block-list">
             <li class="text-block-list-item"><span class="text-block-highlight">Min-length:</span> de minimale lengte van de input waarde.</li>
@@ -725,7 +725,36 @@ handleValidation: function () {
 
 }</pre>
           <p class="text-block-paragraph">De <code class="text-block-inline-code">handleValidation</code> functie kijkt naar de variabelen die door <code class="text-block-inline-code">setValidationOptions</code> zijn ingesteld. Is een variabele <code class="text-block-inline-code">true</code> dan wordt de bijhorende validatie functie uitgevoerd. Nadat alle validatie is gedaan wordt er gekeken wat de waarde van <code class="text-block-inline-code">this.result.passed</code> is. Is deze waarde <code class="text-block-inline-code">true</code> dan betekent het dat de validatie is geslaagd. Is deze waarde <code class="text-block-inline-code">false</code> betekent het dat de validatie mislukt is.</p>
-          <p class="text-block-paragraph">Om de uitleg over <code class="text-block-inline-code">FV</code> af te ronden zal ik ook nog alle validatie functies laten zien. Ik ga niet uitleggen hoe deze precies werken aangezien dit niet super interessant is. Dit zijn alle validatie functies:</p>
+          <p class="text-block-paragraph">Om de uitleg over <code class="text-block-inline-code">FV</code> af te ronden zal ik nog uitleg geven over de daadwerkelijke validatie functies. Ik ga niet in detail in op de werking van al deze functies aangezien ze vrijwel allemaal hetzelfde werken. Wel zal ik de <code class="text-block-inline-code">checkNoNumbers</code> functie uitleggen om te demonstreren hoe de validatie functies over het algemeen werken. Dit is de <code class="text-block-inline-code">checkNoNumbers</code> functie:</p>
+          <pre class="text-block-code">
+checkNoNumbers: function () {
+
+  var regex = new RegExp("\\d");
+
+  if (regex.test(this.value)) {
+    this.setResult(false, "No numbers allowed.");
+  }
+
+}</pre>
+          <p class="text-block-paragraph">Met het volgende stukje code <code class="text-block-inline-code">new RegExp()</code> kan ik een nieuwe reguliere expressie aanmaken. Als parameter geef ik dan de daadwerkelijke reguliere expressie mee. De volgende regel code maakt een nieuwe reguliere expressie aan die checkt of een tekst cijfers bevat.</p>
+          <pre class="text-block-code">
+var regex = new RegExp("\\d");</pre>
+          <p class="text-block-paragraph">Om een reguliere expressie te gebruiken dien je een waarde te vergelijken met de reguliere expressie. De reguliere expressie geeft dan als resultaat terug of de waarde voldoet aan de gestelde eisen. Dit doe je op de volgende manier:</p>
+          <pre class="text-block-code">
+var text = "Hello World 1"; <span class="text-block-code-comment">// Een tekst die een cijfer bevat</span>
+var regex = new RegExp("\\d"); <span class="text-block-code-comment">// Reguliere expressie die checkt of een waarde cijfers bevat</span>
+
+var result = regex.test(text); <span class="text-block-code-comment">// Resultaat van de check, in dit geval 'true' aangezien de waarde een cijfer bevat</span>
+
+console.log(result); <span class="text-block-code-comment">// Toont 'true' in de console</span></pre>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">checkNoNumbers</code> functie werkt bijna hetzelfde als het voorbeeld hierboven. Als eerst wordt dus de reguliere expressie gedefinieerd. Daarna wordt <code class="text-block-inline-code">this.value</code> getest ten opzichte van de reguliere expressie. Als het resultaat <code class="text-block-inline-code">true</code> is betekent het <code class="text-block-inline-code">his.value</code> nummers bevat. Aangezien er geen nummers toegestaan zijn binnen <code class="text-block-inline-code">this.value</code> wordt de <code class="text-block-inline-code">this.setResult</code> functie aangeroepen en wordt het resultaat ingesteld op <code class="text-block-inline-code">false</code>. Dit gebeurt allemaal in het volgende stukje code:</p>
+          <pre class="text-block-code">
+var regex = new RegExp("\\d");
+
+if (regex.test(this.value)) { <span class="text-block-code-comment">// Geeft 'true' terug als this.value cijfers bevat</span>
+  this.setResult(false, "No numbers allowed.");
+}</pre>
+          <p class="text-block-paragraph">Vrijwel alle validatie functie werken op deze manier. Dit zijn alle validatie functies:</p>
           <pre class="text-block-code">
 checkMinLength: function () {
 
@@ -843,7 +872,7 @@ checkCustomRegex: function () {
   }
 
 }</pre>
-          <p class="text-block-paragraph">Wel wil ik nog wat toelichting geven over het gebruik van reguliere expressies. Ik gebruik reguliere expressies om te controleren of de input waarde aan een conditie voldoet. Vandaar komt het volgende stukje code nogal vaak voor: <code class="text-block-inline-code">new RegExp("Reguliere expressie hier");</code>. Al deze reguliere expressies zijn door mij zelf geschreven. Over het algemeen zijn ze niet super ingewikkeld maar voor iemand die totaal geen ervaring had met reguliere expressies was het toch vrij uitdagend om deze expressies te schrijven.</p>
+          <p class="text-block-paragraph">Als laatst wil ik nog wat toelichting geven over het gebruik van reguliere expressies. Al de reguliere expressies in de bovenstaande functies zijn door mij zelf geschreven. Over het algemeen zijn ze niet super ingewikkeld maar voor iemand die totaal geen ervaring had met reguliere expressies was het toch vrij uitdagend om deze expressies te schrijven. Ik heb hier dan ook een hoop van geleerd.</p>
         </div>
       </div>
 
