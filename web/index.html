@@ -949,7 +949,7 @@ EH.init({
 });</pre>
           <p class="text-block-subtitle">Belangrijkste functies</p>
           <p class="text-block-paragraph">Nadat je je opties hebt ingesteld kun je <code class="text-block-inline-code">EH</code> gaan gebruiken. Er zijn eigenlijk maar twee functies die je als gebruiker zult aanroepen. Dat zijn de functies <code class="text-block-inline-code">addErrorState</code> en <code class="text-block-inline-code">addValidatedState</code>. Deze functies updaten het element wat wordt meegegeven als parameter. Hierbij gebruiken ze de opties die je eerder hebt ingesteld.</p>
-          <p class="text-block-paragraph">De <code class="text-block-inline-code">addValidatedState</code> functie ziet er als volgt uit:</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">addValidatedState</code> functie kun je gebruiken om een validated state toe te voegen aan een element. De <code class="text-block-inline-code">addValidatedState</code> functie doet dit in meerdere stappen. Dit is hoe hij eruit ziet:</p>
           <pre class="text-block-code">
 addValidatedState: function (element) {
 
@@ -987,7 +987,7 @@ clearErrorState: function () {
   }
 
 }</pre>
-          <p class="text-block-paragraph">De <code class="text-block-inline-code">clearErrorState</code> functie verwijderd alle styling die hoort bij de error state. Dit zorgt ervoor dat als je element error styling had hij nu weer gereset is naar zijn oorspronkelijke state.</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">clearErrorState</code> functie verwijderd alle styling die hoort bij de error state. Dit zorgt ervoor dat als je element error styling had hij nu weer gereset is naar zijn oorspronkelijke state. Hoe de functies die door <code class="text-block-inline-code">clearErrorState</code> worden aangeroepen precies werken leg ik later uit.</p>
           <p class="text-block-paragraph">Nadat de error state is verwijderd wordt er gecontroleerd of het element niet al de gevalideerde state bevat. Bevat het element deze state niet worden er twee functies aangeroepen. Dit zijn de <code class="text-block-inline-code">addElementClass</code> en <code class="text-block-inline-code">addIcon</code> functies. Dit gebeurt allemaal in het volgende stuk code:</p>
           <pre class="text-block-code">
 if (!this.isValidated) {
@@ -1009,8 +1009,24 @@ removeElementClass: function (elementClass) {
   this.el.classList.remove(elementClass);
 
 }</pre>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">addIcon</code> functie doet precies wat je ervan verwacht, hij voegt namelijk een icon toe. Verschillende icons hebben verschillende styling dus dient er ook naast het icon ook een class meegegeven te worden als parameter. De icon en class worden dan toegevoegd aan het element.</p>
+          <p class="text-block-paragraph">Met de <code class="text-block-inline-code">removeIcon</code> functie (gebruikt in de <code class="text-block-inline-code">clearErrorState</code> functie) kan dit icon dan weer verwijderd worden. Als parameter dient er alleen een class mee gegeven te worden. Dit komt omdat als de class verwijderd wordt de styling van het icon ook verwijderd wordt. Zonder styling is het icon niet zichtbaar. Dit zijn de <code class="text-block-inline-code">addIcon</code> en <code class="text-block-inline-code">removeIcon</code> functies:</p>
+          <pre class="text-block-code">
+<span class="text-block-code-comment">// Deze functie voegt een class en icon toe aan this.el</span>
+addIcon: function (iconClass, icon) {
 
+  this.iconElement.classList.add(iconClass);
+  this.useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', icon);
 
+}
+
+<span class="text-block-code-comment">// Deze functie verwijderd de iconClass van this.el</span>
+removeIcon: function (iconClass) {
+
+  this.el.querySelector('.' + this.iconSelectorClass).classList.remove(iconClass);
+
+}</pre>
+          <p class="text-block-paragraph">Dit zijn alle stappen die worden doorlopen bij het toevoegen van een validated state. Zoals je ziet kan er nogal veel komen kijken bij het aanroepen van &eacute;&eacute;n functie.</p>
 
 
 
