@@ -1027,8 +1027,86 @@ removeIcon: function (iconClass) {
 
 }</pre>
           <p class="text-block-paragraph">Dit zijn alle stappen die worden doorlopen bij het toevoegen van een validated state. Zoals je ziet kan er nogal veel komen kijken bij het aanroepen van &eacute;&eacute;n functie.</p>
+          <p class="text-block-paragraph">Natuurlijk wil je ook de mogelijkheid hebben om een error state te kunnen toevoegen. Dit kan gedaan worden met de <code class="text-block-inline-code">addErrorState</code> functie. Zo ziet deze functie eruit:</p>
+          <pre class="text-block-code">
+addErrorState: function (element, message) {
 
+  this.setVariables(element);
+  this.clearValidatedState();
 
+  if (!this.hasError) {
+    this.addErrorElement(message);
+    this.addElementClass(this.errorClass);
+    this.addIcon(this.errorIconClass, this.errorIcon);
+  } else {
+    this.updateErrorElement(message);
+  }
+
+}</pre>
+          <p class="text-block-paragraph">Zoals je ziet worden er aan deze functie twee parameters meegegeven, <code class="text-block-inline-code">element</code> en <code class="text-block-inline-code">message</code>. De <code class="text-block-inline-code">element</code> parameter vervult dezelfde rol als de <code class="text-block-inline-code">element</code> parameter bij de <code class="text-block-inline-code">addValidatedState</code> functie. De <code class="text-block-inline-code">message</code> parameter bevat de error message die je wilt tonen.</p>
+          <p class="text-block-paragraph">Net zoals bij de <code class="text-block-inline-code">addValidatedState</code> functie is de eerste functie die wordt aangeroepen de <code class="text-block-inline-code">setVariables</code> functie. Daarna wordt de <code class="text-block-inline-code">clearValidatedState</code> functie aangeroepen, die ziet er als volgt uit:</p>
+          <pre class="text-block-code">
+clearValidatedState: function () {
+
+  if (this.isValidated) {
+    this.removeElementClass(this.validatedClass);
+    this.removeIcon(this.validatedIconClass);
+  }
+
+}</pre>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">clearValidatedState</code> functie is vrijwel hetzelfde als de <code class="text-block-inline-code">clearErrorState</code> functie. Er wordt gecontroleerd of het element de validated state bevat. Is dit het geval dan worden de <code class="text-block-inline-code">removeElementClass</code> en <code class="text-block-inline-code">removeIcon</code> functies aangeroepen om de validated state te verwijderen.</p>
+          <p class="text-block-paragraph">Nadat de variabelen zijn ingesteld door de <code class="text-block-inline-code">setVariables</code> functie en de validated state is verwijderd door de <code class="text-block-inline-code">clearValidatedState</code> functie kan de error state toegevoegd worden. De error state bestaat uit drie dingen:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item">Een class die wat error styling toevoegt (zoals bijvoorbeeld een rode border om het input veld heen)</li>
+            <li class="text-block-list-item">Een icon plus bijbehorende class (in het geval van Mimoto een rood kruisje)</li>
+            <li class="text-block-list-item">De daadwerkelijke error (getoond onder het input veld)</li>
+          </ul>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">addErrorState</code> functie controleert of het element al de error state bevat. Als dit het geval is dient namelijk alleen de error message ge&uuml;pdatet te worden. Dit kan gedaan worden met de <code class="text-block-inline-code">updateErrorElement</code> functie:</p>
+          <pre class="text-block-code">
+updateErrorElement: function (message) {
+
+  var error = this.errorParent.querySelector('.' + this.errorElementClasses[0]);
+  error.innerHTML = message;
+
+}</pre>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">updateErrorElement</code> functie zoekt naar een error element in <code class="text-block-inline-code">his.errorParent</code>. Dit element wordt opgeslagen in de variabele <code class="text-block-inline-code">error</code>. De <a class="text-block-link" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">innerHTML</a> van deze variabele wordt daarna ingesteld op de <code class="text-block-inline-code">message</code> parameter.</p>
+          <p class="text-block-paragraph">Als het element nog geen error state bevat dient deze toegevoegd te worden. Hier zijn de volgende drie functies voor nodig:</p>
+          <pre class="text-block-code">
+this.addErrorElement(message);
+this.addElementClass(this.errorClass);
+this.addIcon(this.errorIconClass, this.errorIcon);</pre>
+          <p class="text-block-paragraph">Aangezien ik de <code class="text-block-inline-code">addElementClass</code> en <code class="text-block-inline-code">addIcon</code> functies al heb uitgelegd zal ik alleen nog de <code class="text-block-inline-code">addErrorElement</code> functie uitleggen. Die functie ziet er zo uit:</p>
+          <pre class="text-block-code">
+addErrorElement: function (message) {
+
+  var error = document.createElement(this.errorElement);
+
+  for (var i = 0; i < this.errorElementClasses.length; i++) {
+
+    error.classList.add(this.errorElementClasses[i]);
+
+  }
+
+  error.innerHTML = message;
+  this.errorParent.appendChild(error);
+
+}</pre>
+          <p class="text-block-paragraph">Het eerste wat er in deze functie gebeurd is de creatie van een nieuw HTML element. Dit element wordt opgeslagen in de variabele <code class="text-block-inline-code">error</code>. Daarna worden er door middel van een <a class="text-block-link" target="_blank" href="https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Statements/for">for loop</a> classes toegevoegd aan het <code class="text-block-inline-code">error</code> element.</p>
+          <p class="text-block-paragraph">Nadat het <code class="text-block-inline-code">error</code> element is gecre&euml;erd en de classes zijn toegevoegd wordt de <code class="text-block-inline-code">message</code> parameter ingesteld als <code class="text-block-inline-code">innerHTML</code> van het <code class="text-block-inline-code">error</code> element. Als laatste wordt het <code class="text-block-inline-code">error</code> element dan ook daadwerkelijk toegevoegd aan de pagina. Dit gebeurt op de volgende regel:</p>
+          <pre class="text-block-code">
+this.errorParent.appendChild(error);</pre>
+          <p class="text-block-paragraph">Uiteraard kunnen toegevoegde errors ook weer verwijderd worden. Dit kan gedaan worden met de <code class="text-block-inline-code">removeErrorElement</code> functie (gebruikt in de <code class="text-block-inline-code">clearErrorState</code> functie). Dit is de <code class="text-block-inline-code">removeErrorElement</code> functie:</p>
+          <pre class="text-block-code">
+removeErrorElement: function () {
+
+  var error = this.errorParent.querySelector('.' + this.errorElementClasses[0]);
+
+  if (error) {
+    this.errorParent.removeChild(error);
+  }
+
+}</pre>
+          <p class="text-block-paragraph">Deze functie selecteert het <code class="text-block-inline-code">error</code> element en slaat deze op in de variabele <code class="text-block-inline-code">error</code>. Daarna wordt er gecontroleerd of het <code class="text-block-inline-code">error</code> element daadwerkelijk bestaat. Is dit het geval dan wordt het <code class="text-block-inline-code">error</code> element verwijderd uit de HTML pagina.</p>
 
         </div>
       </div>
