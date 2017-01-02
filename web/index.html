@@ -172,7 +172,7 @@ function sayName (name) {
 
 sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is David' in de console</span></pre>
           <p class="text-block-paragraph"><span class="text-block-highlight">Library:</span> een bibliotheek van vooraf geschreven code. Deze code maakt ontwikkeling van applicaties makkelijker. Als ik het tijdens dit verslag heb over een library praat ik over het algemeen over een JavaScript library.</p>
-          <p class="text-block-paragraph"><span class="text-block-highlight">Component:</span> Een op zichzelf staand stukje code. Een component moet op zichzelf staand kunnen functioneren en geen afhankelijkheid hebben van andere componenten. In mijn project bestaat een component over het algemeen uit twee of drie dingen:</p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Component:</span> Een op zichzelf staand stuk code. Een component moet op zichzelf staand kunnen functioneren en geen afhankelijkheid hebben van andere componenten. In mijn project bestaat een component over het algemeen uit twee of drie dingen:</p>
           <ul class="text-block-list">
             <li class="text-block-list-item">Een Twig bestand waarin alle HTML/Twig logica zich bevindt.</li>
             <li class="text-block-list-item">Een SASS bestand waarin de styling zich bevindt.</li>
@@ -241,7 +241,7 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <p class="text-block-paragraph">Als oplossing voor het probleem wat ik hierboven beschreven heb wil ik Mimoto opnieuw gaan bouwen. Hierbij wil ik gebruik maken van hedendaagse technieken zoals HTML5, CSS3 en JavaScript.</p>
           <p class="text-block-paragraph">Tijdens dit project zal ik mij voornamelijk richting op de front-end en alles wat daarmee te maken heeft aangezien daar mijn expertise ligt. De back-end (en grotendeels het concept) zal ontwikkeld worden door Sebastian Kersten. Ik zal tijdens dit project dan ook intensief met hem samenwerken en overleggen.</p>
           <p class="text-block-subtitle">Modulair</p>
-          <p class="text-block-paragraph">Zoals al eerder uitgelegd is het de bedoeling Mimoto op te zetten als een library. Op deze manier kan het in de toekomst met relatief kleine aanpassingen ook voor andere doeleinden ingezet worden. Om dit te bereiken dient Mimoto opgebouwd te worden uit componenten die elk hun eigen stukje functionaliteit bevatten.</p>
+          <p class="text-block-paragraph">Zoals al eerder uitgelegd is het de bedoeling Mimoto op te zetten als een library. Op deze manier kan het in de toekomst met relatief kleine aanpassingen ook voor andere doeleinden ingezet worden. Om dit te bereiken dient Mimoto opgebouwd te worden uit componenten die elk hun eigen stuk functionaliteit bevatten.</p>
           <p class="text-block-paragraph">Met deze componenten is het dan mogelijk om ook andere interfaces te bouwen. Het is bijvoorbeeld de bedoeling dat ook Respondens (het CMS van De Correspondent) opnieuw gebouwd wordt met behulp van componenten uit Mimoto.</p>
           <p class="text-block-paragraph">Omdat een modulaire opzet het belangrijkste aspect is van dit project zal ik mij tijdens de ontwikkeling voornamelijk richting op de belangrijke componenten. In het geval van een CMS zijn dit formulier elementen. Een CMS kan namelijk op 10.000 verschillende manieren ontworpen worden, &eacute;&eacute;n ding hebben ze altijd gemeen: er wordt een hoop gebruik gemaakt van formulieren en alles wat hierbij hoort.</p>
           <p class="text-block-paragraph">Het is dan ook van groot belang dat deze componenten zo opgezet worden dat ze simpel hergebruikt kunnen worden voor andere doeleinden. Om dit te bereiken is het belangrijk om al de functionaliteit ge&iuml;soleerd op te zetten. Hoe ik dit precies ga doen ga ik later nog verder op in.</p>
@@ -736,7 +736,7 @@ checkNoNumbers: function () {
   }
 
 }</pre>
-          <p class="text-block-paragraph">Met het volgende stukje code <code class="text-block-inline-code">new RegExp()</code> kan ik een nieuwe reguliere expressie aanmaken. Als parameter geef ik dan de daadwerkelijke reguliere expressie mee. De volgende regel code maakt een nieuwe reguliere expressie aan die checkt of een tekst cijfers bevat.</p>
+          <p class="text-block-paragraph">Met het volgende stuk code <code class="text-block-inline-code">new RegExp()</code> kan ik een nieuwe reguliere expressie aanmaken. Als parameter geef ik dan de daadwerkelijke reguliere expressie mee. De volgende regel code maakt een nieuwe reguliere expressie aan die checkt of een tekst cijfers bevat.</p>
           <pre class="text-block-code">
 var regex = new RegExp("\\d");</pre>
           <p class="text-block-paragraph">Om een reguliere expressie te gebruiken dien je een waarde te vergelijken met de reguliere expressie. De reguliere expressie geeft dan als resultaat terug of de waarde voldoet aan de gestelde eisen. Dit doe je op de volgende manier:</p>
@@ -747,7 +747,7 @@ var regex = new RegExp("\\d"); <span class="text-block-code-comment">// Regulier
 var result = regex.test(text); <span class="text-block-code-comment">// Resultaat van de check, in dit geval 'true' aangezien de waarde een cijfer bevat</span>
 
 console.log(result); <span class="text-block-code-comment">// Toont 'true' in de console</span></pre>
-          <p class="text-block-paragraph">De <code class="text-block-inline-code">checkNoNumbers</code> functie werkt bijna hetzelfde als het voorbeeld hierboven. Als eerst wordt dus de reguliere expressie gedefinieerd. Daarna wordt <code class="text-block-inline-code">this.value</code> getest ten opzichte van de reguliere expressie. Als het resultaat <code class="text-block-inline-code">true</code> is betekent het <code class="text-block-inline-code">his.value</code> nummers bevat. Aangezien er geen nummers toegestaan zijn binnen <code class="text-block-inline-code">this.value</code> wordt de <code class="text-block-inline-code">this.setResult</code> functie aangeroepen en wordt het resultaat ingesteld op <code class="text-block-inline-code">false</code>. Dit gebeurt allemaal in het volgende stukje code:</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">checkNoNumbers</code> functie werkt bijna hetzelfde als het voorbeeld hierboven. Als eerst wordt dus de reguliere expressie gedefinieerd. Daarna wordt <code class="text-block-inline-code">this.value</code> getest ten opzichte van de reguliere expressie. Als het resultaat <code class="text-block-inline-code">true</code> is betekent het <code class="text-block-inline-code">his.value</code> nummers bevat. Aangezien er geen nummers toegestaan zijn binnen <code class="text-block-inline-code">this.value</code> wordt de <code class="text-block-inline-code">this.setResult</code> functie aangeroepen en wordt het resultaat ingesteld op <code class="text-block-inline-code">false</code>. Dit gebeurt allemaal in het volgende stuk code:</p>
           <pre class="text-block-code">
 var regex = new RegExp("\\d");
 
@@ -882,7 +882,7 @@ checkCustomRegex: function () {
           <p class="text-block-paragraph">De ErrorHandling library is gebouwd om de state van een formulier element te kunnen veranderen. De oplettende lezer heeft al een glimp opgevangen van hoe deze library gebruikt kan worden. Dit is namelijk de laatste regel van de <code class="text-block-inline-code">FV.handleValidation</code> functie:</p>
           <pre class="text-block-code">
 this.result.passed ? EH.addValidatedState(this.el) : EH.addErrorState(this.el, this.result.message);</pre>
-          <p class="text-block-paragraph">De <code class="text-block-inline-code">EH</code> variabele verwijst naar mijn ErrorHandling library. Hier zie je dus dat er verschillende states worden toegevoegd. Welke state wordt toegevoegd hangt af van de waarden van de <code class="text-block-inline-code">this.result.passed</code> variabele.</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">EH</code> variabele verwijst naar mijn ErrorHandling library. Hier zie je dus dat er verschillende states worden toegevoegd. Welke state wordt toegevoegd hangt af van de waarde van de <code class="text-block-inline-code">this.result.passed</code> variabele.</p>
           <p class="text-block-subtitle">Instellen opties</p>
           <p class="text-block-paragraph">De <code class="text-block-inline-code">EH</code> library werkt iets anders dan de <code class="text-block-inline-code">FV</code> library. Voordat je <code class="text-block-inline-code">EH</code> namelijk kunt gebruiken met je eigen custom HTML dien je eerst de <code class="text-block-inline-code">init</code> functie aan te roepen. Die functie ziet er als volgt uit:</p>
           <pre class="text-block-code">
@@ -933,7 +933,7 @@ init: function (options) {
             <li class="text-block-list-item"><span class="text-block-highlight">This.errorIcon:</span> een ID referentie naar het SVG icoon wat wordt toegevoegd wanneer de error status wordt toegevoegd.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">This.errorIconClass:</span> een HTML class die wordt toegevoegd aan this.iconSelectorClass wanneer de error status wordt toegevoegd.</li>
           </ul>
-          <p class="text-block-paragraph">Mimoto heeft uiteraard haar eigen custom HTML. Mijn <code class="text-block-inline-code">init</code> functie voor Mimoto ziet er dan ook zo uit:</p>
+          <p class="text-block-paragraph">Mimoto heeft uiteraard haar eigen custom opties. Mijn <code class="text-block-inline-code">init</code> functie voor Mimoto ziet er dan ook zo uit:</p>
           <pre class="text-block-code">
 EH.init({
   "errorElement": "p",
@@ -948,7 +948,7 @@ EH.init({
   "errorIconClass": "MimotoCMS_forms_FormComponent-title-icon--warning"
 });</pre>
           <p class="text-block-subtitle">Belangrijkste functies</p>
-          <p class="text-block-paragraph">Nadat je je opties hebt ingesteld kun je <code class="text-block-inline-code">EH</code> gaan gebruiken. Er zijn eigenlijk maar twee functies die je als gebruiker zult aanroepen. Dat zijn <code class="text-block-inline-code">addErrorState</code> en <code class="text-block-inline-code">addValidatedState</code>. Deze functies updaten het element wat wordt meegegeven als parameter. Hierbij gebruiken ze de opties die je eerder hebt ingesteld.</p>
+          <p class="text-block-paragraph">Nadat je je opties hebt ingesteld kun je <code class="text-block-inline-code">EH</code> gaan gebruiken. Er zijn eigenlijk maar twee functies die je als gebruiker zult aanroepen. Dat zijn de functies <code class="text-block-inline-code">addErrorState</code> en <code class="text-block-inline-code">addValidatedState</code>. Deze functies updaten het element wat wordt meegegeven als parameter. Hierbij gebruiken ze de opties die je eerder hebt ingesteld.</p>
           <p class="text-block-paragraph">De <code class="text-block-inline-code">addValidatedState</code> functie ziet er als volgt uit:</p>
           <pre class="text-block-code">
 addValidatedState: function (element) {
@@ -987,7 +987,7 @@ clearErrorState: function () {
   }
 
 }</pre>
-          <p class="text-block-paragraph">De <code class="text-block-inline-code">clearErrorState</code> functie verwijderd alle styling die hoort bij de error state. Dit zorgt ervoor dat als je element error styling had hij nu weer gereset is.</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">clearErrorState</code> functie verwijderd alle styling die hoort bij de error state. Dit zorgt ervoor dat als je element error styling had hij nu weer gereset is naar zijn oorspronkelijke state.</p>
           <p class="text-block-paragraph">Later komt er nog meer toelichting over hoe mijn <code class="text-block-inline-code">EH</code> library precies in elkaar steekt.</p>
         </div>
       </div>
