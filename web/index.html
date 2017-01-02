@@ -988,7 +988,32 @@ clearErrorState: function () {
 
 }</pre>
           <p class="text-block-paragraph">De <code class="text-block-inline-code">clearErrorState</code> functie verwijderd alle styling die hoort bij de error state. Dit zorgt ervoor dat als je element error styling had hij nu weer gereset is naar zijn oorspronkelijke state.</p>
-          <p class="text-block-paragraph">Later komt er nog meer toelichting over hoe mijn <code class="text-block-inline-code">EH</code> library precies in elkaar steekt.</p>
+          <p class="text-block-paragraph">Nadat de error state is verwijderd wordt er gecontroleerd of het element niet al de gevalideerde state bevat. Bevat het element deze state niet worden er twee functies aangeroepen. Dit zijn de <code class="text-block-inline-code">addElementClass</code> en <code class="text-block-inline-code">addIcon</code> functies. Dit gebeurt allemaal in het volgende stuk code:</p>
+          <pre class="text-block-code">
+if (!this.isValidated) {
+  this.addElementClass(this.validatedClass);
+  this.addIcon(this.validatedIconClass, this.validatedIcon);
+}</pre>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">addElementClass</code> functie doet eigenlijk niks anders dan een class toevoegen aan het element. De class dient meegegeven te worden als parameter. Met de <code class="text-block-inline-code">removeElementClass</code> functie (gebruikt in de <code class="text-block-inline-code">clearErrorState</code> functie) kan je deze class dan weer verwijderen. Deze functies zien er zo uit:</p>
+          <pre class="text-block-code">
+<span class="text-block-code-comment">// Deze functie voegt een class toe aan this.el</span>
+addElementClass: function (elementClass) {
+
+  this.el.classList.add(elementClass);
+
+}
+
+<span class="text-block-code-comment">// Deze functie verwijderd een class van this.el</span>
+removeElementClass: function (elementClass) {
+
+  this.el.classList.remove(elementClass);
+
+}</pre>
+
+
+
+
+
         </div>
       </div>
 
