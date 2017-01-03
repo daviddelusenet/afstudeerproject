@@ -65,7 +65,6 @@ module.exports.prototype = {
     //if (this.validated)
     //  this.el.submit();
 
-
   },
 
   validateElements: function () {

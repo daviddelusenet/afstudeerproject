@@ -25,7 +25,6 @@ module.exports.prototype = {
     this.targetClass = '.' + this.el.getAttribute('data-example-target');
     this.contentActiveClass = 'example-block-toggle-content--active';
 
-    console.log(this.formClass);
     this.inputs = this.el.querySelectorAll('.js-input');
     this.submit = this.el.querySelector('.js-submit');
     this.form = document.querySelector(this.formClass);
@@ -57,19 +56,22 @@ module.exports.prototype = {
 
     this.options = {};
     var id;
+    var value = '';
 
     for (var i = 0; i < this.inputs.length; i++) {
+
       var type = this.inputs[i].type;
+
       if (type == 'checkbox') {
 
         if (!this.inputs[i].checked) {
           id = this.inputs[i].getAttribute('id');
-          this.options[id] = '';
+          this.options[id] = value;
         }
 
       } else {
 
-        var value = this.inputs[i].value;
+        value = this.inputs[i].value;
         id = this.inputs[i].getAttribute('id');
 
         if (value && id) {
@@ -110,12 +112,11 @@ module.exports.prototype = {
     for (var key in this.options) {
       if (this.options.hasOwnProperty(key)) {
         this.target.setAttribute('data-fv-' + key, this.options[key]);
-        console.log(this.target);
       }
     }
 
     // Create the event
-    var event = new CustomEvent("validate", { "detail": "Example of an event" });
+    var event = new CustomEvent("validate");
 
     // Dispatch/Trigger/Fire the event
     this.form.dispatchEvent(event);
