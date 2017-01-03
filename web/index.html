@@ -95,7 +95,7 @@
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#toelichting">Toelichting</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#werking-formvalidation">Werking FormValidation</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#werking-errorhandling">Werking ErrorHandling</a></li>
-            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#demo-componenten">Demo componenten</a></li>
+            <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#demos">Demo's</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#prototype">Prototype</a></li>
             <li class="sidebar-submenu-item"><a class="sidebar-submenu-item-link js-submenu-link" href="#conclusies">Conclusies</a></li>
           </ul>
@@ -1111,9 +1111,9 @@ removeErrorElement: function () {
         </div>
       </div>
 
-      <div id="demo-componenten">
+      <div id="demos">
         <div class="text-block">
-          <p class="text-block-section-title"><span class="text-block-section-title-number">4.4</span>Demo componenten</p>
+          <p class="text-block-section-title"><span class="text-block-section-title-number">4.4</span>Demo's</p>
           <p class="text-block-paragraph">Omdat het voor mensen zonder technische achtergrond soms moeilijk te begrijpen is wat ik precies gedaan heb heb ik een paar voorbeelden gemaakt van mijn werk. Hieronder ziet je een formulier waarmee je jouw eigen validatie kunt toepassen op het invoerveld daaronder. Typ maar eens wat cijfers in de invoervelden, druk op 'voeg validatie toe' en typ in het invoerveld!</p>
           <p class="text-block-paragraph">Het is de bedoeling dat dit gedeelte nog een stuk uitgebreider wordt. Ik wil tot in detail uitleggen hoe de belangrijkste formulier elementen zijn opgebouwd en hoe ze werken. Ook wil ik hier nog meerdere demo's bijvoegen.</p>
         </div>
@@ -1130,10 +1130,8 @@ removeErrorElement: function () {
           <div class="example-block-toggle-content js-numbers-toggle-target">
             <label class="example-block-label">Aantal nummmers</label>
             <div class="example-block-inputs">
-              <input class="example-block-input js-input" id="min-numbers" placeholder="Minimaal aantal nummers"
-                     type="text"/>
-              <input class="example-block-input js-input" id="max-numbers" placeholder="Maximaal aantal nummers"
-                     type="text"/>
+              <input class="example-block-input js-input" id="min-numbers" placeholder="Minimaal aantal nummers" type="text"/>
+              <input class="example-block-input js-input" id="max-numbers" placeholder="Maximaal aantal nummers" type="text"/>
             </div>
           </div>
 
@@ -1165,16 +1163,42 @@ removeErrorElement: function () {
           </form>
         </div>
 
-        <div class="example-block js-example" data-example-type="checkbox" data-example-target="js-example-target2" data-form="js-form2">
+        <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target2" data-form="js-form2">
+          <label class="example-block-label">Validatie door middel van reguliere expressie</label>
+          <div class="example-block-inputs">
+            <input class="example-block-input js-input" id="regex" placeholder="Reguliere expressie" type="text"/>
+            <input class="example-block-input js-input" id="error-message" placeholder="Error message" type="text"/>
+          </div>
+
+          <button class="example-block-button js-submit">Voeg validatie toe</button>
+        </div>
+
+        <div class="preview-block">
+          <form class="js-form js-form2">
+            <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
+              <label for="" class="MimotoCMS_forms_FormComponent-title">Reguliere expressie voorbeeld <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <div class="MimotoCMS_forms_FormComponent-content">
+
+                <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
+                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target2" placeholder="RIP">
+                </div>
+                <p class="MimotoCMS_forms_FormComponent-description">Voeg je eigen reguliere expressie toe aan dit veld</p>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="example-block js-example" data-example-type="checkbox" data-example-target="js-example-target3" data-form="js-form3">
           <label class="example-block-label">Aantal selecties</label>
           <div class="example-block-inputs">
             <input class="example-block-input js-input" id="min-checked" placeholder="Minimaal aantal selecties" type="text"/>
             <input class="example-block-input js-input" id="max-checked" placeholder="Maximaal aantal selecties" type="text"/>
           </div>
           <button class="example-block-button js-submit">Voeg validatie toe</button>
-        </div>
+        </div>.
+
         <div class="preview-block">
-          <form class="js-form js-form2">
+          <form class="js-form js-form3">
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-checkbox">
               <div class="MimotoCMS_forms_FormComponent-header">
                 <label for="" class="MimotoCMS_forms_FormComponent-title">Je favoriete eten <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
@@ -1184,7 +1208,7 @@ removeErrorElement: function () {
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <div class="MimotoCMS_forms_FormComponent-element-container">
                     <div class="MimotoCMS_forms_input_Checkbox-container">
-                      <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox js-example-target2" />
+                      <input id="" type="checkbox" class="MimotoCMS_forms_input_Checkbox js-checkbox js-example-target3" />
                       <svg class="MimotoCMS_forms_input_Checkbox-icon"><use xlink:href="#ico-checkmark"></use></svg>
                     </div>
                     <label for="" class="MimotoCMS_forms_FormComponent-element-label">Patat</label>
@@ -1223,6 +1247,7 @@ removeErrorElement: function () {
             </div>
           </form>
         </div>
+
       </div>
 
       <div id="prototype">
