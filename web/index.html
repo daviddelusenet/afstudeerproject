@@ -1126,6 +1126,9 @@ removeErrorElement: function () {
           <p class="text-block-paragraph">Deze demo's zijn er vooral op gericht om de kracht van mijn <code class="text-block-inline-code">FV</code> library te demonstreren. Zoals al eerder uitgelegd werkt <code class="text-block-inline-code">FV</code> met data-attributen om de validatie in te stellen. Ik heb dan ook formulieren gebouwd waarmee het mogelijk is om deze data-attributen toe te voegen aan het bijbehorende Mimoto formulier element.</p>
           <p class="text-block-paragraph">Om de demo's te gebruiken dien je waardes in te vullen in het formulier en dan op de knop <span class="text-block-highlight">voeg validatie toe</span> te drukken. Op dat moment worden de data-attributen toegevoegd aan het Mimoto formulier element en wordt deze meteen gevalideerd. Als je daarna interactie hebt met het bijhorende Mimoto formulier element wordt de validatie steeds opnieuw toegepast.</p>
           <p class="text-block-subtitle">Textline demo's</p>
+          <p class="text-block-paragraph"><code class="text-block-inline-code">Textline</code> is het meest gebruikte component binnen Mimoto. In essentie is <code class="text-block-inline-code">Textline</code> gewoon een input veld van het type text. Hier komt oorspronkelijk dus geen functionaliteit bij kijken.</p>
+          <p class="text-block-paragraph">Door middel van mijn <code class="text-block-inline-code">FV</code> library is het echter mogelijk om functionaliteit toe te voegen aan een <code class="text-block-inline-code">Textline</code> component. Met validatie is het namelijk mogelijk om bepaalde input te forceren binnen een <code class="text-block-inline-code">Textline</code> component. Laat dit nou precies iets zijn wat je heel vaak wilt doen.</p>
+          <p class="text-block-paragraph">Met de onderstaande demo is het dan ook mogelijk om deze validatie toe te voegen aan het bijbehorende <code class="text-block-inline-code">Textline</code> component. Als je zonder validatie toe te voegen interactie hebt met het <code class="text-block-inline-code">Textline</code> component is alle input toegestaan met uitzondering van nummers en speciale karakters.</p>
         </div>
 
         <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target1" data-form="js-form1">
@@ -1173,8 +1176,13 @@ removeErrorElement: function () {
           </form>
         </div>
 
+        <div class="text-block">
+          <p class="text-block-paragraph">Met bovenstaande validatie opties is niet in alle gevallen het gewenste resultaat te bereiken. Wil je bijvoorbeeld heel complexe validatie toevoegen aan een <code class="text-block-inline-code">Textline</code> component is het soms makkelijker om te gebruik te maken van een reguliere expressie.</p>
+          <p class="text-block-paragraph">Via deze <a class="text-block-link" target="_blank" href="http://html5pattern.com/">website</a> is het mogelijk om kant-en-klare reguliere expressies te vinden voor veel verschillende soorten use cases. Kopieer de reguliere expressie die je wilt gebruiken, plak hem in het onderstaande formulier en druk op de knop <span class="text-block-highlight">voeg validatie toe</span>. Vergeet niet een custom error message toe te voegen. Deze wordt getoond wanneer de input waarde niet door de reguliere expressie test heen komt.</p>
+        </div>
+
         <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target2" data-form="js-form2">
-          <label class="example-block-label">Validatie door middel van reguliere expressie</label>
+          <label class="example-block-label">Reguliere expressie en bijbehorende error message</label>
           <div class="example-block-inputs">
             <input class="example-block-input js-input" id="regex" placeholder="Reguliere expressie" type="text"/>
             <input class="example-block-input js-input" id="error-message" placeholder="Error message" type="text"/>
@@ -1186,11 +1194,11 @@ removeErrorElement: function () {
         <div class="preview-block">
           <form class="js-form js-form2">
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label for="" class="MimotoCMS_forms_FormComponent-title">Reguliere expressie voorbeeld <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <label for="" class="MimotoCMS_forms_FormComponent-title">Textline reguliere expressie demo <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
 
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
-                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target2" placeholder="RIP">
+                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target2" placeholder="Typ hier">
                 </div>
                 <p class="MimotoCMS_forms_FormComponent-description">Voeg je eigen reguliere expressie toe aan dit veld</p>
               </div>
@@ -1205,7 +1213,7 @@ removeErrorElement: function () {
             <input class="example-block-input js-input" id="max-checked" placeholder="Maximaal aantal selecties" type="text"/>
           </div>
           <button class="example-block-button js-submit">Voeg validatie toe</button>
-        </div>.
+        </div>
 
         <div class="preview-block">
           <form class="js-form js-form3">
