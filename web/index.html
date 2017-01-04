@@ -1208,8 +1208,8 @@ removeErrorElement: function () {
 
         <div class="text-block">
           <p class="text-block-subtitle">Checkbox component demo</p>
-          <p class="text-block-paragraph">Het <code class="text-block-inline-code">Checkbox</code> component is een ander belangrijk component binnen Mimoto. Met checkboxes is het namelijk mogelijk om verschillende opties te selecteren.</p>
-          <p class="text-block-paragraph">Qua validatie is er echter weinig mogelijk. Als je een groep checkboxes hebt is de enige validatie die je daaraan kunt meegeven het minimale en maximale aantal selecties. Via het onderstaande formulier is het dan ook mogelijk om deze validatie toe te voegen aan de bijbehorende <code class="text-block-inline-code">Checkbox</code> componenten.</p>
+          <p class="text-block-paragraph">Het <code class="text-block-inline-code">Checkbox</code> component is een ander belangrijk component binnen Mimoto. Met het <code class="text-block-inline-code">Checkbox</code> component is het namelijk mogelijk om verschillende opties te selecteren.</p>
+          <p class="text-block-paragraph">Qua validatie is er echter weinig mogelijk. De enige validatie die je kunt meegeven aan het <code class="text-block-inline-code">Checkbox</code> component zijn het minimale en maximale aantal selecties. Via het onderstaande formulier is het dan ook mogelijk om deze validatie toe te voegen aan het bijbehorende <code class="text-block-inline-code">Checkbox</code> component.</p>
         </div>
 
         <div class="example-block js-example" data-example-type="checkbox" data-example-target="js-example-target3" data-form="js-form3">
@@ -1274,6 +1274,12 @@ removeErrorElement: function () {
 
         <div class="text-block">
           <p class="text-block-subtitle">Radio Button component demo</p>
+          <p class="text-block-paragraph">Het <code class="text-block-inline-code">Radio Button</code> component lijkt enigszins op het <code class="text-block-inline-code">Checkbox</code> component. Beide componenten kunnen namelijk gebruikt worden om opties te selecteren. Echter, er zijn twee grote verschillen tussen deze twee componenten:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item">Bij het <code class="text-block-inline-code">Radio Button</code> component is het niet mogelijk om meer dan &eacute;&eacute;n keuze te selecteren. Bij het <code class="text-block-inline-code">Checkbox</code> component is dit wel mogelijk.</li>
+            <li class="text-block-list-item"><code class="text-block-inline-code">Radio Button</code> componenten worden over het algemeen gebruikt voor opties die niet leeg gelaten mogen worden. <code class="text-block-inline-code">Checkbox</code> componenten worden vaker gebruikt voor optionele opties.</li>
+          </ul>
+          <p class="text-block-paragraph">De enige validatie die dus eigenlijk toegevoegd kan worden aan het <code class="text-block-inline-code">Radio Button</code> component is de check of er een optie geselecteerd is. Deze check wordt gedaan wanneer een formulier verstuurd wordt. Aangezien de onderstaande demo geen optie heeft om het formulier te versturen kan de error state van het <code class="text-block-inline-code">Radio Button</code> component niet getriggerd worden. Wel kan de validated state getriggerd worden door een optie te selecteren. In een latere demo zal het ook mogelijk zijn om de error state te triggeren.</p>
         </div>
 
         <div class="preview-block">
