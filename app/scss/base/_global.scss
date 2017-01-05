@@ -16,6 +16,11 @@ body {
   visibility: hidden;
 }
 
+::selection {
+  color: $white;
+  background: $bright-gray;
+}
+
 @font-face {
   font-family: 'Futura PT W02 Book';
   src: url('#{$futura-font-path}/94fe45a6-9447-4224-aa0f-fa09fe58c702.eot?#iefix');
