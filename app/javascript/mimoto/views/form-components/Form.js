@@ -63,7 +63,7 @@ module.exports.prototype = {
     this.validated = true;
     this.validateElements();
 
-    if (this.validated) this.el.submit();
+    //if (this.validated) this.el.submit();
 
   },
 
