@@ -11,7 +11,7 @@ module.exports.prototype = {
 
   init: function () {
 
-    console.log('Init Textline');
+    console.log('Init Dropdown');
 
     this.setVariables();
     this.addEventListeners();
@@ -20,19 +20,19 @@ module.exports.prototype = {
 
   setVariables: function () {
 
-    this.textline = this.el.querySelector('.js-textline');
+    this.dropdown = this.el.querySelector('.js-dropdown');
 
   },
 
   addEventListeners: function () {
 
-    this.textline.addEventListener('keyup', this.handleValidation.bind(this));
+    this.dropdown.addEventListener('change', this.handleValidation.bind(this));
 
   },
 
   handleValidation: function () {
 
-    var value = this.textline.value;
+    var value = this.dropdown.value;
 
     if (value == '') {
 

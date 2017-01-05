@@ -3,6 +3,7 @@
 var TextlineView = require('./Textline');
 var CheckboxView = require('./Checkbox');
 var RadioButtonView = require('./RadioButton');
+var DropdownView = require('./Dropdown');
 
 module.exports = function (element) {
 
@@ -34,8 +35,7 @@ module.exports.prototype = {
 
   addEventListeners: function () {
 
-    if (this.submit)
-      this.submit.addEventListener('click',this.validateForm.bind(this));
+    if (this.submit) this.submit.addEventListener('click', this.validateForm.bind(this));
 
     this.el.addEventListener('validate', this.validateForm.bind(this));
 
@@ -51,8 +51,9 @@ module.exports.prototype = {
         new CheckboxView(this.elements[i]);
       } else if (this.elements[i].classList.contains('js-form-component-radio-button')) {
         new RadioButtonView(this.elements[i]);
+      } else if (this.elements[i].classList.contains('js-form-component-dropdown')) {
+        new DropdownView(this.elements[i]);
       }
-
     }
 
   },
@@ -62,8 +63,7 @@ module.exports.prototype = {
     this.validated = true;
     this.validateElements();
 
-    //if (this.validated)
-    //  this.el.submit();
+    if (this.validated) this.el.submit();
 
   },
 
@@ -71,15 +71,21 @@ module.exports.prototype = {
 
     for (var i = 0; i < this.elements.length; i++) {
 
-      var type = this.elements[i].querySelector('input').type;
+      var result = FV.validateInput(this.elements[i]);
 
-      if (type == 'checkbox') {
-        this.handleCheckboxValidation(this.elements[i]);
-      } else if (type == 'text') {
-        this.handleTextlineValidation(this.elements[i]);
-      } else if (type == 'radio') {
-        this.handleRadioButtonValidation(this.elements[i]);
-      }
+      if (!result.passed) this.validated = false;
+
+      //var type = (this.elements[i].querySelector('input') || this.elements[i].querySelector('select')).type;
+      //
+      //if (type == 'checkbox') {
+      //    this.handleCheckboxValidation(this.elements[i]);
+      //} else if (type == 'text') {
+      //    this.handleTextlineValidation(this.elements[i]);
+      //} else if (type == 'radio') {
+      //    this.handleRadioButtonValidation(this.elements[i]);
+      //} else if (type == 'select-one') {
+      //    this.handleDropdownValidation(this.elements[i]);
+      //}
 
     }
 
@@ -89,9 +95,7 @@ module.exports.prototype = {
 
     var result = FV.validateInput(element);
 
-    if (!result.passed) {
-      this.validated = false;
-    }
+    if (!result.passed) this.validated = false;
 
   },
 
@@ -99,9 +103,7 @@ module.exports.prototype = {
 
     var result = FV.validateInput(element);
 
-    if (!result.passed) {
-      this.validated = false;
-    }
+    if (!result.passed) this.validated = false;
 
   },
 
@@ -109,9 +111,15 @@ module.exports.prototype = {
 
     var result = FV.validateInput(element);
 
-    if (!result.passed) {
-      this.validated = false;
-    }
+    if (!result.passed) this.validated = false;
+
+  },
+
+  handleDropdownValidation: function (element) {
+
+    var result = FV.validateInput(element);
+
+    if (!result.passed) this.validated = false;
 
   }
 
