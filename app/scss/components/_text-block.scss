@@ -74,13 +74,13 @@
     }
 
   .text-block-subtitle {
-      margin-bottom: 20px;
-      padding-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 1.3;
-      color: $bright-gray;
-    }
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: $bright-gray;
+  }
 
     .text-block-paragraph {
       margin-bottom: 20px;
@@ -117,22 +117,22 @@
     }
 
     .text-block-link {
-        font-family: $lucida-grande;
-        font-size: 15px;
-        font-weight: bold;
-        text-decoration: none;
-        color: $bright-gray;
-        transition: color 100ms ease-out;
+      font-family: $lucida-grande;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: $bright-gray;
+      transition: color 100ms ease-out;
 
-        &:hover {
-          color: $royal-blue;
-        }
+      &:hover {
+        color: $royal-blue;
       }
+    }
 
     .text-block-highlight {
-        font-weight: bold;
-        color: $valencia;
-      }
+      font-weight: bold;
+      color: $valencia;
+    }
 
     .text-block-design-challenge {
       position: relative;
@@ -197,25 +197,54 @@
         }
       }
 
-    .text-block-source {
-      display: block;
+    .text-block-sources-preview {
+      margin: 0 0 20px;
+      padding: 20px 40px 0;
+      border: 1px solid $alto;
+      background-color: $alabaster;
+
+      .text-block-sources {
+        margin-left: 0;
+      }
     }
 
-      .text-block-source-number {
-        font-family: $lucida-grande;
-        font-size: 14px;
-        font-weight: bold;
+    .text-block-sources {
+      display: block;
+      margin: 0 0 20px 40px;
+      font-family: $lucida-bright;
+    }
+
+      .text-block-source {
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 1.6;
       }
 
-      .text-block-source-publisher {
-        //font-weight: bold;
-      }
+        .text-block-source-number {
+          position: absolute;
+          top: 3px;
+          left: -40px;
+          font-family: $lucida-grande;
+          font-size: 12px;
+          font-weight: bold;
+        }
 
-      .text-block-source-title {
-        font-style: italic;
-        color: $valencia;
-      }
+        .text-block-source-publisher {
+          //font-weight: bold;
+        }
 
-      .text-block-source-divider {
-        margin: 0 4px;
-      }
+        .text-block-source-title {
+          font-style: italic;
+          color: $valencia;
+        }
+
+        .text-block-source-divider {
+          margin: 0 4px;
+        }
+
+        .text-block-source-link {
+          @extend .text-block-link;
+          font-size: 13px;
+        }
