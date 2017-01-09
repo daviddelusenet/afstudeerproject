@@ -1115,7 +1115,6 @@ removeErrorElement: function () {
 
 }</pre>
           <p class="text-block-paragraph">Deze functie selecteert het <code class="text-block-inline-code">error</code> element en slaat deze op in de variabele <code class="text-block-inline-code">error</code>. Daarna wordt er gecontroleerd of het <code class="text-block-inline-code">error</code> element daadwerkelijk bestaat. Is dit het geval dan wordt het <code class="text-block-inline-code">error</code> element verwijderd uit de HTML pagina.</p>
-
         </div>
       </div>
 
@@ -1133,32 +1132,38 @@ removeErrorElement: function () {
         </div>
 
         <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target1" data-form="js-form1">
-          <label class="example-block-label">Lengte van de invoer</label>
-          <div class="example-block-inputs">
-            <input class="example-block-input js-input" id="min-length" placeholder="Minimaal aantal characters" type="text"/>
-            <input class="example-block-input js-input" id="max-length" placeholder="Maximaal aantal characters" type="text"/>
-          </div>
-          <div class="example-block-inputs">
-            <input class="example-block-checkbox js-input js-toggle" data-target="js-numbers-toggle-target" type="checkbox" id="no-numbers"><label for="no-numbers" class="example-block-label">Nummers toestaan</label>
-          </div>
-          <div class="example-block-toggle-content js-numbers-toggle-target">
-            <!--<label class="example-block-label">Aantal nummmers</label>-->
-            <div class="example-block-inputs">
-              <input class="example-block-input js-input" id="min-numbers" placeholder="Minimaal aantal nummers" type="text"/>
-              <input class="example-block-input js-input" id="max-numbers" placeholder="Maximaal aantal nummers" type="text"/>
+          <div class="example-block-container">
+            <label class="example-block-label">Lengte van de invoer</label>
+            <div class="example-block-input-container">
+              <input class="example-block-input js-input" id="min-length" placeholder="Minimaal aantal characters" type="text"/>
+              <input class="example-block-input js-input" id="max-length" placeholder="Maximaal aantal characters" type="text"/>
             </div>
           </div>
 
-          <div class="example-block-inputs">
-            <input class="example-block-checkbox js-input js-toggle" data-target="js-special-characters-toggle-target" type="checkbox" id="no-special-characters"><label for="no-special-characters" class="example-block-label">Speciale characters toestaan</label>
-          </div>
-          <div class="example-block-toggle-content js-special-characters-toggle-target">
-            <!--<label class="example-block-label">Aantal speciale characters</label>-->
-            <div class="example-block-inputs">
-              <input class="example-block-input js-input" id="min-special-characters" placeholder="Minimaal aantal speciale characters" type="text"/>
-              <input class="example-block-input js-input" id="max-special-characters" placeholder="Maximaal aantal speciale characters" type="text"/>
+          <div class="example-block-container">
+            <div class="example-block-input-container">
+              <input class="example-block-checkbox js-input js-toggle" data-target="js-numbers-toggle-target" type="checkbox" id="no-numbers"><label for="no-numbers" class="example-block-label">Nummers toestaan</label>
+            </div>
+            <div class="example-block-toggle-content js-numbers-toggle-target">
+              <div class="example-block-input-container">
+                <input class="example-block-input js-input" id="min-numbers" placeholder="Minimaal aantal nummers" type="text"/>
+                <input class="example-block-input js-input" id="max-numbers" placeholder="Maximaal aantal nummers" type="text"/>
+              </div>
             </div>
           </div>
+
+          <div class="example-block-container">
+            <div class="example-block-input-container">
+              <input class="example-block-checkbox js-input js-toggle" data-target="js-special-characters-toggle-target" type="checkbox" id="no-special-characters"><label for="no-special-characters" class="example-block-label">Speciale characters toestaan</label>
+            </div>
+            <div class="example-block-toggle-content js-special-characters-toggle-target">
+              <div class="example-block-input-container">
+                <input class="example-block-input js-input" id="min-special-characters" placeholder="Minimaal aantal speciale characters" type="text"/>
+                <input class="example-block-input js-input" id="max-special-characters" placeholder="Maximaal aantal speciale characters" type="text"/>
+              </div>
+            </div>
+          </div>
+
           <button class="example-block-button js-submit">Voeg validatie toe</button>
         </div>
 
@@ -1184,7 +1189,7 @@ removeErrorElement: function () {
 
         <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target2" data-form="js-form2">
           <label class="example-block-label">Reguliere expressie en bijbehorende error message</label>
-          <div class="example-block-inputs">
+          <div class="example-block-input-container">
             <input class="example-block-input js-input" id="regex" placeholder="Reguliere expressie" type="text"/>
             <input class="example-block-input js-input" id="error-message" placeholder="Error message" type="text"/>
           </div>
@@ -1215,7 +1220,7 @@ removeErrorElement: function () {
 
         <div class="example-block js-example" data-example-type="checkbox" data-example-target="js-example-target3" data-form="js-form3">
           <label class="example-block-label">Aantal selecties</label>
-          <div class="example-block-inputs">
+          <div class="example-block-input-container">
             <input class="example-block-input js-input" id="min-checked" placeholder="Minimaal aantal selecties" type="text"/>
             <input class="example-block-input js-input" id="max-checked" placeholder="Maximaal aantal selecties" type="text"/>
           </div>

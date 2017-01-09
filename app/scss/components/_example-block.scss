@@ -2,9 +2,13 @@
   padding: 20px 200px 0 120px;
 }
 
+  .example-block-container {
+    margin-bottom: 30px;
+  }
+
   .example-block-label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-family: $lucida-grande;
     font-size: 15px;
     font-weight: bold;
@@ -13,9 +17,8 @@
     transition: color 100ms ease-out;
   }
 
-  .example-block-inputs {
+  .example-block-input-container {
     display: flex;
-    margin-bottom: 20px;
     flex-wrap: nowrap;
 
     .example-block-label {
@@ -27,7 +30,7 @@
       display: block;
       width: 50%;
       height: 40px;
-      margin-right: 5px;
+      margin-right: 10px;
       padding: 0 10px;
       font-family: $lucida-bright;
       font-size: 15px;
@@ -38,17 +41,19 @@
       background-color: $alabaster;
 
       &:last-child {
-        margin: 0 0 0 5px;
+        margin: 0 0 0 10px;
       }
     }
 
     .example-block-checkbox {
       display: block;
       margin-right: 10px;
+      outline: none;
     }
 
   .example-block-toggle-content {
     display: none;
+    padding-top: 20px;
   }
 
   .example-block-toggle-content--active {
@@ -63,6 +68,7 @@
     cursor: pointer;
     font-size: 12px;
     font-weight: bold;
+    line-height: 36px;
     text-align: center;
     opacity: .8;
     color: $valencia;
