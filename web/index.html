@@ -39,6 +39,10 @@
         <symbol id="ico-checkmark" viewBox="0 0 18 36">
           <path d="M17.72,12.48l-1.29-1.4A.81.81,0,0,0,15.28,11l-.06.06h0l-8.87,9.5L2.76,16.72a.81.81,0,0,0-1.14-.06l-.06.06L.25,18.12a1,1,0,0,0,0,1.29h0L5.1,24.62a1.69,1.69,0,0,0,2.38.13l.13-.13L17.72,13.85A1,1,0,0,0,17.72,12.48Z"/>
         </symbol>
+
+        <symbol id="ico-arrow" viewBox="0 0 18 36">
+          <path d="M18,18,4.63,3.86,0,8.74,8.74,18,0,27.26l4.63,4.89Z"/>
+        </symbol>
       </defs>
     </svg>
   </div>
@@ -1139,7 +1143,6 @@ removeErrorElement: function () {
               <input class="example-block-input js-input" id="max-length" placeholder="Maximaal aantal characters" type="text"/>
             </div>
           </div>
-
           <div class="example-block-container">
             <div class="example-block-input-container">
               <input class="example-block-checkbox js-input js-toggle" data-target="js-numbers-toggle-target" type="checkbox" id="no-numbers"><label for="no-numbers" class="example-block-label">Nummers toestaan</label>
@@ -1151,7 +1154,6 @@ removeErrorElement: function () {
               </div>
             </div>
           </div>
-
           <div class="example-block-container">
             <div class="example-block-input-container">
               <input class="example-block-checkbox js-input js-toggle" data-target="js-special-characters-toggle-target" type="checkbox" id="no-special-characters"><label for="no-special-characters" class="example-block-label">Speciale characters toestaan</label>
@@ -1163,7 +1165,6 @@ removeErrorElement: function () {
               </div>
             </div>
           </div>
-
           <button class="example-block-button js-submit">Voeg validatie toe</button>
         </div>
 
@@ -1172,7 +1173,6 @@ removeErrorElement: function () {
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
               <label for="" class="MimotoCMS_forms_FormComponent-title">Textline custom validatie demo <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
-
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target1" placeholder="Typ hier">
                 </div>
@@ -1188,12 +1188,13 @@ removeErrorElement: function () {
         </div>
 
         <div class="example-block js-example" data-example-type="textline" data-example-target="js-example-target2" data-form="js-form2">
-          <label class="example-block-label">Reguliere expressie en bijbehorende error message</label>
-          <div class="example-block-input-container">
-            <input class="example-block-input js-input" id="regex" placeholder="Reguliere expressie" type="text"/>
-            <input class="example-block-input js-input" id="error-message" placeholder="Error message" type="text"/>
+          <div class="example-block-container">
+            <label class="example-block-label">Reguliere expressie en bijbehorende error message</label>
+            <div class="example-block-input-container">
+              <input class="example-block-input js-input" id="regex" placeholder="Reguliere expressie" type="text"/>
+              <input class="example-block-input js-input" id="error-message" placeholder="Error message" type="text"/>
+            </div>
           </div>
-
           <button class="example-block-button js-submit">Voeg validatie toe</button>
         </div>
 
@@ -1202,7 +1203,6 @@ removeErrorElement: function () {
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
               <label for="" class="MimotoCMS_forms_FormComponent-title">Textline reguliere expressie demo <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
-
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target2" placeholder="Typ hier">
                 </div>
@@ -1219,10 +1219,12 @@ removeErrorElement: function () {
         </div>
 
         <div class="example-block js-example" data-example-type="checkbox" data-example-target="js-example-target3" data-form="js-form3">
-          <label class="example-block-label">Aantal selecties</label>
-          <div class="example-block-input-container">
-            <input class="example-block-input js-input" id="min-checked" placeholder="Minimaal aantal selecties" type="text"/>
-            <input class="example-block-input js-input" id="max-checked" placeholder="Maximaal aantal selecties" type="text"/>
+          <div class="example-block-container">
+            <label class="example-block-label">Aantal selecties</label>
+            <div class="example-block-input-container">
+              <input class="example-block-input js-input" id="min-checked" placeholder="Minimaal aantal selecties" type="text"/>
+              <input class="example-block-input js-input" id="max-checked" placeholder="Maximaal aantal selecties" type="text"/>
+            </div>
           </div>
           <button class="example-block-button js-submit">Voeg validatie toe</button>
         </div>
