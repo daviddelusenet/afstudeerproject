@@ -48,7 +48,12 @@
     .example-block-checkbox {
       display: block;
       margin-right: 10px;
+      cursor: pointer;
       outline: none;
+
+      + .example-block-label {
+        cursor: pointer;
+      }
     }
 
   .example-block-toggle-content {
@@ -76,7 +81,8 @@
     border-radius: 0;
     outline: none;
     background: none;
-    -webkit-appearance: none;
+    transition: opacity 100ms ease-out;
+    appearance: none;
 
     &:hover {
       opacity: 1;
