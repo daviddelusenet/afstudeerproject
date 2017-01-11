@@ -1,5 +1,6 @@
-#{$pr-input}_Button {
+.MimotoCMS_ButtonModule {
   display: inline-flex;
+  margin-bottom: 30px;
   padding: 10px 20px;
   cursor: pointer;
   text-decoration: none;
@@ -16,7 +17,12 @@
   }
 }
 
-#{$pr-input}_Button--secondary {
+.MimotoCMS_ButtonModule--loading {
+  pointer-events: none;
+  background-color: rgba($black, .7);
+}
+
+.MimotoCMS_ButtonModule--secondary {
   background-color: $tower-gray;
 
   &:hover {
@@ -24,7 +30,7 @@
   }
 }
 
-#{$pr-input}_Button--text {
+.MimotoCMS_ButtonModule--text {
   text-decoration: underline;
   color: #555;
   background-color: inherit;
@@ -34,34 +40,36 @@
   }
 }
 
-#{$pr-input}_Button--alert {
+.MimotoCMS_ButtonModule--alert {
   background-color: $fuzzy-wuzzy-brown;
 
   &:hover {
     background-color: $black;
   }
 
-  &>.#{$pr-input}_Button-icon {
+  &>.MimotoCMS_ButtonModule-icon {
     color: #fff;
   }
 }
 
-#{$pr-input}_Button--small {
-  padding: 6px 10px;
-  font-size: rem-calc(10px);
-}
-
-#{$pr-input}_Button-text {
+.MimotoCMS_ButtonModule-text {
   font-family: $font-family-futura;
-  font-size: rem-calc(14px);
+  font-size: 14px;
   font-weight: 500;
-  line-height: rem-calc(20px);
+  line-height: 20px;
 }
 
-#{$pr-input}_Button-icon {
+.MimotoCMS_ButtonModule-icon {
   display: block;
   width: 10px;
   height: 10px;
   margin: 5px 0 5px 15px;
   fill: $tower-gray;
+}
+
+.MimotoCMS_ButtonModule-icon--loading {
+  width: 12px;
+  height: 12px;
+  margin: 4px 0 4px 13px;
+  stroke: $tower-gray;
 }
