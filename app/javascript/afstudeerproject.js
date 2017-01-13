@@ -5,6 +5,7 @@ var IntroBlockAnimation = require('./components/IntroBlockAnimation');
 // Mimoto views
 var FormView = require('./mimoto/views/form-components/Form');
 var ExampleView = require('./mimoto/views/Example');
+var ListView = require('./mimoto/views/form-components/List');
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Mimoto examples
   var forms = document.querySelectorAll('.js-form');
   var examples = document.querySelectorAll('.js-example');
+  var lists = document.querySelectorAll('.js-list');
 
   EH.init({
     "errorElement": "p",
@@ -37,12 +39,17 @@ document.addEventListener('DOMContentLoaded', function () {
     "errorIconClass": "MimotoCMS_forms_FormComponent-title-icon--warning"
   });
 
-  if (forms.length)
-    for (i = 0; i < forms.length; i++)
-      new FormView(forms[i]);
+  for (i = 0; i < forms.length; i++) {
+    new FormView(forms[i]);
+  }
 
-  if (examples.length)
-    for (i = 0; i < examples.length; i++)
-      new ExampleView(examples[i]);
+  for (i = 0; i < examples.length; i++) {
+    new ExampleView(examples[i]);
+  }
+
+  for (i = 0; i < lists.length; i++) {
+    new ListView(lists[i]);
+  }
+
 
 }, false);
