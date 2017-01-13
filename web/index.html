@@ -1509,6 +1509,21 @@ removeErrorElement: function () {
         <div class="text-block">
           <p class="text-block-subtitle">Inschrijfformulier demo</p>
           <p class="text-block-paragraph">Door verschillende componenten uit Mimoto te combineren is het mogelijk om complete formulieren op te bouwen. In combinatie met mijn <code class="text-block-inline-code">FV</code> library is het dan mogelijk om hier validatie aan toe te voegen. Hieronder heb ik dan ook een inschrijfformulier opgebouwd met bijbehorende validatie. Dit is de validatie die ik per veld heb ingesteld:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item"><span class="text-block-highlight">First name:</span> dit is een verplicht veld, ingesteld met het <code class="text-block-inline-code">data-fv-required</code> attribuut.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Last name:</span> dit is ook een verplicht veld.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Gender:</span> en dit ook.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Email address:</span> dit veld gebruikt een reguliere expressie om te valideren of er een geldig email adres wordt ingevoerd. Deze reguliere expressie heb ik van de volgende <a class="text-block-link" target="_blank" href="http://www.w3schools.com/jsref/prop_email_pattern.asp">website</a> gekopieerd en ingesteld via het <code class="text-block-inline-code">data-fv-regex</code> attribuut. Ook is er een error message ingesteld met het <code class="text-block-inline-code">data-fv-error-message</code> attribuut.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Date of birth:</span> ook bij dit veld wordt er een reguliere expressie ingesteld. Deze reguliere expressie wordt gebruikt om te valideren of er een geldige geboortedatum wordt ingevoerd. De reguliere expressie heb ik van deze <a class="text-block-link" target="_blank" href="http://html5pattern.com/Dates">website</a> gekopieerd. Ook bij dit veld is er een error message ingesteld.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Street:</span> dit is een verplicht veld.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">House number:</span> dit is ook een verplicht veld.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Country:</span> en dit ook.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Password:</span> heeft een minimale lengte van vijf karakters ingesteld gekregen door middel van het <code class="text-block-inline-code">data-fv-min-length</code> attribuut. Ook worden de attributen <code class="text-block-inline-code">data-fv-min-numbers</code> en <code class="text-block-inline-code">data-fv-min-special-characters</code> gebruikt om in te stellen dat er minimaal &eacute;&eacute;n nummer en &eacute;&eacute;n special karakter ingevoerd dienen te worden.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Repeat password:</span> dit veld heeft dezelfde validatie als het password veld.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Terms and conditions:</span> dit is een verplicht veld.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">Newsletter:</span> dit veld heeft geen validatie en is dus optioneel.</li>
+          </ul>
+          <p class="text-block-paragraph">In de onderstaande demo is het via twee manieren mogelijk om de velden te valideren. De eerste manier is door interactie te hebben met een veld. Het desbetreffende veld wordt bij elke update opnieuw gevalideerd. De tweede manier is door op de <span class="text-block-highlight">sign up</span> knop te drukken. Als je dat doet wordt meteen het gehele formulier gevalideerd. Op deze manier kan je de error state toevoegen aan de <code class="text-block-inline-code">Dropdown</code> en <code class="text-block-inline-code">Radio Button</code> componenten.</p>
         </div>
 
         <div class="preview-block">
