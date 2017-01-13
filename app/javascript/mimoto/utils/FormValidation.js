@@ -5,7 +5,6 @@ module.exports = {
   setVariables: function (element) {
 
     this.el = element;
-
     this.value = '';
     this.checked = 0;
 
@@ -93,27 +92,16 @@ module.exports = {
   handleValidation: function () {
 
     if (this.validateRequired) this.checkValue();
-
     if (this.validateMinLength) this.checkMinLength();
-
     if (this.validateMaxLength) this.checkMaxLength();
-
     if (this.validateNoNumbers) this.checkNoNumbers();
-
     if (this.validateMinNumbers) this.checkMinNumbers();
-
     if (this.validateMaxNumbers) this.checkMaxNumbers();
-
     if (this.validateNoSpecialCharacters) this.checkNoSpecialCharacters();
-
     if (this.validateMinSpecialCharacters) this.checkMinSpecialCharacters();
-
     if (this.validateMaxSpecialCharacters) this.checkMaxSpecialCharacters();
-
     if (this.validateMinChecked) this.checkMinChecked();
-
     if (this.validateMaxChecked) this.checkMaxChecked();
-
     if (this.validateCustomRegex) this.checkCustomRegex();
 
     this.result.passed ? EH.addValidatedState(this.el) : EH.addErrorState(this.el, this.result.message);
@@ -134,11 +122,7 @@ module.exports = {
 
   checkValue: function () {
 
-    if (this.value == '' && this.checked == 0) {
-
-      this.setResult(false, "This field is required");
-
-    }
+    if (this.value == '' && this.checked == 0) this.setResult(false, "This field is required");
 
   },
 
@@ -218,7 +202,7 @@ module.exports = {
 
     var regex = new RegExp(this.customRegex);
 
-    if (!regex.test(this.value)) this.setResult(false, this.errorMessage);
+    if (!regex.test(this.value)) this.setResult(false, "Please comply to the requested format.");
 
   }
 
