@@ -3,10 +3,9 @@
 var Dropzone = require('dropzone');
 Dropzone.autoDiscover = false;
 
-module.exports = function (element, options) {
+module.exports = function (element) {
 
   this.el = element;
-  this.options = options;
   this.init();
 
 };
@@ -15,8 +14,9 @@ module.exports.prototype = {
 
   init: function () {
 
+    console.log("Init Image Upload");
     this.setVariables();
-    this.initDropzones();
+    this.initDropzone();
 
   },
 
@@ -27,19 +27,19 @@ module.exports.prototype = {
     this.previewClass = '.js-image-upload-preview';
     this.previewTemplateClass = '.js-image-upload-preview-template';
 
-    this.showPreviewClass = 'form-image-upload--show-preview';
-    this.showPreviewImageClass = 'form-image-upload--show-preview-image';
-    this.hideUploadProgressClass = 'form-image-upload--hide-upload-progess';
+    this.showPreviewClass = 'MimotoCMS_forms_input_ImageUpload--show-preview';
+    this.showPreviewImageClass = 'MimotoCMS_forms_input_ImageUpload--show-preview-image';
+    this.hideUploadProgressClass = 'MimotoCMS_forms_input_ImageUpload--hide-upload-progess';
 
     this.errorParent = this.el.querySelector('.js-error-parent');
 
-    this.postURL = this.options.url;
+    this.postURL = "http://httpbin.org/post";
     this.imageUpload = this.el.querySelector(this.imageUploadClass);
     this.previewTemplate = this.getPreviewTemplate();
 
   },
 
-  initDropzones: function () {
+  initDropzone: function () {
 
     this.dropzone = new Dropzone(this.imageUpload, {
       url: this.postURL,
@@ -71,7 +71,7 @@ module.exports.prototype = {
 
     this.dropzone.on('removedfile', function (file) {
       this.dropzone.element.classList.remove(this.showPreviewClass);
-      ErrorHandling.clearState(this.el, this.errorParent);
+      EH.clearState(this.el);
     }.bind(this));
 
     this.dropzone.on('addedfile', function (file) {
@@ -83,13 +83,13 @@ module.exports.prototype = {
     }.bind(this));
 
     this.dropzone.on('error', function (file, errorMessage, xhrObject) {
-      ErrorHandling.addError(errorMessage, this.errorParent, this.el);
+      EH.addErrorState(this.el, errorMessage);
     }.bind(this));
 
     this.dropzone.on('success', function (file, serverResponse) {
       setTimeout(function () {
         this.dropzone.element.classList.add(this.hideUploadProgressClass);
-        ErrorHandling.isValidated(this.el);
+        EH.addValidatedState(this.el);
       }.bind(this), 100);
     }.bind(this));
 

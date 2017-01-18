@@ -43,6 +43,10 @@
         <symbol id="ico-arrow" viewBox="0 0 18 36">
           <path d="M18,18,4.63,3.86,0,8.74,8.74,18,0,27.26l4.63,4.89Z"/>
         </symbol>
+
+        <symbol id="ico-plus" viewBox="0 0 40 40" >
+          <polygon points="40,16 24,16 24,0 16,0 16,16 0,16 0,24 16,24 16,40 24,40 24,24 40,24 "/>
+        </symbol>
       </defs>
     </svg>
   </div>
@@ -1042,7 +1046,7 @@ updateErrorElement: function (message) {
   error.innerHTML = message;
 
 }</pre>
-          <p class="text-block-paragraph">De <code class="text-block-inline-code">updateErrorElement</code> functie zoekt naar een error element in <code class="text-block-inline-code">his.errorParent</code>. Dit element wordt opgeslagen in de variabele <code class="text-block-inline-code">error</code>. De <a class="text-block-link" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">innerHTML</a> van deze variabele wordt daarna ingesteld op de <code class="text-block-inline-code">message</code> parameter.</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">updateErrorElement</code> functie zoekt naar een error element in <code class="text-block-inline-code">this.errorParent</code>. Dit element wordt opgeslagen in de variabele <code class="text-block-inline-code">error</code>. De <a class="text-block-link" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">innerHTML</a> van deze variabele wordt daarna ingesteld op de <code class="text-block-inline-code">message</code> parameter.</p>
           <p class="text-block-paragraph">Als het element nog geen error state bevat dient deze toegevoegd te worden. Hier zijn de volgende drie functies voor nodig:</p>
           <pre class="text-block-code">
 this.addErrorElement(message);
@@ -1644,6 +1648,41 @@ removeErrorElement: function () {
             <a class="MimotoCMS_ButtonModule js-form-submit">
               <span class="MimotoCMS_ButtonModule-text">Sign up</span>
             </a>
+          </form>
+        </div>
+
+        <div class="preview-block">
+          <form class="js-form js-form7">
+            <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-image">
+              <div class="MimotoCMS_forms_FormComponent-header">
+                <label for="avatar" class="MimotoCMS_forms_FormComponent-title">Upload your avatar <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              </div>
+              <div class="MimotoCMS_forms_FormComponent-content ">
+                <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
+                  <div class="MimotoCMS_forms_input_ImageUpload js-image-upload">
+                    <div class="MimotoCMS_forms_input_ImageUpload-trigger js-image-upload-trigger">
+                      <div class="MimotoCMS_forms_input_ImageUpload-trigger-button"><svg class="MimotoCMS_forms_input_ImageUpload-trigger-button-icon"><use xlink:href="#ico-plus"></use></svg></div>
+                      <p class="MimotoCMS_forms_input_ImageUpload-trigger-text">Klik hier of drop een afbeelding</p>
+                    </div>
+
+                    <div class="MimotoCMS_forms_input_ImageUpload-preview js-image-upload-preview">
+                      <div class="MimotoCMS_forms_input_ImageUpload-preview-template js-image-upload-preview-template">
+                        <img data-dz-thumbnail class="MimotoCMS_forms_input_ImageUpload-preview-image" />
+                        <div class="MimotoCMS_forms_input_ImageUpload-preview-upload-progress">
+                          <div class="MimotoCMS_forms_input_ImageUpload-preview-upload-progess-bar" data-dz-uploadprogress></div>
+                        </div>
+                        <div class="MimotoCMS_forms_input_ImageUpload-preview-button">
+                          <button data-dz-remove="" class="MimotoCMS_ButtonModule">
+                            <span class="MimotoCMS_ButtonModule-text">Remove</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="MimotoCMS_forms_FormComponent-description">Een foto zegt meer dan 1000 woorden</p>
+              </div>
+            </div>
           </form>
         </div>
 
