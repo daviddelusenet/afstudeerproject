@@ -3,134 +3,164 @@
   overflow: hidden;
   max-width: 1000px;
   margin-bottom: 20px;
-  font-family: $font-family-futura;
-  line-height: 1.5;
+}
 
-  &#{$pr-forms}_FormComponent--is-validated {
-    .#{$pr-forms}_FormComponent-title {
-      color: $tower-gray;
-    }
-  }
-
-  &#{$pr-forms}_FormComponent--has-error {
-    #{$pr-input}_Textline,
-    #{$pr-input}_Dropdown,
-    #{$pr-input}_Checkbox::after,
-    #{$pr-input}_RadioButton::after,
-    .form-image-upload {
-      border-color: $fuzzy-wuzzy-brown;
-    }
+#{$pr-forms}_FormComponent--is-validated {
+  .#{$pr-forms}_FormComponent-title {
+    color: $tower-gray;
   }
 }
 
-#{$pr-forms}_FormComponent-header {
-  display: flex;
-  padding-right: percentage(1 / 3);
-  align-items: center;
+#{$pr-forms}_FormComponent--has-error {
+  #{$pr-input}_Textline,
+  #{$pr-input}_Textline:focus,
+  #{$pr-input}_Textline:focus + #{$pr-forms}_FormComponent-element-prefix,
+  #{$pr-input}_Textblock,
+  #{$pr-input}_Textblock:focus,
+  #{$pr-forms}_FormComponent-element-prefix,
+  #{$pr-input}_Dropdown,
+  #{$pr-input}_Checkbox::after,
+  #{$pr-input}_RadioButton::after,
+  #{$pr-input}_ImageUpload {
+    border-color: $fuzzy-wuzzy-brown;
+  }
 }
 
-#{$pr-forms}_FormComponent-title {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 10px;
-  padding: 0 20px 0 0;
-  font-family: $font-family-futura;
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba($black, .9);
-}
+  #{$pr-forms}_FormComponent-header {
+    display: flex;
+    padding-right: percentage(1 / 3);
+    align-items: center;
+  }
 
-#{$pr-forms}_FormComponent-title-information {
-  font-family: $font-family-helvetica;
-  color: rgba($black, .5);
-}
+    #{$pr-forms}_FormComponent-title {
+      position: relative;
+      display: inline-block;
+      margin: 0 0 10px;
+      padding: 0 20px 0 0;
+      font-family: $font-family-futura;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba($black, .9);
+    }
 
-#{$pr-forms}_FormComponent-title-icon {
-  position: absolute;
-  top: -4px;
-  right: 0;
-  display: none;
-  width: 15px;
-  height: 30px;
-}
+      #{$pr-forms}_FormComponent-title-information {
+        font-family: $font-family-helvetica;
+        color: rgba($black, .5);
+      }
 
-#{$pr-forms}_FormComponent-title-iconicon-loading {
-  top: 5px;
-  width: 15px;
-  height: 15px;
-  background-size: 15px 15px;
-}
+      #{$pr-forms}_FormComponent-title-icon {
+        position: absolute;
+        top: -4px;
+        right: 0;
+        display: none;
+        width: 15px;
+        height: 30px;
+      }
 
-#{$pr-forms}_FormComponent-title-icon--checkmark {
-  display: block;
-  fill: $tower-gray;
-}
+      #{$pr-forms}_FormComponent-title-icon--checkmark {
+        display: block;
+        fill: $tower-gray;
+      }
 
-#{$pr-forms}_FormComponent-title-icon--warning {
-  display: block;
-  fill: $fuzzy-wuzzy-brown;
-}
+      #{$pr-forms}_FormComponent-title-icon--warning {
+        display: block;
+        fill: $fuzzy-wuzzy-brown;
+      }
 
-#{$pr-forms}_FormComponent-button {
-  display: flex;
-  margin: 0 0 10px;
-  flex: 1 1 auto;
-  justify-content: flex-end;
-}
+    #{$pr-forms}_FormComponent-button {
+      display: flex;
+      margin: 0 0 10px;
+      flex: 1 1 auto;
+      justify-content: flex-end;
+    }
 
-#{$pr-forms}_FormComponent-content {
-  display: flex;
-  flex-wrap: wrap;
+  #{$pr-forms}_FormComponent-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-  &#{$pr-forms}_FormComponent-content--no-description {
+  #{$pr-forms}_FormComponent-content--no-description {
     padding: 0 percentage(1 / 3) 0 0;
   }
-}
 
-#{$pr-forms}_FormComponent-element {
-  width: percentage(2 / 3);
-  min-width: 400px;
-  flex: 1 1 auto;
-}
+    #{$pr-forms}_FormComponent-element {
+      width: percentage(2 / 3);
+      min-width: 400px;
+      flex: 1 1 auto;
+    }
 
-#{$pr-forms}_FormComponent-description {
-  position: relative;
-  width: percentage(1 / 3);
-  min-width: 200px;
-  margin: 0 0 10px;
-  padding: 10px 0 0 15px;
-  font-size: 13px;
-  color: rgba($black, 5);
-  flex: 1 1 auto;
-}
+      #{$pr-forms}_FormComponent-element-container {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+      }
 
-#{$pr-forms}_FormComponent-description::before {
-  position: absolute;
-  top: 0;
-  left: 15px;
-  display: block;
-  width: 100px;
-  height: 1px;
-  content: '';
-  background: rgba($black, .15);
-}
+      #{$pr-forms}_FormComponent-element-container--has-prefix {
+        margin-bottom: 0;
 
-#{$pr-forms}_FormComponent-element-container {
-  display: flex;
-  margin: 0 0 10px;
-}
+        #{$pr-input}_Textline {
+          padding-left: 0;
+          border-left: 0;
+          order: 2;
+        }
+      }
 
-#{$pr-forms}_FormComponent-element-label {
-  padding: 0 0 0 10px;
-  cursor: pointer;
-  font-size: 14px;
-  color: rgba($black, .9);
-  flex: 0 1 auto;
-}
+        #{$pr-forms}_FormComponent-element-prefix {
+          display: block;
+          height: 50px;
+          margin-bottom: 10px;
+          padding-left: 15px;
+          font-family: $font-family-helvetica;
+          font-size: 14px;
+          line-height: 48px;
+          color: $tower-gray;
+          border: 1px solid $pale-slate;
+          border-right: 0;
+          outline: none;
+          background: $alabaster;
+          transition: all 100ms ease-out;
+          flex: 0 0 auto;
+          order: 1;
+        }
 
-#{$pr-forms}_FormComponent-element-error {
-  margin: 0 0 10px;
-  font-size: 13px;
-  color: $fuzzy-wuzzy-brown;
-}
+        #{$pr-forms}_FormComponent-element-label {
+          padding: 0 0 0 10px;
+          cursor: pointer;
+          font-size: 14px;
+          color: rgba($black, .9);
+          flex: 0 1 auto;
+        }
+
+      #{$pr-forms}_FormComponent-element-error {
+        margin: 0 0 10px;
+        font-size: 13px;
+        color: $fuzzy-wuzzy-brown;
+      }
+
+    #{$pr-forms}_FormComponent-description {
+      position: relative;
+      width: percentage(1 / 3);
+      min-width: 200px;
+      margin: 0 0 10px;
+      padding: 10px 0 0 15px;
+      font-size: 13px;
+      color: rgba($black, 5);
+      flex: 1 1 auto;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        display: block;
+        width: 100px;
+        height: 1px;
+        content: '';
+        background: rgba($black, .15);
+      }
+    }
+
+      #{$pr-forms}_FormComponent-description-link {
+        text-decoration: underline;
+        color: rgba($black, 5);
+      }
 
