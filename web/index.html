@@ -1178,13 +1178,35 @@ removeErrorElement: function () {
         </div>
 
         <div class="text-block">
+          <p class="text-block-paragraph">Het <code class="text-block-inline-code">Textline</code> component heeft ook nog ondersteuning voor een prefix. Deze prefix kan bijvoorbeeld gebruikt worden om bij een mobiel nummer de <code class="text-block-inline-code">06</code> al te tonen. Hieronder volgt een voorbeeld van het <code class="text-block-inline-code">Textline</code> component waarin een geldige URL wordt verwacht. De prefix wordt dan gebruikt om <code class="text-block-inline-code">http://</code> te tonen.
+          </p>
+        </div>
+
+        <div class="preview-block">
+          <form class="js-form">
+            <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
+              <label class="MimotoCMS_forms_FormComponent-title">Textline prefix demo <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <div class="MimotoCMS_forms_FormComponent-content">
+                <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
+                  <div class="MimotoCMS_forms_FormComponent-element-container MimotoCMS_forms_FormComponent-element-container--has-prefix">
+                    <input type="text" class="MimotoCMS_forms_input_Textline js-textline" placeholder="yourwebsite.example" data-fv-regex="^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" data-fv-error-message="Please follow this format: yourwebsite.example">
+                    <span class="MimotoCMS_forms_FormComponent-element-prefix">http://</span>
+                  </div>
+                </div>
+                <p class="MimotoCMS_forms_FormComponent-description">Enter your favorite website</p>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="text-block">
           <p class="text-block-subtitle">Textblock component demo</p>
           <p class="text-block-paragraph">Het <code class="text-block-inline-code">Textblock</code> component is vrijwel hetzelfde als het <code class="text-block-inline-code">Textline</code> component. In beide componenten kan er namelijk tekst ingevoerd worden. Toch zijn er verschillen tussen deze componenten:</p>
           <ul class="text-block-list">
             <li class="text-block-list-item">Het <code class="text-block-inline-code">Textline</code> component kan maar &eacute;&eacute;n regel tekst bevatten, het <code class="text-block-inline-code">Textblock</code> component in theorie oneindig veel regels.</li>
             <li class="text-block-list-item">Het <code class="text-block-inline-code">Textblock</code> component is in hoogte aanpasbaar door de gebruiker.</li>
           </ul>
-          <p class="text-block-paragraph">Aangezien ook de validatie mogelijkheden exact hetzelfde zijn heb ik besloten om geen custom validatie voorbeeld van het <code class="text-block-inline-code">Textblock</code> component te ontwikkelen. Wel kan je hieronder een voorbeeld vinden van het <code class="text-block-inline-code">Textblock</code> component, inclusief vooraf ingesteld validatie.</p>
+          <p class="text-block-paragraph">Aangezien ook de validatie mogelijkheden exact hetzelfde zijn heb ik besloten om geen custom validatie voorbeeld van het <code class="text-block-inline-code">Textblock</code> component te ontwikkelen. Wel kan je hieronder een voorbeeld vinden van het <code class="text-block-inline-code">Textblock</code> component, inclusief vooraf ingestelde validatie.</p>
         </div>
         
         <div class="preview-block">
@@ -1552,7 +1574,7 @@ removeErrorElement: function () {
                     </div>
                   </div>
                 </div>
-                <p class="MimotoCMS_forms_FormComponent-description">Original order based on <a href="http://rateyourmusic.com/customchart?page=1&chart_type=top&type=album&year=alltime&genre_include=1&include_child_genres=1&genres=hip+hop&include_child_genres_chk=1&include=both&origin_countries=&limit=none&countries=" target="_blank">rateyourmusic.com</a></p>
+                <p class="MimotoCMS_forms_FormComponent-description">Original order based on <a class="MimotoCMS_forms_FormComponent-description-link" href="http://rateyourmusic.com/customchart?page=1&chart_type=top&type=album&year=alltime&genre_include=1&include_child_genres=1&genres=hip+hop&include_child_genres_chk=1&include=both&origin_countries=&limit=none&countries=" target="_blank">rateyourmusic.com</a></p>
               </div>
             </div>
           </form>
