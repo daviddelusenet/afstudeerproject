@@ -1,9 +1,11 @@
 'use strict';
 
-var TextlineView = require('./Textline');
 var CheckboxView = require('./Checkbox');
-var RadioButtonView = require('./RadioButton');
 var DropdownView = require('./Dropdown');
+var ImageUploadView = require('./ImageUpload');
+var RadioButtonView = require('./RadioButton');
+var TextlineView = require('./Textline');
+var TextblockView = require('./Textblock');
 
 module.exports = function (element) {
 
@@ -53,7 +55,12 @@ module.exports.prototype = {
         new RadioButtonView(this.elements[i]);
       } else if (this.elements[i].classList.contains('js-form-component-dropdown')) {
         new DropdownView(this.elements[i]);
+      } else if (this.elements[i].classList.contains('js-form-component-textblock')) {
+        new TextblockView(this.elements[i]);
+      } else if (this.elements[i].classList.contains('js-form-component-image')) {
+        new ImageUploadView(this.elements[i]);
       }
+
     }
 
   },
@@ -78,5 +85,5 @@ module.exports.prototype = {
     }
 
   }
-  
+
 };
