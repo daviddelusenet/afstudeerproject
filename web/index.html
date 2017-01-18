@@ -1179,8 +1179,12 @@ removeErrorElement: function () {
 
         <div class="text-block">
           <p class="text-block-subtitle">Textblock component demo</p>
-          <p class="text-block-paragraph">Het <code class="text-block-inline-code">Textblock</code> component is een ander belangrijk component binnen Mimoto. Met het <code class="text-block-inline-code">Checkbox</code> component is het namelijk mogelijk om verschillende opties te selecteren.</p>
-          <p class="text-block-paragraph">Qua validatie is er echter weinig mogelijk. De enige validatie die je kunt meegeven aan het <code class="text-block-inline-code">Checkbox</code> component zijn het minimale en maximale aantal selecties. Via het onderstaande formulier is het dan ook mogelijk om deze validatie toe te voegen aan het bijbehorende <code class="text-block-inline-code">Checkbox</code> component.</p>
+          <p class="text-block-paragraph">Het <code class="text-block-inline-code">Textblock</code> component is vrijwel hetzelfde als het <code class="text-block-inline-code">Textline</code> component. In beide componenten kan er namelijk tekst ingevoerd worden. Toch zijn er verschillen tussen deze componenten:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item">Het <code class="text-block-inline-code">Textline</code> component kan maar &eacute;&eacute;n regel tekst bevatten, het <code class="text-block-inline-code">Textblock</code> component in theorie oneindig veel regels.</li>
+            <li class="text-block-list-item">Het <code class="text-block-inline-code">Textblock</code> component is in hoogte aanpasbaar door de gebruiker.</li>
+          </ul>
+          <p class="text-block-paragraph">Aangezien ook de validatie mogelijkheden exact hetzelfde zijn heb ik besloten om geen custom validatie voorbeeld van het <code class="text-block-inline-code">Textblock</code> component te ontwikkelen. Wel kan je hieronder een voorbeeld vinden van het <code class="text-block-inline-code">Textblock</code> component, inclusief vooraf ingesteld validatie.</p>
         </div>
         
         <div class="preview-block">
@@ -1198,7 +1202,6 @@ removeErrorElement: function () {
             </div>
           </form>
         </div>
-
 
         <div class="text-block">
           <p class="text-block-subtitle">Checkbox component demo</p>
@@ -1349,151 +1352,210 @@ removeErrorElement: function () {
         </div>
 
         <div class="preview-block">
-          <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-list">
-            <div class="MimotoCMS_forms_FormComponent-header">
-              <p class="MimotoCMS_forms_FormComponent-title">My favourite albums <span class="MimotoCMS_forms_FormComponent-title-icon icon"></span></p>
-            </div>
-            <div class="MimotoCMS_forms_FormComponent-content">
-              <div class="MimotoCMS_forms_FormComponent-element">
-                <div class="MimotoCMS_forms_input_List js-list js-list-sortable">
-                  <div class="MimotoCMS_forms_input_ListItem">
-                    <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album1.png);"></figure>
-                    <div class="MimotoCMS_forms_input_ListItem-text">
-                      <p class="MimotoCMS_forms_input_ListItem-title">Madvillain - Madvillainy</p>
-                      <p class="MimotoCMS_forms_input_ListItem-subtitle">Hip-hop</p>
+          <form class="js-form">
+            <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-list">
+              <div class="MimotoCMS_forms_FormComponent-header">
+                <p class="MimotoCMS_forms_FormComponent-title">Top 10 hip hop albums of all time <span class="MimotoCMS_forms_FormComponent-title-icon icon"></span></p>
+              </div>
+              <div class="MimotoCMS_forms_FormComponent-content">
+                <div class="MimotoCMS_forms_FormComponent-element">
+                  <div class="MimotoCMS_forms_input_List js-list js-list-sortable">
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album1.jpg);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">Enter the Wu-Tang (36 Chambers)</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">Wu-Tang Clan</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                    <div class="MimotoCMS_forms_input_ListItem-handle">
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album2.jpg);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">Illmatic</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">Nas</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="MimotoCMS_forms_input_ListItem">
-                    <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album2.png);"></figure>
-                    <div class="MimotoCMS_forms_input_ListItem-text">
-                      <p class="MimotoCMS_forms_input_ListItem-title">Kendrick Lamar - To Pimp A Butterfly</p>
-                      <p class="MimotoCMS_forms_input_ListItem-subtitle">Hip-hop</p>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album3.png);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">Endtroducing....</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">DJ Shadow</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                    <div class="MimotoCMS_forms_input_ListItem-handle">
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album4.png);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">Liquid Swords</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">Genius/GZA</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="MimotoCMS_forms_input_ListItem">
-                    <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album3.jpeg);"></figure>
-                    <div class="MimotoCMS_forms_input_ListItem-text">
-                      <p class="MimotoCMS_forms_input_ListItem-title">FKA Twigs - m3ll155x</p>
-                      <p class="MimotoCMS_forms_input_ListItem-subtitle">Alternative/Indie</p>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album5.jpg);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">Madvillainy</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">Madvillain</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                    <div class="MimotoCMS_forms_input_ListItem-handle">
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album6.jpg);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">The Low End Theory</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">A Tribe Called Quest</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="MimotoCMS_forms_input_ListItem">
-                    <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album4.jpg);"></figure>
-                    <div class="MimotoCMS_forms_input_ListItem-text">
-                      <p class="MimotoCMS_forms_input_ListItem-title">JJ DOOM - Key to the Kuffs</p>
-                      <p class="MimotoCMS_forms_input_ListItem-subtitle">Hip-hop</p>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album7.jpg);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">My Beautiful Dark Twisted Fantasy</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">Kanye West</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                    <div class="MimotoCMS_forms_input_ListItem-handle">
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album8.jpg);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">good kid, m.A.A.d city</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">Kendrick Lamar</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="MimotoCMS_forms_input_ListItem">
-                    <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album5.jpg);"></figure>
-                    <div class="MimotoCMS_forms_input_ListItem-text">
-                      <p class="MimotoCMS_forms_input_ListItem-title">Limp Bizkit - Results May Vary</p>
-                      <p class="MimotoCMS_forms_input_ListItem-subtitle">Nu metal</p>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album9.jpg);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">To Pimp a Butterfly</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">Kendrick Lamar</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
-                    <div class="MimotoCMS_forms_input_ListItem-handle">
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                    </div>
-                  </div>
-                  <div class="MimotoCMS_forms_input_ListItem">
-                    <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album6.jpg);"></figure>
-                    <div class="MimotoCMS_forms_input_ListItem-text">
-                      <p class="MimotoCMS_forms_input_ListItem-title">J Dilla - Donuts</p>
-                      <p class="MimotoCMS_forms_input_ListItem-subtitle">Hip-hop instrumentals</p>
-                    </div>
-                    <div class="MimotoCMS_forms_input_ListItem-handle">
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                    </div>
-                  </div>
-                  <div class="MimotoCMS_forms_input_ListItem">
-                    <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album7.jpg);"></figure>
-                    <div class="MimotoCMS_forms_input_ListItem-text">
-                      <p class="MimotoCMS_forms_input_ListItem-title">Danny Brown - Atrocity Exhibition</p>
-                      <p class="MimotoCMS_forms_input_ListItem-subtitle">Hip-hop</p>
-                    </div>
-                    <div class="MimotoCMS_forms_input_ListItem-handle">
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
-                      <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                    <div class="MimotoCMS_forms_input_ListItem">
+                      <figure class="MimotoCMS_forms_input_ListItem-figure" style="background-image: url(static/img/album10.jpg);"></figure>
+                      <div class="MimotoCMS_forms_input_ListItem-text">
+                        <p class="MimotoCMS_forms_input_ListItem-title">Midnight Marauders</p>
+                        <p class="MimotoCMS_forms_input_ListItem-subtitle">A Tribe Called Quest</p>
+                      </div>
+                      <div class="MimotoCMS_forms_input_ListItem-handle">
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                        <div class="MimotoCMS_forms_input_ListItem-handle-dot"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <p class="MimotoCMS_forms_FormComponent-description">Original order based on <a href="http://rateyourmusic.com/customchart?page=1&chart_type=top&type=album&year=alltime&genre_include=1&include_child_genres=1&genres=hip+hop&include_child_genres_chk=1&include=both&origin_countries=&limit=none&countries=" target="_blank">rateyourmusic.com</a></p>
               </div>
-              <p class="MimotoCMS_forms_FormComponent-description">&ldquo;One good thing about music, when it hits you, you feel no pain.&rdquo; - Bob Marley</p>
             </div>
-          </div>
+          </form>
         </div>
 
         <div class="text-block">
@@ -1678,7 +1740,7 @@ removeErrorElement: function () {
           <form class="js-form js-form7">
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-image">
               <div class="MimotoCMS_forms_FormComponent-header">
-                <label for="avatar" class="MimotoCMS_forms_FormComponent-title">Upload your avatar <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+                <label class="MimotoCMS_forms_FormComponent-title">Upload your avatar <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               </div>
               <div class="MimotoCMS_forms_FormComponent-content ">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
