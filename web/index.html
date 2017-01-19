@@ -1139,7 +1139,7 @@ removeErrorElement: function () {
               <label class="MimotoCMS_forms_FormComponent-title">Textline custom validation demo <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
-                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target1" placeholder="Begin typing">
+                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target1" placeholder="Start typing here">
                 </div>
                 <p class="MimotoCMS_forms_FormComponent-description">Your own custom validation, how awesome</p>
               </div>
@@ -1169,7 +1169,7 @@ removeErrorElement: function () {
               <label class="MimotoCMS_forms_FormComponent-title">Textline regular expression demo <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
-                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target2" placeholder="Begin typing">
+                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline js-example-target2" placeholder="Start typing here">
                 </div>
                 <p class="MimotoCMS_forms_FormComponent-description">Add your own regular expression to this component</p>
               </div>
@@ -1178,8 +1178,7 @@ removeErrorElement: function () {
         </div>
 
         <div class="text-block">
-          <p class="text-block-paragraph">Het <code class="text-block-inline-code">Textline</code> component heeft ook nog ondersteuning voor een prefix. Deze prefix kan bijvoorbeeld gebruikt worden om bij een mobiel nummer de <code class="text-block-inline-code">06</code> al te tonen. Hieronder volgt een voorbeeld van het <code class="text-block-inline-code">Textline</code> component waarin een geldige URL wordt verwacht. De prefix wordt dan gebruikt om <code class="text-block-inline-code">http://</code> te tonen.
-          </p>
+          <p class="text-block-paragraph">Het <code class="text-block-inline-code">Textline</code> component heeft ook nog ondersteuning voor een prefix. Deze prefix kan bijvoorbeeld gebruikt worden om bij een mobiel nummer de <code class="text-block-inline-code">06</code> al te tonen. Hieronder volgt een voorbeeld van het <code class="text-block-inline-code">Textline</code> component waarin een geldige URL wordt verwacht. De prefix wordt dan gebruikt om <code class="text-block-inline-code">http://</code> te tonen.</p>
         </div>
 
         <div class="preview-block">
@@ -1372,6 +1371,14 @@ removeErrorElement: function () {
 
         <div class="text-block">
           <p class="text-block-subtitle">List en List Item componenten demo</p>
+          <p class="text-block-paragraph">Het <code class="text-block-inline-code">List</code> component kan eigenlijk niet gebruikt worden zonder het <code class="text-block-inline-code">List Item</code> component. Een <code class="text-block-inline-code">List</code> component zonder &eacute;&eacute;n of meerdere instanties van het <code class="text-block-inline-code">List Item</code> component is namelijk een lege lijst.</p>
+          <p class="text-block-paragraph">Binnen Mimoto kan het <code class="text-block-inline-code">List</code> component voor meerdere dingen gebruikt worden, waaronder:</p>
+          <ul class="text-block-list">
+            <li class="text-block-list-item">Het sorteren van <code class="text-block-inline-code">List Item</code> componenten.</li>
+            <li class="text-block-list-item">Het toevoegen/verwijderen van <code class="text-block-inline-code">List Item</code> componenten.</li>
+          </ul>
+          <p class="text-block-paragraph">Het toevoegen of verwijderen van <code class="text-block-inline-code">List Item</code> componenten is vooralsnog niet mogelijk. Op het moment is het dus alleen mogelijk om de volgorde van de <code class="text-block-inline-code">List Item</code> componenten aan te passen. De volgorde van de onderstaande demo wordt opgeslagen in je <a href="https://developer.mozilla.org/nl/docs/Web/API/Window/localStorage" target="_blank" class="text-block-link">local storage</a>. Pas maar eens de volgorde aan en herlaad de pagina.</p>
+          <p class="text-block-paragraph">Momenteel zijn er nog geen validatie opties die toegevoegd kunnen worden aan deze componenten.</p>
         </div>
 
         <div class="preview-block">
@@ -1582,6 +1589,86 @@ removeErrorElement: function () {
         </div>
 
         <div class="text-block">
+          <p class="text-block-subtitle">Image Upload component demo</p>
+          <p class="text-block-paragraph">Met het <code class="text-block-inline-code">Image Upload</code> component is mogelijk wat de naam al doet vermoeden, namelijk het uploaden van een afbeelding.</p>
+          <p class="text-block-paragraph">Omdat het niet nodig is om het wiel opnieuw uit te vinden heb ik de JavaScript library <a class="text-block-link" target="_blank" href="http://www.dropzonejs.com/">DropzoneJS</a> gebruikt om dit resultaat te bereiken. Ik gebruik de volgende code om de Dropzone te initialiseren:</p>
+          <pre class="text-block-code">
+initDropzone: function () {
+
+  this.dropzone = new Dropzone(this.imageUpload, {
+    url: this.postURL,
+    maxFilesize: 1,
+    uploadMultiple: false,
+    previewTemplate: this.previewTemplate,
+    thumbnailWidth: 500,
+    thumbnailHeight: null,
+    previewsContainer: this.previewClass,
+    clickable: this.imageUploadTriggerClass
+  });
+
+  this.addDropzoneEvents();
+
+}</pre>
+          <p class="text-block-paragraph">Zoals je ziet wordt in de bovenstaande code gebruik gemaakt van meerdere variabelen. Deze variabelen worden ingesteld in de <code class="text-block-inline-code">setVariables</code> functie. Die ziet er als volgt uit:</p>
+          <pre class="text-block-code">
+setVariables: function () {
+
+  this.imageUploadClass = '.js-image-upload';
+  this.imageUploadTriggerClass = '.js-image-upload-trigger';
+  this.previewClass = '.js-image-upload-preview';
+  this.previewTemplateClass = '.js-image-upload-preview-template';
+
+  this.showPreviewClass = 'MimotoCMS_forms_input_ImageUpload--show-preview';
+  this.showPreviewImageClass = 'MimotoCMS_forms_input_ImageUpload--show-preview-image';
+  this.hideUploadProgressClass = 'MimotoCMS_forms_input_ImageUpload--hide-upload-progess';
+
+  this.errorParent = this.el.querySelector('.js-error-parent');
+
+  this.postURL = "http://httpbin.org/post";
+  this.imageUpload = this.el.querySelector(this.imageUploadClass);
+  this.previewTemplate = this.getPreviewTemplate();
+
+}</pre>
+          <p class="text-block-paragraph">Nadat de Dropzone instantie is ge&iuml;nitialiseerd wordt de <code class="text-block-inline-code">addDropzoneEvents</code> functie aangeroepen:</p>
+          <p class="text-block-paragraph">In deze functie worden er verschillende functies aan verschillende events gekoppeld. Wanneer bijvoorbeeld een afbeelding succesvol is ge&uuml;pload wordt de functie <code class="text-block-inline-code">EH.addValidatedState</code> gebruikt om de gevalideerde state toe te voegen aan het <code class="text-block-inline-code">Image Upload</code> component. Gaat er iets mis dan wordt de <code class="text-block-inline-code">EH.addErrorState</code> functie gebruikt om de error te tonen.</p>
+          <p class="text-block-paragraph">Momenteel zijn er nog geen validatie mogelijkheden voor het <code class="text-block-inline-code">Image Upload</code> component.</p>
+        </div>
+
+        <div class="preview-block">
+          <form class="js-form js-form7">
+            <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-image">
+              <div class="MimotoCMS_forms_FormComponent-header">
+                <label class="MimotoCMS_forms_FormComponent-title">Upload a vacation photo <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              </div>
+              <div class="MimotoCMS_forms_FormComponent-content ">
+                <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
+                  <div class="MimotoCMS_forms_input_ImageUpload js-image-upload">
+                    <div class="MimotoCMS_forms_input_ImageUpload-trigger js-image-upload-trigger">
+                      <div class="MimotoCMS_forms_input_ImageUpload-trigger-button"><svg class="MimotoCMS_forms_input_ImageUpload-trigger-button-icon"><use xlink:href="#ico-plus"></use></svg></div>
+                      <p class="MimotoCMS_forms_input_ImageUpload-trigger-text">Click here or drop an image</p>
+                    </div>
+                    <div class="MimotoCMS_forms_input_ImageUpload-preview js-image-upload-preview">
+                      <div class="MimotoCMS_forms_input_ImageUpload-preview-template js-image-upload-preview-template">
+                        <img data-dz-thumbnail class="MimotoCMS_forms_input_ImageUpload-preview-image" />
+                        <div class="MimotoCMS_forms_input_ImageUpload-preview-upload-progress">
+                          <div class="MimotoCMS_forms_input_ImageUpload-preview-upload-progess-bar" data-dz-uploadprogress></div>
+                        </div>
+                        <div class="MimotoCMS_forms_input_ImageUpload-preview-button">
+                          <button data-dz-remove="" class="MimotoCMS_ButtonModule">
+                            <span class="MimotoCMS_ButtonModule-text">Remove</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="MimotoCMS_forms_FormComponent-description">A picture says more than a thousand words</p>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="text-block">
           <p class="text-block-subtitle">Inschrijfformulier demo</p>
           <p class="text-block-paragraph">Door verschillende componenten uit Mimoto te combineren is het mogelijk om complete formulieren op te bouwen. In combinatie met mijn <code class="text-block-inline-code">FV</code> library is het dan mogelijk om hier validatie aan toe te voegen. Hieronder heb ik dan ook een inschrijfformulier opgebouwd met bijbehorende validatie. Dit is de validatie die ik per veld heb ingesteld:</p>
           <ul class="text-block-list">
@@ -1604,16 +1691,17 @@ removeErrorElement: function () {
         <div class="preview-block">
           <form class="js-form js-form6">
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label class="MimotoCMS_forms_FormComponent-title">First name <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
-              <div class="MimotoCMS_forms_FormComponent-content MimotoCMS_forms_FormComponent-content--no-description">
+              <label class="MimotoCMS_forms_FormComponent-title">First name* <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <div class="MimotoCMS_forms_FormComponent-content">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="text" class="MimotoCMS_forms_input_Textline js-textline" placeholder="Michael" data-fv-required>
                 </div>
+                <p class="MimotoCMS_forms_FormComponent-description">Fields with an * are required</p>
               </div>
             </div>
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label class="MimotoCMS_forms_FormComponent-title">Last name <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <label class="MimotoCMS_forms_FormComponent-title">Last name* <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content MimotoCMS_forms_FormComponent-content--no-description">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="text" class="MimotoCMS_forms_input_Textline js-textline" placeholder="Jordan" data-fv-required>
@@ -1623,7 +1711,7 @@ removeErrorElement: function () {
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-radio-button">
               <div class="MimotoCMS_forms_FormComponent-header">
-                <label class="MimotoCMS_forms_FormComponent-title">Gender <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+                <label class="MimotoCMS_forms_FormComponent-title">Gender* <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               </div>
               <div class="MimotoCMS_forms_FormComponent-content MimotoCMS_forms_FormComponent-content--no-description">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
@@ -1644,17 +1732,17 @@ removeErrorElement: function () {
             </div>
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label class="MimotoCMS_forms_FormComponent-title">Email address <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <label class="MimotoCMS_forms_FormComponent-title">Email address* <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
-                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline" placeholder="email@example.domain" data-fv-regex="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" data-fv-error-message="Please enter a valid email address">
+                  <input type="text" class="MimotoCMS_forms_input_Textline js-textline" placeholder="youremail@example.com" data-fv-regex="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" data-fv-error-message="Please enter a valid email address">
                 </div>
-                <p class="MimotoCMS_forms_FormComponent-description">Email should follow the email@example.domain format</p>
+                <p class="MimotoCMS_forms_FormComponent-description">Email should follow the youremail@example.com format</p>
               </div>
             </div>
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label class="MimotoCMS_forms_FormComponent-title">Date of Birth <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <label class="MimotoCMS_forms_FormComponent-title">Date of Birth* <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="text" class="MimotoCMS_forms_input_Textline js-textline" placeholder="1992-06-24" data-fv-regex="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" data-fv-error-message="Please enter a valid date of birth">
@@ -1664,7 +1752,7 @@ removeErrorElement: function () {
             </div>
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label class="MimotoCMS_forms_FormComponent-title">Street <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <label class="MimotoCMS_forms_FormComponent-title">Street* <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content MimotoCMS_forms_FormComponent-content--no-description">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="text" class="MimotoCMS_forms_input_Textline js-textline" placeholder="Memory Lane" data-fv-required>
@@ -1673,7 +1761,7 @@ removeErrorElement: function () {
             </div>
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label class="MimotoCMS_forms_FormComponent-title">House number and (optional) addition <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <label class="MimotoCMS_forms_FormComponent-title">House number and (optional) addition* <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content MimotoCMS_forms_FormComponent-content--no-description">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="text" class="MimotoCMS_forms_input_Textline js-textline" placeholder="13" data-fv-required data-fv-no-special-characters>
@@ -1683,7 +1771,7 @@ removeErrorElement: function () {
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-dropdown">
               <div class="MimotoCMS_forms_FormComponent-header">
-                <label class="MimotoCMS_forms_FormComponent-title">Country <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+                <label class="MimotoCMS_forms_FormComponent-title">Country* <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               </div>
               <div class="MimotoCMS_forms_FormComponent-content MimotoCMS_forms_FormComponent-content--no-description">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
@@ -1701,7 +1789,7 @@ removeErrorElement: function () {
             </div>
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label class="MimotoCMS_forms_FormComponent-title">Password <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <label class="MimotoCMS_forms_FormComponent-title">Password* <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="password" class="MimotoCMS_forms_input_Textline js-textline" placeholder="Be safe" data-fv-min-length="5" data-fv-min-numbers="1" data-fv-min-special-characters="1">
@@ -1711,7 +1799,7 @@ removeErrorElement: function () {
             </div>
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-textline">
-              <label class="MimotoCMS_forms_FormComponent-title">Repeat password <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+              <label class="MimotoCMS_forms_FormComponent-title">Repeat password* <svg class="MimotoCMS_forms_FormComponent-title-icon js-error-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               <div class="MimotoCMS_forms_FormComponent-content MimotoCMS_forms_FormComponent-content--no-description">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
                   <input type="password" class="MimotoCMS_forms_input_Textline js-textline" placeholder="Be safe" data-fv-min-length="5" data-fv-min-numbers="1" data-fv-min-special-characters="1">
@@ -1721,7 +1809,7 @@ removeErrorElement: function () {
 
             <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-checkbox">
               <div class="MimotoCMS_forms_FormComponent-header">
-                <label class="MimotoCMS_forms_FormComponent-title">Terms and conditions <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
+                <label class="MimotoCMS_forms_FormComponent-title">Terms and conditions* <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
               </div>
               <div class="MimotoCMS_forms_FormComponent-content MimotoCMS_forms_FormComponent-content--no-description">
                 <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
@@ -1756,41 +1844,6 @@ removeErrorElement: function () {
             <a class="MimotoCMS_ButtonModule js-form-submit">
               <span class="MimotoCMS_ButtonModule-text">Sign up</span>
             </a>
-          </form>
-        </div>
-
-        <div class="preview-block">
-          <form class="js-form js-form7">
-            <div class="MimotoCMS_forms_FormComponent js-form-component js-form-component-image">
-              <div class="MimotoCMS_forms_FormComponent-header">
-                <label class="MimotoCMS_forms_FormComponent-title">Upload your avatar <svg class="js-error-icon MimotoCMS_forms_FormComponent-title-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></use></svg></label>
-              </div>
-              <div class="MimotoCMS_forms_FormComponent-content ">
-                <div class="MimotoCMS_forms_FormComponent-element js-error-parent">
-                  <div class="MimotoCMS_forms_input_ImageUpload js-image-upload">
-                    <div class="MimotoCMS_forms_input_ImageUpload-trigger js-image-upload-trigger">
-                      <div class="MimotoCMS_forms_input_ImageUpload-trigger-button"><svg class="MimotoCMS_forms_input_ImageUpload-trigger-button-icon"><use xlink:href="#ico-plus"></use></svg></div>
-                      <p class="MimotoCMS_forms_input_ImageUpload-trigger-text">Klik hier of drop een afbeelding</p>
-                    </div>
-
-                    <div class="MimotoCMS_forms_input_ImageUpload-preview js-image-upload-preview">
-                      <div class="MimotoCMS_forms_input_ImageUpload-preview-template js-image-upload-preview-template">
-                        <img data-dz-thumbnail class="MimotoCMS_forms_input_ImageUpload-preview-image" />
-                        <div class="MimotoCMS_forms_input_ImageUpload-preview-upload-progress">
-                          <div class="MimotoCMS_forms_input_ImageUpload-preview-upload-progess-bar" data-dz-uploadprogress></div>
-                        </div>
-                        <div class="MimotoCMS_forms_input_ImageUpload-preview-button">
-                          <button data-dz-remove="" class="MimotoCMS_ButtonModule">
-                            <span class="MimotoCMS_ButtonModule-text">Remove</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p class="MimotoCMS_forms_FormComponent-description">Een foto zegt meer dan 1000 woorden</p>
-              </div>
-            </div>
           </form>
         </div>
 
