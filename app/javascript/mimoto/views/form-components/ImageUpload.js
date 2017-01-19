@@ -44,7 +44,7 @@ module.exports.prototype = {
     this.dropzone = new Dropzone(this.imageUpload, {
       url: this.postURL,
       maxFilesize: 1,
-      parallelUploads: 20,
+      uploadMultiple: false,
       previewTemplate: this.previewTemplate,
       thumbnailWidth: 500,
       thumbnailHeight: null,
