@@ -12,6 +12,7 @@
     font-family: $lucida-grande;
     font-size: 15px;
     font-weight: bold;
+    line-height: 22px;
     text-decoration: none;
     color: $bright-gray;
     transition: color 100ms ease-out;
@@ -47,6 +48,7 @@
 
     .example-block-checkbox {
       display: block;
+      height: 22px;
       margin-right: 10px;
       cursor: pointer;
       outline: none;
