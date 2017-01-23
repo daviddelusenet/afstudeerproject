@@ -2,7 +2,5 @@
 .idea
 node_modules
 web/static/css/*.css
-web/static/appendices/*
-web/static/img/*
 web/static/js/*.js
 web/static/js/*.js.map
