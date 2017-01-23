@@ -134,9 +134,10 @@
           <h1 class="text-block-title"><span class="text-block-title-number">1</span>Context</h1>
           <p class="text-block-section-title"><span class="text-block-section-title-number">1.1</span>Voorwoord</p>
           <p class="text-block-paragraph">De afgelopen maanden zijn een uitdagende en leuke periode geweest. Ik ben druk bezig geweest met mijn afstudeerproject voor de opleiding Communication en Multimedia Design. Deze opleiding volg ik aan de Hogeschool van Amsterdam.</p>
-          <p class="text-block-paragraph">Dit project heb ik gecombineerd met mijn baan als front-end developer bij Momkai. Ook heb ik in mijn vrije tijd nog de nodige uurtjes op een basketbalveld doorgebracht. Ik wil dan ook mijn vriendin Katheleyne bedanken voor haar begrip als ik weer eens moe thuiskwam na een lange dag.</p>
-          <p class="text-block-paragraph">Ook wil ik Momkai en al mijn collega's bedanken voor de kans dit project te realiseren en voor de broodnodige ondersteuning tijdens het traject.</p>
+          <p class="text-block-paragraph">Mijn afstudeerproject heb ik gecombineerd met mijn baan als front-end developer bij Momkai. Ook heb ik in mijn vrije tijd nog de nodige uurtjes op een basketbalveld doorgebracht. Ik wil dan ook mijn vriendin Katheleyne bedanken voor haar begrip als ik weer eens moe thuiskwam na een lange dag.</p>
+          <p class="text-block-paragraph">Ook wil ik Momkai en al mijn collega's bedanken voor de kans dit project te kunnen realiseren en voor de broodnodige ondersteuning tijdens het traject.</p>
           <p class="text-block-paragraph">Uiteraard wil ik ook mijn ouders bedanken, op wie ik altijd kan vertrouwen als het gaat om goed advies en feedback.</p>
+          <p class="text-block-paragraph">Ook wil ik mijn afstudeerbegeleider <a href="https://www.linkedin.com/in/koenwijffelaars" target="_blank" class="text-block-link">Koen Wijffelaars</a> bedanken voor de goede begeleiding tijdens dit project.</p>
           <p class="text-block-paragraph">Als laatste wil ik nog expliciet mijn collega <a href="http://www.linkedin.com/in/tonsomers" target="_blank" class="text-block-link">Ton Somers</a> bedanken voor de visuele ondersteuning tijdens de ontwikkeling van deze website.</p>
         </div>
       </div>
@@ -166,7 +167,7 @@
       <div id="terminologie">
         <div class="text-block">
           <p class="text-block-section-title"><span class="text-block-section-title-number">1.3</span>Terminologie</p>
-          <p class="text-block-paragraph">Voor degene die dit leest en geen technische achtergrond heeft, hierbij een uitleg van veel gebruikte technische termen binnen mijn verslag.</p>
+          <p class="text-block-paragraph">Voor degene die deze documentatie leest en geen technische achtergrond heeft, hierbij een uitleg van veel gebruikte (technische) termen binnen mijn verslag.</p>
           <p class="text-block-paragraph"><span class="text-block-highlight">HTML:</span> HTML (Hyper Text Markup Language) is een opmaaktaal waarmee het mogelijk is om documenten te schrijven. HTML is de standaard opmaaktaal voor webpagina's en bestaat al sinds 1997.<a href="#source-12" class="text-block-paragraph-sup">2</a></p>
           <p class="text-block-paragraph"><span class="text-block-highlight">Twig:</span> Twig is een templating engine voor PHP. Twig code wordt gecompileerd naar PHP maar is een stuk beter leesbaar. Ook maakt Twig bepaalde PHP functionaliteit een stuk makkelijker om te gebruiken.<a href="#source-12" class="text-block-paragraph-sup">3</a></p>
           <p class="text-block-paragraph"><span class="text-block-highlight">CSS:</span> CSS (Cascading Style Sheets) zijn een mogelijkheid om webpagina's mee op te maken. In CSS bestanden verwijs je naar HTML elementen om deze vervolgens te stylen.<a href="#source-14" class="text-block-paragraph-sup">4</a></p>
@@ -195,7 +196,7 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
             <li class="text-block-list-item">Optioneel: een JavaScript bestand waarin de functionaliteit van het component zich bevindt.</li>
           </ul>
           <p class="text-block-paragraph"><span class="text-block-highlight">Refactoring:</span> Het aanpassen van bepaalde code naar een nieuwe (verbeterde) versie. Dit wordt vaak gedaan om de leesbaarheid en de performance van code te verbeteren.</p>
-          <p class="text-block-paragraph"><span class="text-block-highlight">Content Management Sytem:</span> Een Content Management System (ook wel CMS genoemd) bevindt zich over het algemeen aan de achterkant van een website. Via een CMS is het mogelijk om content in te voeren in pagina's en in sommige gevallen kan je er zelfs pagina's mee aanmaken.<a href="#source-16" class="text-block-paragraph-sup">6</a></p>
+          <p class="text-block-paragraph"><span class="text-block-highlight">Content Management Sytem:</span> Een Content Management System (ook wel CMS genoemd) bevindt zich over het algemeen aan de achterkant van een website. Via een CMS is het mogelijk om content in te voeren in pagina's en in sommige gevallen kun je er zelfs pagina's mee aanmaken.<a href="#source-16" class="text-block-paragraph-sup">6</a></p>
           <p class="text-block-paragraph"><span class="text-block-highlight">Automated Task Runner:</span> Met een task runner is het mogelijk om je ontwikkelingsproces te stroomlijnen. Denk hierbij aan het automatisch compileren van code wanneer je iets aanpast en het up to date houden van verschillende browsers.</p>
           <p class="text-block-paragraph"><span class="text-block-highlight">Module Bundler:</span> In mijn project gebruik ik een module bundler om mijn JavaScript bestanden samen te voegen. Het is handig om functionaliteit om te delen in kleinere, beter onderhoudbare bestanden.</p>
           <p class="text-block-paragraph"><span class="text-block-highlight">Minification:</span> Minifyen is het verwijderen van alle onnodige karakters van stukken code zonder de functionaliteit te veranderen. Dit wordt gedaan om de bestandsgrote te verkleinen en de uitvoeringssnelheid te vergroten.</p>
@@ -259,7 +260,7 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <p class="text-block-subtitle">Modulair</p>
           <p class="text-block-paragraph">Zoals al eerder uitgelegd is het de bedoeling Mimoto op te zetten als een library. Op deze manier kan het in de toekomst met relatief kleine aanpassingen ook voor andere doeleinden ingezet worden. Om dit te bereiken dient Mimoto opgebouwd te worden uit componenten die elk hun eigen stuk functionaliteit bevatten.</p>
           <p class="text-block-paragraph">Met deze componenten is het dan mogelijk om ook andere interfaces te bouwen. Het is bijvoorbeeld de bedoeling dat ook Respondens (het CMS van De Correspondent) opnieuw gebouwd wordt met behulp van componenten uit Mimoto.</p>
-          <p class="text-block-paragraph">Omdat een modulaire opzet het belangrijkste aspect is van dit project zal ik mij tijdens de ontwikkeling voornamelijk richting op de belangrijke componenten. In het geval van een CMS zijn dit formulier elementen. Een CMS kan namelijk op 10.000 verschillende manieren ontworpen worden, &eacute;&eacute;n ding hebben ze altijd gemeen: er wordt een hoop gebruik gemaakt van formulieren en alles wat hierbij hoort.</p>
+          <p class="text-block-paragraph">Omdat een modulaire opzet het belangrijkste aspect is van dit project zal ik mij tijdens de ontwikkeling voornamelijk richting op de belangrijke componenten. In het geval van een CMS zijn dit formulier componenten. Een CMS kan namelijk op 10.000 verschillende manieren ontworpen worden, &eacute;&eacute;n ding hebben ze altijd gemeen: er wordt een hoop gebruik gemaakt van formulieren en alles wat hierbij hoort.</p>
           <p class="text-block-paragraph">Het is dan ook van groot belang dat deze componenten zo opgezet worden dat ze simpel hergebruikt kunnen worden voor andere doeleinden. Om dit te bereiken is het belangrijk om al de functionaliteit ge&iuml;soleerd op te zetten. Hoe ik dit precies ga doen ga ik later nog verder op in.</p>
           <p class="text-block-subtitle">Ontwerp</p>
           <p class="text-block-paragraph">Het visual design wordt gedaan door ontwerpers die werkzaam zijn bij Momkai en De Correspondent. Ik zal wel bij dit proces betrokken zijn maar niet het daadwerkelijke ontwerp maken.</p>
@@ -273,35 +274,35 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <p class="text-block-paragraph">Om een project succes te laten verlopen is het belangrijk om je prioriteiten op orde te hebben. Om dit te bereiken heb ik met behulp van de MoSCoW-methode een lijst opgesteld van prioriteiten.<a href="#source-18" class="text-block-paragraph-sup">8</a></p>
           <p class="text-block-subtitle">Must have</p>
           <ul class="text-block-list">
-            <li class="text-block-list-item">Een responsive interface</li>
-            <li class="text-block-list-item">Front-end code die modulair opgezet is</li>
-            <li class="text-block-list-item">Ontwikkeld met behulp van HTML5, CSS3 en JavaScript</li>
-            <li class="text-block-list-item">Ondersteuning van meerdere formulier elementen (foto upload, tekst input, checkboxes, radio buttons en dropdowns)</li>
-            <li class="text-block-list-item">Gebruiksvriendelijke interface, gevalideerd door middel van expert reviews en/of usability tests</li>
-            <li class="text-block-list-item">Validatie bij gebruik formulier element &eacute;n bij versturen formulier</li>
+            <li class="text-block-list-item">Een responsive interface.</li>
+            <li class="text-block-list-item">Front-end code die modulair opgezet is.</li>
+            <li class="text-block-list-item">Ontwikkeld met behulp van HTML5, CSS3 en JavaScript.</li>
+            <li class="text-block-list-item">Ondersteuning van meerdere formulier elementen (onder andere foto upload, tekst input, checkbox, radio button en dropdown elementen).</li>
+            <li class="text-block-list-item">Een gebruiksvriendelijke interface, gevalideerd door middel van expert reviews en/of usability tests.</li>
+            <li class="text-block-list-item">Validatie bij gebruik formulier element &eacute;n bij versturen formulier.</li>
           </ul>
           <p class="text-block-subtitle">Should have</p>
           <ul class="text-block-list">
-            <li class="text-block-list-item">Login</li>
-            <li class="text-block-list-item">Notificaties</li>
+            <li class="text-block-list-item">Een login.</li>
+            <li class="text-block-list-item">Mogelijkheid om notificaties te tonen.</li>
           </ul>
           <p class="text-block-subtitle">Could have</p>
           <ul class="text-block-list">
-            <li class="text-block-list-item">Ondersteuning voor meerdere gebruikers inclusief verschillende rechten</li>
-            <li class="text-block-list-item">Mogelijkheid om te communiceren met andere gebruikers</li>
-            <li class="text-block-list-item">Live preview bij aanpassen content</li>
-            <li class="text-block-list-item">Multi-factor authentication</li>
-            <li class="text-block-list-item">Video upload (inclusief preview)</li>
-            <li class="text-block-list-item">Theming</li>
-            <li class="text-block-list-item">Mogelijkheid om met verschillende gebruikers op dezelfde pagina te werken</li>
-            <li class="text-block-list-item">Grafieken en statistieken</li>
+            <li class="text-block-list-item">Ondersteuning voor meerdere gebruikers inclusief verschillende rechten.</li>
+            <li class="text-block-list-item">Mogelijkheid om te kunnen communiceren met andere gebruikers.</li>
+            <li class="text-block-list-item">Live preview bij aanpassen content.</li>
+            <li class="text-block-list-item">Multi-factor authentication.</li>
+            <li class="text-block-list-item">Mogelijkheid om grafieken en statistieken te kunnen tonen.</li>
+            <li class="text-block-list-item">Video upload (inclusief preview).</li>
+            <li class="text-block-list-item">Theming mogelijkheden.</li>
+            <li class="text-block-list-item">Mogelijkheid om met verschillende gebruikers op dezelfde pagina te werken.</li>
           </ul>
           <p class="text-block-subtitle">Won't have</p>
           <ul class="text-block-list">
-            <li class="text-block-list-item">Ondersteuning voor vertalingen</li>
+            <li class="text-block-list-item">Ondersteuning voor vertalingen,</li>
           </ul>
-          <p class="text-block-paragraph">Veel van de punten die nog niet in de eerste versie van Mimoto komen vind je wel terug in de meeste andere varianten van een open-source CMS. Het is dan ook de bedoeling dat deze functionaliteiten in de toekomst wel toegevoegd worden maar daar is simpelweg nu nog geen tijd voor. Twintig weken is een korte periode om iets te realiseren dus we hebben besloten om voor nu alleen nog de basis functionaliteit te ontwikkelen.</p>
-          <p class="text-block-paragraph">Echter, de afloop van mijn afstudeerproject betekent dus niet het einde van het Mimoto project. Na mijn afstudeerproject ga ik nog een lange tijd samen met Sebastian (en waarschijnlijk ook andere Momkai collega's) verder met de ontwikkeling van Mimoto. We willen van Mimoto graag een complete toolkit maken die door veel mensen met gemak en plezier gebruikt wordt.</p>
+          <p class="text-block-paragraph">Veel van de punten die nog niet in de eerste versie van Mimoto komen vind je wel terug in de meeste andere varianten van een open-source CMS. Het is dan ook de bedoeling dat deze functionaliteiten in de toekomst wel toegevoegd worden maar daar is simpelweg nu nog geen tijd voor. Twintig weken is een korte periode om een project te realiseren dus we hebben besloten om voor nu alleen nog de basis functionaliteit te ontwikkelen.</p>
+          <p class="text-block-paragraph">Echter, de afloop van mijn afstudeerproject betekent dus niet het einde van het Mimoto project. Na mijn afstudeerproject ga ik nog een lange tijd samen met Sebastian (en waarschijnlijk ook met andere Momkai collega's) verder met de ontwikkeling van Mimoto. We willen van Mimoto graag een complete library maken die door veel mensen met gemak en plezier gebruikt wordt.</p>
         </div>
       </div>
 
@@ -310,8 +311,8 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <h1 class="text-block-title"><span class="text-block-title-number">2</span>Ontwerpproces</h1>
           <p class="text-block-section-title"><span class="text-block-section-title-number">2.1</span>Insteek</p>
           <p class="text-block-paragraph">Op voorhand wist ik dat dit een uitdagend project zou worden. Ik had veel vrijheid waar ik gebruik van kon maken, wat dingen er soms niet makkelijker op maakte.</p>
-          <p class="text-block-paragraph">Het was aan het begin namelijk nog niet helemaal duidelijk wat er allemaal gebouwd diende te worden. We wisten dat we formulier elementen nodig zouden hebben. Ook hadden we natuurlijk een interface nodig om deze elementen in te kunnen gebruiken. Wat we nog niet wisten waren de specifieke componenten die we hier voor nodig zouden hebben.</p>
-          <p class="text-block-paragraph">In het verleden is er ooit een formulier pagina ontworpen voor Respondens. Deze pagina is echter nooit ontwikkeld voor de huidige versie van Respondens. Wel bevatte deze pagina een hoop formulier elementen die we ook nodig gingen hebben voor Mimoto. We hebben toen besloten om dit design aan te houden als richtlijn voor de eerste opzet van de formulier elementen.</p>
+          <p class="text-block-paragraph">Het was aan het begin namelijk nog niet helemaal duidelijk wat er allemaal gebouwd diende te worden. We wisten dat we formulier componenten nodig zouden hebben. Ook hadden we natuurlijk een interface nodig om deze componenten in te kunnen gebruiken. Wat we nog niet wisten waren de specifieke componenten die we hier voor nodig zouden hebben.</p>
+          <p class="text-block-paragraph">In het verleden is er ooit een formulier pagina ontworpen voor Respondens. Deze pagina is echter nooit ontwikkeld voor de huidige versie van Respondens. Wel bevatte deze pagina een hoop formulier elementen die we ook nodig gingen hebben voor Mimoto. We hebben toen besloten om dit design aan te houden als richtlijn voor de eerste opzet van de formulier componenten.</p>
           <p class="text-block-paragraph">De huidige versie van Respondens heeft een goed ontworpen en gebruiksvriendelijke interface. Echter is deze interface niet responsive en kan de code ook wel een opfrisbeurt gebruiken. Om beide problemen te tackelen hebben we besloten om de Respondens interface opnieuw te bouwen. Uiteraard werd het deze keer wel responsive opgezet en ook beter gestructureerd qua code. Deze interface konden we dan gaan gebruiken voor Mimoto.</p>
         </div>
         <figure class="image-block">
@@ -330,7 +331,7 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <p class="text-block-paragraph">Ons project was eigenlijk een combinatie van de laatste twee opties. Sebastian en ik werkten veel langs elkaar heen omdat Sebastian zich richtte op de back-end en ik mij op de front-end. Dit zorgde ervoor dat we veel dingen zelf moesten uitzoeken.</p>
           <p class="text-block-paragraph">Wel werd er veel overlegd tussen ons om te bepalen wat er gedaan moest worden en waar we ons op dat moment bevonden. We hadden bijvoorbeeld elke week een planning bijeenkomst waarin wij begeleid door <a class="text-block-link" target="_blank" href="http://twitter.com/reneclerc">Ren&eacute; Clerc</a> (projectleider bij De Correspondent). In deze meetings werden onze Trello lijstjes weer bijgewerkt tot de laatste versies.</p>
           <p class="text-block-paragraph">Uiteraard heb ik ook mijn collega's bij Momkai veel betrokken bij dit project. Als ik hulp nodig had bij een ontwerp kwestie kon ik altijd terecht bij &eacute;&eacute;n van mijn visual design collega's. Ik heb hen dan ook een hoop vragen gesteld, vari&euml;rend van vragen over uitlijning op bepaalde resoluties tot het verzoek om nieuwe iconen te ontwerpen.</p>
-          <p class="text-block-paragraph">Ook heb ik geprobeerd om zo vaak mogelijk te sparren met een interactie designer over bepaalde functionaliteiten. Op deze manier kwam ik vaak tot inzichten waar ik zonder hulp niet snel tot gekomen zou zijn. Dit heeft ertoe geleidt dat de formulier elementen qua functionaliteit goed in elkaar zitten.</p>
+          <p class="text-block-paragraph">Ook heb ik geprobeerd om zo vaak mogelijk te sparren met een interactie designer over bepaalde functionaliteiten. Op deze manier kwam ik vaak tot inzichten waar ik zonder hulp niet snel tot gekomen zou zijn. Dit heeft ertoe geleidt dat de formulier componenten qua functionaliteit goed in elkaar zitten.</p>
         </div>
       </div>
 
@@ -339,17 +340,17 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <p class="text-block-section-title"><span class="text-block-section-title-number">2.2</span>Development tools</p>
           <p class="text-block-paragraph">Als front-end developer maak je tijdens het ontwikkelingsproces veel gebruik van verschillende tools. Hieronder laat ik zien wat mijn meest gebruikte tools zijn en waar ik deze voor inzette.</p>
           <p class="text-block-subtitle">Github</p>
-          <p class="text-block-paragraph"><a href="https://github.com/" target="_blank" class="text-block-link">Github</a> is een website die met behulp van Git het mogelijk maakt om in groepen aan dezelfde software te werken<a href="#source-21" class="text-block-paragraph-sup">1</a>. Github heeft concurrentie van andere diensten (zoals <a href="http://bitbucket.org/" target="_blank" class="text-block-link">Bitbucket</a>) die ongeveer hetzelfde aanbieden maar is verreweg de grootste speler.</p>
+          <p class="text-block-paragraph"><a href="https://github.com/" target="_blank" class="text-block-link">Github</a> is een website die met behulp van Git het mogelijk maakt om in groepen aan dezelfde software te werken<a href="#source-21" class="text-block-paragraph-sup">1</a>. Github heeft concurrentie van andere diensten (zoals <a href="http://bitbucket.org/" target="_blank" class="text-block-link">Bitbucket</a> en <a href="https://about.gitlab.com/" target="_blank" class="text-block-link">GitLab</a>) die ongeveer hetzelfde aanbieden maar is verreweg de grootste speler.</p>
           <p class="text-block-paragraph">Ik gebruik Github dan ook al sinds ik ben begonnen als front-end developer en ik zie geen reden om hier de komende tijd nog van af te stappen. Github heeft een gigantische community achter zich en alle functionaliteit die je als developer nodig hebt. Als je ge&iuml;nteresseerd bent in hoe Github precies werkt kan je er <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/" target="_blank" class="text-block-link">hier</a> meer over lezen.</p>
-          <p class="text-block-paragraph">Voor dit project gebruikten Sebastian en ik Github uiteraard veel. Al onze code werd via Github beheerd en opgeslagen. Op deze manier konden fouten makkelijk teruggedraaid worden en konden Sebastian en ik goed naast elkaar werken. Ook was onze code veilig mocht &eacute;&eacute;n van onze computers onverwachts stuk gaan.</p>
+          <p class="text-block-paragraph">Voor dit project gebruikten Sebastian en ik Github uiteraard veel. Al onze code werd via Github beheerd en opgeslagen. Op deze manier konden fouten makkelijk teruggedraaid worden en konden Sebastian en ik goed naast elkaar werken. Ook was onze code veilig mocht &eacute;&eacute;n van onze computers onverwachts stuk gaan of gestolen worden.</p>
           <p class="text-block-subtitle">SourceTree</p>
           <p class="text-block-paragraph"><a href="https://www.sourcetreeapp.com/" target="_blank" class="text-block-link">SourceTree</a> is een programma waarmee het mogelijk is om te communiceren met diensten die Git gebruiken (zoals Github). Het is mogelijk om met Git te werken via de command line alleen vergt dit de beheersing van veel commands.</p>
           <p class="text-block-paragraph">Voor mensen die er geen zin in hebben om deze commands te leren zijn er programma's zoals SourceTree. Sourcetree maakt het mogelijk om via een interface Git commands uit te voeren. Dit zorgt ervoor dat je nooit in de buurt van een command line hoeft te komen.</p>
           <p class="text-block-subtitle">Node en NPM</p>
           <p class="text-block-paragraph"><a href="https://nodejs.org/en/" target="_blank" class="text-block-link">Node</a> zorgt ervoor dat het mogelijk is om JavaScript uit te voeren via je console. Op deze manier is het mogelijk om tools zoals Gulp en Grunt te gebruiken, hierover later meer.</p>
           <p class="text-block-paragraph">Als je Node installeert krijg je gelijk de Node Package Manager (NPM) meegeleverd. NPM is de meest gebruikte tool om packages te installeren en beheren. Op deze <a href="http://www.npmjs.com" target="_blank" class="text-block-link">website</a> kun je meer lezen over NPM en al haar packages.</p>
-          <p class="text-block-paragraph">Je kunt via NPM op een hele makkelijke manier een package installeren en opslaan in een zogenaamd <code class="text-block-inline-code">package.json</code> bestand. Als iemand anders dan je project binnen haalt kan hij via het volgende commando: <code class="text-block-inline-code">npm install</code> alle dependencies van dat project installeren.</p>
-          <p class="text-block-paragraph">Ik heb Node voor dit project gebruikt om Gulp te draaien. Ook heb ik via NPM alle packages die ik bij dit project gebruik opgeslagen en ge&iuml;nstalleerd.</p>
+          <p class="text-block-paragraph">Je kunt via NPM op een hele makkelijke manier een package installeren en opslaan in een zogenaamd <code class="text-block-inline-code">package.json</code> bestand. Als iemand anders dan je project binnen haalt kan hij via het commando <code class="text-block-inline-code">npm install</code> alle dependencies van dat project installeren.</p>
+          <p class="text-block-paragraph">Ik heb Node voor dit project gebruikt om Gulp te draaien. Ook heb ik via NPM alle packages die ik bij dit project gebruik ge&iuml;nstalleerd en opgeslagen.</p>
           <p class="text-block-subtitle">Gulp</p>
           <p class="text-block-paragraph"><a href="http://gulpjs.com/" target="_blank" class="text-block-link">Gulp</a> is een automated task runner. Je kunt voor Gulp tasks schrijven die je leven tijdens de ontwikkeling van een project een stuk aangenamer maken.</p>
           <p class="text-block-paragraph">Gulp heeft concurrentie van andere task runners, waaronder <a href="http://gruntjs.com/" target="_blank" class="text-block-link">Grunt</a>. Er zijn meerdere redenen waarom ik gekozen heb voor Gulp bij dit project (en bij vele andere projecten). Een goede vergelijking van Gulp vs Grunt kan <a href="http://medium.com/@preslavrachev/gulp-vs-grunt-why-one-why-the-other-f5d3b398edc4" target="_blank" class="text-block-link">hier</a> gelezen worden.</p>
@@ -371,6 +372,7 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
       <div id="samenvatting">
         <div class="text-block">
           <p class="text-block-section-title"><span class="text-block-section-title-number">2.3</span>Samenvatting</p>
+          <p class="text-block-paragraph">Voor degene die geen tijd en/of zin heeft om mijn gehele documentatie te lezen volgt hieronder een beknopte samenvatting van mijn project traject.</p>
           <p class="text-block-subtitle">Periode 1: vooronderzoek en eerste opzet componenten</p>
           <p class="text-block-paragraph">De eerste weken van mijn project heb ik mij voornamelijk beziggehouden met vooronderzoek en de eerste opzet van sommige componenten.</p>
           <p class="text-block-paragraph">In de eerste week heb ik op school een workshop bijgewoond over de designbrief en later ook nog &eacute;&eacute;n over de roadmap. Ook heb ik deze week mijn afstudeerbegeleider Koen Wijffelaars toegewezen gekregen.</p>
@@ -378,23 +380,22 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <p class="text-block-paragraph">Toen deze opzet werkbaar was ben ik begonnen met het opzetten van de eerste componenten. Denk hierbij aan het opzetten van de basis HTML structuur en bijbehorende CSS zonder enige functionaliteit. Ook heb ik in deze week Koen voor het eerst ontmoet. Buiten dit alles was ik ook begonnen met mijn designbrief en roadmap, welke aan het einde van week 3 ingeleverd dienden te worden.</p>
           <p class="text-block-paragraph">Aan het eind van deze periode heb ik toen mijn designbrief en roadmap ingeleverd. De inlevering van deze documenten betekende dat het daadwerkelijke project nu echt ging beginnen.</p>
           <p class="text-block-subtitle">Periode 2: ontwikkeling</p>
-          <p class="text-block-paragraph">Het eerste component waar ik mee ben begonnen is het input component. Dit component is vrij simpel qua interactie, er kan namelijk alleen maar in getypt worden. Echter betekent dit niet dat het een simpel component is om te ontwikkelen.</p>
-          <p class="text-block-paragraph">Sebastian was ondertussen bezig met de back-end en wou graag wat mooi opgemaakte componenten hebben om mee te werken. Om deze reden heb ik daarom eerst nog wat andere componenten gebouwd. Nadat ik de eerste versie van de checkbox, radio button en select klaar had ben ik verder gegaan met de functionaliteit van het input component.</p>
-          <p class="text-block-paragraph">De week daarop heb ik mij voornamelijk beziggehouden met het slicen van het image upload component. Ook ben ik bezig geweest met het verder finetunen van de componenten die ik al eerder had gesliced. Aan het einde van deze week heb ik mijn designbrief ingeleverd.</p>
-          <p class="text-block-paragraph">De weken die daarop volgden heb ik mij vooral beziggehouden met de formulier elementen. Denk hierbij aan relatief simpele element zoals een input, checkbox en radio button.</p>
-          <p class="text-block-paragraph">Het was erg belangrijk dat deze componenten goed opgezet zouden worden zodat ze makkelijk hergebruikt kunnen worden voor toekomstige projecten.</p>
-          <p class="text-block-paragraph">Ik merkte al snel tijdens mijn ontwikkeling dat ik behoefte had aan herbruikbare JavaScript functies voor formulier validatie en error afhandeling. Ik heb om dit probleem op te lossen mijn eigen libraries geschreven, FormValidation en ErrorHandling. Hierover later meer.</p>
-          <p class="text-block-paragraph">Tijdens deze periode van het project heb ik veel overlegd met Sebastian over wat we precies wilden ontwikkelen. Dit project is namelijk vooraf niet vastgelegd in steen dus dienden er veel beslissingen tijdens ontwikkeling gemaakt te worden. Deze beslissingen werden over het algemeen gemaakt in meetings. Ik heb meetings gehad over naamgeving, functionaliteit, code structuur en nog veel meer.</p>
+          <p class="text-block-paragraph">Het eerste component waar ik mee ben begonnen is het <code class="text-block-inline-code">Textline</code> component. Dit component is vrij simpel qua interactie, er kan namelijk alleen maar in getypt worden. Echter betekent dit niet dat het een simpel component is om te ontwikkelen.</p>
+          <p class="text-block-paragraph">Sebastian was ondertussen bezig met de back-end en wou graag wat mooi opgemaakte componenten hebben om mee te werken. Om deze reden heb ik daarom eerst nog wat andere componenten gebouwd. Nadat ik de eerste versies van de <code class="text-block-inline-code">Checkbox</code>, <code class="text-block-inline-code">Radio Button</code> en <code class="text-block-inline-code">Dropdown</code> componenten af had ben ik verder gegaan met de functionaliteit van het <code class="text-block-inline-code">Textline</code> component.</p>
+          <p class="text-block-paragraph">De week daarop heb ik mij voornamelijk beziggehouden met het slicen van het <code class="text-block-inline-code">Image Upload</code> component. Ook ben ik bezig geweest met het verder finetunen van de componenten die ik al eerder had gesliced. Aan het einde van deze week heb ik mijn designbrief ingeleverd.</p>
+          <p class="text-block-paragraph">De weken die daarop volgden heb ik mij vooral beziggehouden met de formulier componenten. Denk hierbij aan relatief simpele componenten zoals het <code class="text-block-inline-code">Textline</code> component, het <code class="text-block-inline-code">Checkbox</code> component en het <code class="text-block-inline-code">Radio Button</code> component.</p>
+          <p class="text-block-paragraph">Het was erg belangrijk dat deze componenten goed opgezet zouden worden zodat ze makkelijk hergebruikt konden worden voor toekomstige projecten.</p>
+          <p class="text-block-paragraph">Ik merkte al snel tijdens mijn ontwikkeling dat ik behoefte had aan herbruikbare JavaScript functies voor formulier validatie en error afhandeling. Ik heb om dit probleem op te lossen mijn eigen libraries geschreven, genaamd <code class="text-block-inline-code">FormValidation</code> en <code class="text-block-inline-code">ErrorHandling</code>. Hierover later meer.</p>
+          <p class="text-block-paragraph">Tijdens deze periode van het project heb ik veel overlegd met Sebastian over wat we precies wilden ontwikkelen. Dit project is namelijk niet vooraf vastgelegd in steen dus dienden er veel beslissingen tijdens ontwikkeling gemaakt te worden. Deze beslissingen werden over het algemeen gemaakt in meetings. Ik heb meetings gehad over naamgeving, functionaliteit, code structuur en nog veel meer.</p>
           <p class="text-block-paragraph">In de meetings met Sebastian kwamen we vaak tot lijstjes to-do's waar we de komende tijd aan wilden werken. Voor deze lijstjes gebruikten we zoals al eerder genoemd Trello. Op deze manier was het makkelijk om te documenteren wie wat had afgerond en wie waar nog mee bezig was.</p>
           <p class="text-block-paragraph">Ik heb met Sebastian tijdens dit project veel discussies gevoerd. Wij hebben allebei een sterke mening over bepaalde punten en soms was het lastig om hierin concessies te doen.</p>
           <p class="text-block-paragraph">Om maar even een voorbeeld te noemen, Sebastian en ik hadden allebei een andere mening over de beste manier om CSS naamgeving te regelen. Dit heeft ons eerst een uur lang een discussie opgeleverd en later hebben we zelfs een meeting moeten inplannen met een andere front-end developer erbij om hieruit te komen. Later zal ik hier nog in detail op ingaan.</p>
-          <p class="text-block-paragraph">Buiten de nadelen die zulke stelligheid met zich meebrengt heeft het ook veel positieve invloeden gehad op ons project. We hielden ons namelijk allebei veel bezig met de 'juiste manier' om dingen te doen en dit heeft ertoe geleidt dat ons eindproduct van een hoge kwaliteit is.</p>
+          <p class="text-block-paragraph">Buiten de nadelen die zulke stelligheid met zich meebrengt heeft het ook veel positieve invloeden gehad op ons project. We hielden ons namelijk allebei veel bezig met de 'juiste manier' om dingen te doen en dit heeft ertoe geleidt dat alles wat we hebben ontwikkeld van een hoge kwaliteit is.</p>
           <p class="text-block-paragraph">Terwijl ik bezig was met de ontwikkeling van Mimoto heb ik mij ook nog beziggehouden met de ontwikkeling van de nieuwe Momkai website. Om de eerste versie van Mimoto te gaan testen is het namelijk de bedoeling om deze te gaan gebruiken bij de nieuwe Momkai website.</p>
-          <p class="text-block-paragraph">Het uit eindelijke prototype wat ik dan ook heb opgeleverd is dan ook een kopie van de Momkai website.</p>
           <p class="text-block-subtitle">Periode 3: testing</p>
           <p class="text-block-paragraph">In januari ben ik begonnen met het testen van de oplossing die ik heb ontwikkeld. Aangezien Mimoto nog niet klaar was om gebruikt te worden heb ik mij gericht op de componenten en libraries die ik heb ontwikkeld.</p>
           <p class="text-block-paragraph">De tests die ik heb gedaan heb ik in twee delen opgedeeld. Ik heb mijn front-end developer collega's gevraagd om mijn code te beoordelen. Deze test was het meest belangrijk aangezien ik hiermee heb aangetoond dat mijn oplossing voldoet aan de vooraf bepaalde voorwaarden van mijn design challenge.</p>
-          <p class="text-block-paragraph">Ook heb ik verscheidene interaction design en visual design collega's gevraagd om de functionaliteit van mijn formulier componenten te beoordelen. Beide tests zijn uitgevoerd via het expert review formaat en compleet door mij ontwikkeld.</p>
+          <p class="text-block-paragraph">Ook heb ik meerdere interaction design en visual design collega's gevraagd om de functionaliteit van mijn formulier componenten te beoordelen. Beide tests zijn uitgevoerd via het expert review formaat en compleet door mij ontwikkeld.</p>
           <p class="text-block-paragraph">De resultaten van deze tests zullen later gebruikt gaan worden om Mimoto te verbeteren.</p>
         </div>
       </div>
@@ -402,12 +403,13 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
       <div id="uitdagingen">
         <div class="text-block">
           <p class="text-block-section-title"><span class="text-block-section-title-number">2.4</span>Uitdagingen</p>
+          <p class="text-block-paragraph">Tijdens mijn project ben ik veel uitdagingen tegengekomen. Hieronder zal ik in detail uitleggen hoe ik twee van deze uitdagingen heb getackeld.</p>
           <p class="text-block-subtitle">Component naamgeving</p>
           <p class="text-block-paragraph">Bij een modulaire applicatie is correcte naamgeving erg belangrijk. Aangezien elk component uniek is kan een component naam niet meer dan &eacute;&eacute;n keer gebruikt worden. Deze component naam wordt dan ook gebruikt als CSS selector. Bij complexe applicaties zoals Mimoto kan dit problemen opleveren.</p>
           <p class="text-block-paragraph">In toekomstige versies van Mimoto is het namelijk de bedoeling dat Mimoto over een website heen geprojecteerd kan worden. Dit willen we doen zodat inline editing van content mogelijk is. Als wij dan een component naam zoals <code class="text-block-inline-code">button</code> gebruiken kan dit conflicten opleveren met de styling van de desbetreffende website. Gebruikt de desbetreffende website dan namelijk ook de component naam <code class="text-block-inline-code">button</code> dan wordt onze styling overschreven.</p>
           <p class="text-block-paragraph">Oorspronkelijk was ik van mening dat met goede component namen je dit probleem vrijwel niet tegen zou komen. Om dingen nog veiliger te maken was ik aan het nadenken over een prefix zoals bijvoorbeeld <code class="text-block-inline-code">mi</code>. Om het button component als voorbeeld te nemen, de component-naam zou dan <code class="text-block-inline-code">mi-button</code> worden.</p>
           <p class="text-block-paragraph">Sebastian had hier echter een ander idee over. Component namen zoals <code class="text-block-inline-code">mi-button</code> zouden volgens hem alsnog relatief makkelijk conflicten kunnen opleveren. Aangezien zijn achtergrond meer ligt in de klassieke programmeertalen opperde hij de suggestie om locaties in de component namen te gaan gebruiken.</p>
-          <p class="text-block-paragraph">Ik was het hier oorspronkelijk niet mee eens. In mijn ogen heeft de naam van een component niks te maken met waar het zich bevindt. Om ons meningsverschil op te lossen hebben we toen een meeting ingepland met onze front-end collega Marc.</p>
+          <p class="text-block-paragraph">Ik was het hier oorspronkelijk niet mee eens. In mijn ogen heeft de naam van een component niks te maken met waar het zich bevindt. Om ons meningsverschil op te lossen hebben we toen een meeting ingepland met onze front-end collega <a href="https://www.linkedin.com/in/marcup" target="_blank" class="text-block-link">Marc Bruisten</a>.</p>
           <p class="text-block-paragraph">In deze meeting hebben Sebastian en ik allebei ons zegje gedaan. Sebastian heeft hier zijn standpunt uitgebreid toegelicht en heeft uiteindelijk Marc en mij met de volgende argumenten weten te overtuigen:</p>
           <ul class="text-block-list">
             <li class="text-block-list-item">Locaties gebruiken in component namen zorgt ervoor dat het onmogelijk is om conflicten te krijgen met andere component namen.</li>
@@ -429,7 +431,7 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <p class="text-block-paragraph">Bij vrijwel alle Momkai projecten wordt er gebruik gemaakt van de open-source <a href="http://conditionerjs.com/" target="_blank" class="text-block-link">Conditioner.js</a> library. Met deze library is het mogelijk om JavaScript modules in te laden wanneer er aan bepaalde condities voldaan wordt.</p>
           <p class="text-block-paragraph">In de praktijk ziet dit er als volgt uit:</p>
           <pre class="text-block-code">&lt;a href=&quot;http://maps.google.com/?ll=51.741,3.822&quot; data-module=&quot;ui/Map&quot; data-conditions=&quot;media:{(min-width:40em)} and element:{was visible}&quot;&gt; ... &lt;/a&gt;</pre>
-          <p class="text-block-paragraph">Als je geen condities instelt (zoals wij over het algemeen doen bij Momkai) wordt de JavaScript gewoon geladen wanneer het component waar de JavaScript bij hoort gebruikt wordt. Dit is handig zodat je geen if-statements hoeft te schrijven in je initiatie JavaScript bestand.</p>
+          <p class="text-block-paragraph">Als je geen condities instelt (zoals wij over het algemeen doen bij Momkai) wordt de JavaScript gewoon geladen wanneer het component waar de JavaScript bij hoort gebruikt wordt. Dit is handig zodat je geen <a href="https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank" class="text-block-link">if statements</a> hoeft te schrijven in je initiatie JavaScript bestand.</p>
           <p class="text-block-paragraph">Het was dus ook de bedoeling om Conditioner te gaan gebruiken bij dit project. Echter, toen ik bezig was met de opzet van mijn development setup kreeg ik Conditioner niet werkend. Na wat onderzoek gedaan te hebben kwam ik tot de conclusie dat wij een custom build van Conditioner gebruikten zodat het mogelijk was om JavaScript modules te schrijven in het <a href="http://en.wikipedia.org/wiki/CommonJS" target="_blank" class="text-block-link">CommonJS</a> formaat. Oorspronkelijk ondersteunt Conditioner alleen <a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition" target="_blank" class="text-block-link">AMD</a> JavaScript modules.</p>
           <p class="text-block-paragraph">Normaliter schreef ik mijn JavaScript modules altijd via het CommonJS formaat. Aangezien ik Conditioner graag wou gebruiken besloot ik om voor dit project mijn JavaScript modules via het AMD formaat te schrijven.</p>
           <p class="text-block-paragraph">Echter kreeg ik Conditioner alsnog niet werkend in combinatie met Webpack. Conditioner heeft om te kunnen werken een loader zoals bijvoorbeeld RequireJS nodig. Echter kan Webpack alles zelf al wat RequireJS ook kan dus is het nogal raar om verschillende dingen te gebruiken die hetzelfde doen.</p>
@@ -437,7 +439,7 @@ sayName(myName); <span class="text-block-code-comment">// Toont 'Mijn naam is Da
           <p class="text-block-paragraph">Na een paar berichten heen en weer kreeg ik eindelijk een werkend voorbeeld van hoe het mogelijk was om Conditioner te gebruiken in combinatie met Webpack. Dit voorbeeld was echter zo ingewikkeld en achterhaald dat ik besloten heb om Conditioner niet te gebruiken binnen Mimoto. Voor deze beslissing had ik de volgende argumenten:</p>
           <ul class="text-block-list">
             <li class="text-block-list-item">Conditioner heeft een extra loader nodig om te functioneren terwijl Webpack al alles kan wat die loaders ook kunnen. Het gebruik van een extra loader is dan ook overkill.</li>
-            <li class="text-block-list-item">De performance van Conditioner is minder goed dan de 'oldskool' manier van if-statements.</li>
+            <li class="text-block-list-item">De performance van Conditioner is minder goed dan de 'oldskool' manier van if statements.</li>
             <li class="text-block-list-item">We willen zo weinig mogelijk dependencies binnen Mimoto.</li>
           </ul>
           <p class="text-block-paragraph">Omdat ik dus geen Conditioner kon gebruiken binnen dit project moest ik mijn JavaScript modules op de ouderwetse manier inladen. Ik zal nu uitleggen hoe dat precies te werk is gegaan.</p>
@@ -473,7 +475,7 @@ module.exports.prototype = {
     <span class="text-block-code-comment">// Begin hier met het uitvoeren van andere code</span>
   }
 };</pre>
-          <p class="text-block-paragraph">Als ik dan een module wou gebruiken voegde ik deze toe aan mijn <code class="text-block-inline-code">mimoto.cms.js</code> bestand. In dit bestand wordt alle JavaScript van Mimoto ge&iuml;nitialiseerd. Webpack zorgt er uiteindelijk voor dat alle modules ook daadwerkelijk worden samengevoegd en geminified.</p>
+          <p class="text-block-paragraph">Als ik dan een module wou gebruiken voegde ik deze toe aan mijn <code class="text-block-inline-code">mimoto.cms.js</code> bestand. In dit bestand wordt alle JavaScript van Mimoto ge&iuml;nitialiseerd. Webpack zorgt er uiteindelijk voor dat alle modules ook daadwerkelijk samengevoegd en geminified worden.</p>
           <p class="text-block-paragraph">Het toevoegen van een JavaScript module aan mijn initiatie bestand is extreem simpel om te doen. Het kan namelijk al met de volgende code:</p>
           <pre class="text-block-code">var headerView = require('./views/Header');</pre>
           <p class="text-block-paragraph">Nadat een module is toegevoegd moet hij ge&iuml;nitialiseerd worden wil je hem kunnen gebruiken. Dat kan met de eerder getoonde <code class="text-block-inline-code">new</code> operator. Hieronder volgt een voorbeeld vanuit <code class="text-block-inline-code">mimoto.cms.js</code> waarin modules worden ingeladen en aangeroepen.</p>
@@ -519,7 +521,6 @@ document.addEventListener('DOMContentLoaded', function () { <span class="text-bl
           <ul class="text-block-list">
             <li class="text-block-list-item"><a href="https://www.linkedin.com/in/tonsomers" target="_blank" class="text-block-link">Ton Somers</a></li>
             <li class="text-block-list-item"><a href="https://www.linkedin.com/in/marlies-bartels-5bbb3123" target="_blank" class="text-block-link">Marlies Bartels</a></li>
-            <li class="text-block-list-item"><a href="https://www.linkedin.com/in/tkdow" target="_blank" class="text-block-link">Thomas Dow</a></li>
           </ul>
           <p class="text-block-paragraph">De templates die ik gebruikt heb voor deze expert reviews zijn te vinden in de bijlagen.</p>
         </div>
@@ -528,7 +529,7 @@ document.addEventListener('DOMContentLoaded', function () { <span class="text-bl
       <div id="resultaten">
         <div class="text-block">
           <p class="text-block-section-title"><span class="text-block-section-title-number">3.2</span>Resultaten</p>
-          <p class="text-block-paragraph">Hieronder volgen samenvattingen van de resultaten uit de expert reviews.</p>
+          <p class="text-block-paragraph">Hieronder volgen beknopte samenvattingen van de resultaten uit de expert reviews.</p>
           <p class="text-block-subtitle">Resultaten code expert review</p>
           <p class="text-block-paragraph"></p>
           <p class="text-block-subtitle">Resultaten user experience expert review</p>
@@ -540,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function () { <span class="text-bl
         <div class="text-block">
           <h1 class="text-block-title"><span class="text-block-title-number">4</span>Product presentatie</h1>
           <p class="text-block-section-title"><span class="text-block-section-title-number">4.1</span>Toelichting</p>
-          <p class="text-block-paragraph">Tijdens dit project heb ik verschillende dingen ontwikkeld. In deze sectie ga ik dieper in op de functionaliteit van de belangrijkste libraries en componenten die ik heb gebouwd. Als eerste zal ik uitleg geven over de werking van mijn <code class="text-block-inline-code">FormValidation</code> en <code class="text-block-inline-code">ErrorHandling</code> JavaScript libraries. Daarna geef ik een demo van verschillende formulier elementen die ik heb gebouwd. Tijdens deze demo's demonstreer ik ook de kracht van de JavaScript libraries die ik heb gebouwd.</p>
+          <p class="text-block-paragraph">Tijdens dit project heb ik verschillende dingen ontwikkeld. In deze sectie ga ik dieper in op de functionaliteit van de belangrijkste libraries en componenten die ik heb gebouwd. Als eerste zal ik uitleg geven over de werking van mijn <code class="text-block-inline-code">FormValidation</code> en <code class="text-block-inline-code">ErrorHandling</code> JavaScript libraries. Daarna geef ik demo's van verschillende formulier componenten die ik heb gebouwd. Tijdens deze demo's demonstreer ik ook de kracht van de JavaScript libraries die ik heb gebouwd.</p>
           <p class="text-block-paragraph">Omdat alles wat ik heb ontwikkeld voor dit project bestaat uit code nodig ik je graag uit om de <a class="text-block-link" target="_blank" href="http://github.com/SebastianKersten/Mimoto.Aimless">broncode</a> van dit project te bekijken. Daar valt pas goed op hoe groot dit project is en hoeveel werk er al inzit. En dan te bedenken dat Mimoto nog lang niet af is.</p>
           <p class="text-block-paragraph">Als je broncode interessant vindt om te bekijken neem dan ook eens een kijkje naar de broncode van de website die je nu bekijkt. Die code kan <a class="text-block-link" target="_blank" href="http://github.com/daviddelusenet/afstudeerproject">hier</a> gevonden worden.</p>
         </div>
@@ -549,7 +550,7 @@ document.addEventListener('DOMContentLoaded', function () { <span class="text-bl
       <div id="werking-formvalidation">
         <div class="text-block">
           <p class="text-block-section-title"><span class="text-block-section-title-number">4.2</span>Werking FormValidation</p>
-          <p class="text-block-paragraph">Ik heb de FormValidation library gebouwd om de validatie van formulier elementen te regelen. Via Webpack is het mogelijk om een JavaScript module toe te kennen aan een variabele en deze beschikbaar te maken in alle modules. Op deze manier hoef je een veelgebruikte module maar &eacute;&eacute;n keer toe te voegen en kan je hem daarna overal gebruiken.</p>
+          <p class="text-block-paragraph">Ik heb de <code class="text-block-inline-code">FormValidation</code> library gebouwd om de validatie van formulier elementen te regelen. Via Webpack is het mogelijk om een JavaScript module toe te kennen aan een variabele en deze beschikbaar te maken in alle modules. Op deze manier hoef je een veelgebruikte module maar &eacute;&eacute;n keer toe te voegen en kan je hem daarna overal gebruiken.</p>
           <p class="text-block-paragraph">Om je module op deze manier toe te kunnen voegen dient hij wel via de object literal notatie geschreven te worden. Wil je meer over JavaScript data types en literals te weten komen lees dan eens het volgende <a class="text-block-link" target="_blank" href="http://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">artikel</a>. Omdat het nogal een uitgebreid artikel is zal ik zelf ook een kort voorbeeld geven van hoe een object literal precies werkt.</p>
           <pre class="text-block-code">
 var human = {
@@ -564,7 +565,7 @@ var human = {
 
 };</pre>
           <p class="text-block-paragraph">Hierboven wordt een JavaScript object gedefinieerd en toegekend aan de variabele <code class="text-block-inline-code">human</code>. Dit object bevat twee functies, <code class="text-block-inline-code">speak</code> en <code class="text-block-inline-code">run</code>. Deze functies kunnen op de volgende manier worden aangeroepen: <code class="text-block-inline-code">human.speak();</code> of <code class="text-block-inline-code">human.run();</code>.</p>
-          <p class="text-block-paragraph">Ik heb de FormValidation library via Webpack gekoppeld aan de variabele <code class="text-block-inline-code">FV</code>. Op deze manier kan je via <code class="text-block-inline-code">FV.functieNaam();</code> in alle JavaScript modules functies uit de FormValidation library aanroepen. Ik zal vanaf nu dan ook naar de FormValidation library refereren via <code class="text-block-inline-code">FV</code>.</p>
+          <p class="text-block-paragraph">Ik heb de <code class="text-block-inline-code">FormValidation</code> library via Webpack gekoppeld aan de variabele <code class="text-block-inline-code">FV</code>. Op deze manier kan je via <code class="text-block-inline-code">FV.functieNaam();</code> in alle JavaScript modules functies uit de <code class="text-block-inline-code">FormValidation</code> library aanroepen. Ik zal vanaf nu dan ook naar de <code class="text-block-inline-code">FormValidation</code> library refereren via <code class="text-block-inline-code">FV</code>.</p>
           <p class="text-block-subtitle">Data-attributen</p>
           <p class="text-block-paragraph">Als je gebruik wilt maken van <code class="text-block-inline-code">FV</code> dien je als eerste data-attributen toe te voegen aan je formulier element. De volgende data-attributen worden ondersteunt voor formulier elementen waarin getypt kan worden:</p>
           <p class="text-block-paragraph"></p>
@@ -683,7 +684,7 @@ this.textline = this.el.querySelector('.js-textline');
 this.checkboxes = this.el.querySelectorAll('.js-checkbox');
 this.radioButtons = this.el.querySelectorAll('.js-radio-button');
 this.dropdown = this.el.querySelector('.js-dropdown');</pre>
-          <p class="text-block-paragraph">Nadat deze variabelen zijn gedefinieerd wordt er door middel van een if-statement gekeken of de daadwerkelijke variabelen ook echt gevuld zijn. Er worden verschillende dingen gedaan wanneer er verschillende variabelen gevuld zijn. Voor dit voorbeeld gaan we nu er nu even vanuit dat <code class="text-block-inline-code">this.textline</code> gevuld is. Dat betekent dat de volgende code wordt uitgevoerd:</p>
+          <p class="text-block-paragraph">Nadat deze variabelen zijn gedefinieerd wordt er door middel van een if statement gekeken of de daadwerkelijke variabelen ook echt gevuld zijn. Er worden verschillende dingen gedaan wanneer er verschillende variabelen gevuld zijn. Voor dit voorbeeld gaan we nu er nu even vanuit dat <code class="text-block-inline-code">this.textline</code> gevuld is. Dat betekent dat de volgende code wordt uitgevoerd:</p>
           <pre class="text-block-code">
 this.input = this.textline;
 this.value = this.input.value;</pre>
@@ -784,7 +785,7 @@ var regex = new RegExp("\\d"); <span class="text-block-code-comment">// Regulier
 var result = regex.test(text); <span class="text-block-code-comment">// Resultaat van de check, in dit geval 'true' aangezien de waarde een cijfer bevat</span>
 
 console.log(result); <span class="text-block-code-comment">// Toont 'true' in de console</span></pre>
-          <p class="text-block-paragraph">De <code class="text-block-inline-code">checkNoNumbers</code> functie werkt bijna hetzelfde als het voorbeeld hierboven. Als eerst wordt dus de reguliere expressie gedefinieerd. Daarna wordt <code class="text-block-inline-code">this.value</code> getest ten opzichte van de reguliere expressie. Als het resultaat <code class="text-block-inline-code">true</code> is betekent het <code class="text-block-inline-code">his.value</code> nummers bevat. Aangezien er geen nummers toegestaan zijn binnen <code class="text-block-inline-code">this.value</code> wordt de <code class="text-block-inline-code">this.setResult</code> functie aangeroepen en wordt het resultaat ingesteld op <code class="text-block-inline-code">false</code>. Dit gebeurt allemaal in het volgende stuk code:</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">checkNoNumbers</code> functie werkt bijna hetzelfde als het voorbeeld hierboven. Als eerst wordt dus de reguliere expressie gedefinieerd. Daarna wordt <code class="text-block-inline-code">this.value</code> getest ten opzichte van de reguliere expressie. Als het resultaat <code class="text-block-inline-code">true</code> is betekent het <code class="text-block-inline-code">this.value</code> nummers bevat. Aangezien er geen nummers toegestaan zijn binnen <code class="text-block-inline-code">this.value</code> wordt de <code class="text-block-inline-code">this.setResult</code> functie aangeroepen en wordt het resultaat ingesteld op <code class="text-block-inline-code">false</code>. Dit gebeurt allemaal in het volgende stuk code:</p>
           <pre class="text-block-code">
 var regex = new RegExp("\\d");
 
@@ -885,10 +886,10 @@ checkCustomRegex: function () {
       <div id="werking-errorhandling">
         <div class="text-block">
           <p class="text-block-section-title"><span class="text-block-section-title-number">4.3</span>Werking ErrorHandling</p>
-          <p class="text-block-paragraph">De ErrorHandling library is gebouwd om de state van een formulier element te kunnen veranderen. De oplettende lezer heeft al een glimp opgevangen van hoe deze library gebruikt kan worden. Dit is namelijk de laatste regel van de <code class="text-block-inline-code">FV.handleValidation</code> functie:</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">ErrorHandling</code> library is gebouwd om de state van een formulier element te kunnen veranderen. De oplettende lezer heeft al een glimp opgevangen van hoe deze library gebruikt kan worden. Dit is namelijk de laatste regel van de <code class="text-block-inline-code">FV.handleValidation</code> functie:</p>
           <pre class="text-block-code">
 this.result.passed ? EH.addValidatedState(this.el) : EH.addErrorState(this.el, this.result.message);</pre>
-          <p class="text-block-paragraph">De <code class="text-block-inline-code">EH</code> variabele verwijst naar mijn ErrorHandling library. Hier zie je dus dat er verschillende states worden toegevoegd. Welke state wordt toegevoegd hangt af van de waarde van de <code class="text-block-inline-code">this.result.passed</code> variabele.</p>
+          <p class="text-block-paragraph">De <code class="text-block-inline-code">EH</code> variabele verwijst naar mijn <code class="text-block-inline-code">ErrorHandling</code> library. Hier zie je dus dat er verschillende states worden toegevoegd. Welke state wordt toegevoegd hangt af van de waarde van de <code class="text-block-inline-code">this.result.passed</code> variabele.</p>
           <p class="text-block-subtitle">Instellen opties</p>
           <p class="text-block-paragraph">De <code class="text-block-inline-code">EH</code> library werkt iets anders dan de <code class="text-block-inline-code">FV</code> library. Voordat je <code class="text-block-inline-code">EH</code> namelijk kunt gebruiken met je eigen custom HTML dien je eerst de <code class="text-block-inline-code">init</code> functie aan te roepen. Die functie ziet er als volgt uit:</p>
           <pre class="text-block-code">
@@ -930,7 +931,7 @@ init: function (options) {
           <ul class="text-block-list">
             <li class="text-block-list-item"><span class="text-block-highlight">This.errorElement:</span> het HTML element waarin de error wordt getoond.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">This.errorElementClasses:</span> de classes die aan this.errorElement worden toegevoegd.</li>
-            <li class="text-block-list-item"><span class="text-block-highlight">This.iconSelectorClass:</span> een HTML class om het SVG element mee te selecteren.</li>
+            <li class="text-block-list-item"><span class="text-block-highlight">This.iconSelectorClass:</span> een HTML class om het SVG element waar SVG iconen aan toegevoegd kunnen worden mee te selecteren.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">This.validatedClass:</span> een HTML class die wordt toegevoegd wanneer de validated status wordt toegevoegd.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">This.validatedIcon:</span> een ID referentie naar het SVG icoon wat wordt toegevoegd wanneer de validated status wordt toegevoegd.</li>
             <li class="text-block-list-item"><span class="text-block-highlight">This.validatedIconClass:</span> een HTML class die wordt toegevoegd aan this.iconSelectorClass wanneer de validated status wordt toegevoegd.</li>
@@ -1063,9 +1064,9 @@ clearValidatedState: function () {
           <p class="text-block-paragraph">De <code class="text-block-inline-code">clearValidatedState</code> functie is vrijwel hetzelfde als de <code class="text-block-inline-code">clearErrorState</code> functie. Er wordt gecontroleerd of het element de validated state bevat. Is dit het geval dan worden de <code class="text-block-inline-code">removeElementClass</code> en <code class="text-block-inline-code">removeIcon</code> functies aangeroepen om de validated state te verwijderen.</p>
           <p class="text-block-paragraph">Nadat de variabelen zijn ingesteld door de <code class="text-block-inline-code">setVariables</code> functie en de validated state is verwijderd door de <code class="text-block-inline-code">clearValidatedState</code> functie kan de error state toegevoegd worden. De error state bestaat uit drie dingen:</p>
           <ul class="text-block-list">
-            <li class="text-block-list-item">Een class die wat error styling toevoegt (zoals bijvoorbeeld een rode border om het input veld heen)</li>
-            <li class="text-block-list-item">Een icon plus bijbehorende class (in het geval van Mimoto een rood kruisje)</li>
-            <li class="text-block-list-item">De daadwerkelijke error (getoond onder het input veld)</li>
+            <li class="text-block-list-item">Een class die wat error styling toevoegt (zoals bijvoorbeeld een rode border om het input veld heen).</li>
+            <li class="text-block-list-item">Een icon plus bijbehorende class (in het geval van Mimoto een rood kruisje).</li>
+            <li class="text-block-list-item">De daadwerkelijke error (getoond onder het input veld).</li>
           </ul>
           <p class="text-block-paragraph">De <code class="text-block-inline-code">addErrorState</code> functie controleert of het element al de error state bevat. Als dit het geval is dient namelijk alleen de error message ge&uuml;pdatet te worden. Dit kan gedaan worden met de <code class="text-block-inline-code">updateErrorElement</code> functie:</p>
           <pre class="text-block-code">
@@ -1120,11 +1121,11 @@ removeErrorElement: function () {
         <div class="text-block">
           <p class="text-block-section-title"><span class="text-block-section-title-number">4.4</span>Demo's</p>
           <p class="text-block-paragraph">Omdat het voor mensen soms moeilijk te begrijpen is wat ik precies heb gebouwd tijdens dit project heb ik meerdere demo's ontwikkeld om mijn werk te presenteren.</p>
-          <p class="text-block-paragraph">De formulier elementen waaraan de validatie wordt toegevoegd zijn rechtstreeks overgenomen vanuit Mimoto. Ik heb deze formulier elementen relatief simpel kunnen gebruiken binnen dit project. Dit betekent dat de modulaire opzet waarnaar gestreefd wordt binnen Mimoto tot nu toe goed ge&iuml;mplementeerd wordt.</p>
-          <p class="text-block-paragraph">Deze demo's zijn er vooral op gericht om de kracht van mijn <code class="text-block-inline-code">FV</code> library te demonstreren. Zoals al eerder uitgelegd werkt <code class="text-block-inline-code">FV</code> met data-attributen om de validatie in te stellen. Ik heb dan ook formulieren gebouwd waarmee het mogelijk is om deze data-attributen toe te voegen aan het bijbehorende Mimoto formulier element.</p>
-          <p class="text-block-paragraph">Om de demo's te gebruiken dien je waardes in te vullen in het formulier en dan op de knop <span class="text-block-highlight">voeg validatie toe</span> te drukken. Op dat moment worden de data-attributen toegevoegd aan het Mimoto formulier element en wordt deze meteen gevalideerd. Als je daarna interactie hebt met het bijhorende Mimoto formulier element wordt de validatie steeds opnieuw toegepast.</p>
+          <p class="text-block-paragraph">De formulier componenten waaraan de validatie wordt toegevoegd zijn rechtstreeks overgenomen vanuit Mimoto. Ik heb deze formulier componenten relatief simpel kunnen gebruiken binnen dit project. Dit betekent dat de modulaire opzet waarnaar gestreefd wordt binnen Mimoto tot nu toe goed ge&iuml;mplementeerd wordt.</p>
+          <p class="text-block-paragraph">Deze demo's zijn er vooral op gericht om de kracht van mijn <code class="text-block-inline-code">FV</code> library te demonstreren. Zoals al eerder uitgelegd werkt <code class="text-block-inline-code">FV</code> met data-attributen om de validatie in te stellen. Ik heb dan ook formulieren gebouwd waarmee het mogelijk is om deze data-attributen toe te voegen aan het bijbehorende Mimoto formulier component.</p>
+          <p class="text-block-paragraph">Om de demo's te gebruiken dien je waardes in te vullen in het formulier en dan op de knop <span class="text-block-highlight">voeg validatie toe</span> te drukken. Op dat moment worden de data-attributen toegevoegd aan het Mimoto formulier component en wordt deze meteen gevalideerd. Als je daarna interactie hebt met het bijhorende Mimoto formulier component wordt de validatie steeds opnieuw toegepast.</p>
           <p class="text-block-subtitle">Textline component demo's</p>
-          <p class="text-block-paragraph"><code class="text-block-inline-code">Textline</code> is het meest gebruikte component binnen Mimoto. In essentie is <code class="text-block-inline-code">Textline</code> gewoon een input veld van het type text. Hier komt oorspronkelijk dus geen functionaliteit bij kijken.</p>
+          <p class="text-block-paragraph"><code class="text-block-inline-code">Textline</code> is het meest gebruikte component binnen Mimoto. In essentie is het <code class="text-block-inline-code">Textline</code> component gewoon een input veld van het type text. Hier komt oorspronkelijk dus geen functionaliteit bij kijken.</p>
           <p class="text-block-paragraph">Door middel van mijn <code class="text-block-inline-code">FV</code> library is het echter mogelijk om functionaliteit toe te voegen aan een <code class="text-block-inline-code">Textline</code> component. Met validatie is het namelijk mogelijk om bepaalde input te forceren binnen een <code class="text-block-inline-code">Textline</code> component. Laat dit nou precies iets zijn wat je heel vaak wilt doen.</p>
           <p class="text-block-paragraph">Met de onderstaande demo is het dan ook mogelijk om deze validatie toe te voegen aan het bijbehorende <code class="text-block-inline-code">Textline</code> component. Typ maar eens wat waardes in het onderstaande formulier en druk op de knop <span class="text-block-highlight">voeg validatie toe</span>.</p>
         </div>
@@ -1233,6 +1234,7 @@ removeErrorElement: function () {
           <ul class="text-block-list">
             <li class="text-block-list-item">Het <code class="text-block-inline-code">Textline</code> component kan maar &eacute;&eacute;n regel tekst bevatten, het <code class="text-block-inline-code">Textblock</code> component in theorie oneindig veel regels.</li>
             <li class="text-block-list-item">Het <code class="text-block-inline-code">Textblock</code> component is in hoogte aanpasbaar door de gebruiker.</li>
+            <li class="text-block-list-item">Het <code class="text-block-inline-code">Textblock</code> component heeft (nog) geen prefix ondersteuning.</li>
           </ul>
           <p class="text-block-paragraph">Aangezien ook de validatie mogelijkheden exact hetzelfde zijn heb ik besloten om geen custom validatie voorbeeld van het <code class="text-block-inline-code">Textblock</code> component te ontwikkelen. Wel kan je hieronder een voorbeeld vinden van het <code class="text-block-inline-code">Textblock</code> component, inclusief vooraf ingestelde validatie.</p>
         </div>
@@ -1899,18 +1901,18 @@ setVariables: function () {
           <p class="text-block-paragraph">Persoonlijk wil ik verder gaan met de ontwikkeling van mijn <code class="text-block-inline-code">FormValidation</code> library en hier uit eindelijk een <a class="text-block-link" target="_blank" href="https://docs.npmjs.com/getting-started/publishing-npm-packages">NPM module</a> van maken zodat andere developers hier ook gebruik van kunnen maken. Of ik hetzelfde ga doen met mijn <code class="text-block-inline-code">ErrorHandling</code> library is nog niet zeker aangezien er veel minder vraag is zulk soort functionaliteit.</p>
           <p class="text-block-paragraph">Op het gebied van Mimoto heeft Sebastian nog een hoop functionaliteit die hij graag gebouwd zou willen zien, waaronder:</p>
           <ul class="text-block-list">
-            <li class="text-block-list-item">Real time preview inclusief inline editing</li>
-            <li class="text-block-list-item">Video upload/embed component</li>
-            <li class="text-block-list-item">Login met multi-factor authentication</li>
-            <li class="text-block-list-item">Formulier generator</li>
-            <li class="text-block-list-item">Real time updates</li>
-            <li class="text-block-list-item">Ondersteuning voor meerdere gebruikers inclusief verschillende rechten</li>
-            <li class="text-block-list-item">Theming mogelijkheden</li>
-            <li class="text-block-list-item">Tonen van grafieken en statistieken</li>
-            <li class="text-block-list-item">Mogelijkheid om met verschillende gebruikers op dezelfde pagina te kunnen werken</li>
-            <li class="text-block-list-item">Gebruik van <a class="text-block-link" target="_blank" href="http://elementqueries.com/">EQCSS</a> binnen componenten zodat ze altijd goed getoond worden</li>
-            <li class="text-block-list-item">Mogelijkheid om te kunnen communiceren met andere gebruikers</li>
-            <li class="text-block-list-item">Ondersteuning voor vertalingen</li>
+            <li class="text-block-list-item">Real time preview inclusief inline editing.</li>
+            <li class="text-block-list-item">Video upload/embed component.</li>
+            <li class="text-block-list-item">Login met multi-factor authentication.</li>
+            <li class="text-block-list-item">Formulier generator.</li>
+            <li class="text-block-list-item">Real time updates.</li>
+            <li class="text-block-list-item">Ondersteuning voor meerdere gebruikers inclusief verschillende rechten.</li>
+            <li class="text-block-list-item">Theming mogelijkheden.</li>
+            <li class="text-block-list-item">Tonen van grafieken en statistieken.</li>
+            <li class="text-block-list-item">Mogelijkheid om met verschillende gebruikers op dezelfde pagina te kunnen werken.</li>
+            <li class="text-block-list-item">Gebruik van <a class="text-block-link" target="_blank" href="http://elementqueries.com/">EQCSS</a> binnen componenten zodat ze altijd goed getoond worden.</li>
+            <li class="text-block-list-item">Mogelijkheid om te kunnen communiceren met andere gebruikers.</li>
+            <li class="text-block-list-item">Ondersteuning voor vertalingen.</li>
           </ul>
           <p class="text-block-paragraph">Zoals je kunt zien is er nog een hoop functionaliteit die ontwikkeld moet worden. Ik blijf de komende tijd dan ook betrokken bij de ontwikkeling van het Mimoto project. Waarschijnlijk gaan er ook collega's meehelpen met het ontwikkelen van deze functionaliteit.</p>
           <p class="text-block-paragraph">Voordat we Mimoto kunnen inzetten bij commerci&euml;le projecten zijn we van plan eerst nog een grote design revisie te doen. Veel componenten zijn nu nog niet van de kwaliteit die klanten van Momkai normaliter gewend zijn. Op het moment van schrijven is het design team al bezig met de eerste visuele verbeteringen, namelijk het updaten van alle iconen binnen Mimoto.</p>
@@ -1920,7 +1922,7 @@ setVariables: function () {
       <div id="nawoord">
         <div class="text-block">
           <p class="text-block-section-title"><span class="text-block-section-title-number">5.3</span>Nawoord</p>
-          <p class="text-block-paragraph">Ik wil nogmaals iedereen bedanken wie <a class="text-block-link" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">dit project</a> mogelijk heeft gemaakt. Zonder jullie was ik waarschijnlijk nooit afgestudeerd.</p>
+          <p class="text-block-paragraph">Ik wil nogmaals <a class="text-block-link" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">iedereen bedanken</a> wie dit project mogelijk heeft gemaakt. Zonder jullie was ik waarschijnlijk nooit afgestudeerd.</p>
           <p class="text-block-paragraph">In het bijzonder wil ik Momkai bedanken voor de kans mijn afstudeerproject te kunnen combineren met mijn baan.</p>
         </div>
       </div>
