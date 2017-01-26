@@ -157,6 +157,10 @@
         content: '';
         background-color: $valencia;
       }
+
+      + .text-block-paragraph {
+        padding-top: 20px;
+      }
     }
 
     .text-block-code {
@@ -232,9 +236,6 @@
           font-family: $lucida-grande;
           font-size: 12px;
           font-weight: bold;
-        }
-
-        .text-block-source-publisher {
         }
 
         .text-block-source-title {
